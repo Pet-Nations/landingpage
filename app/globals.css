@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+body {
+}
+
+@layer utilities {
+  .bg-custom-bg {
+    mix-blend-mode: multiply;
+    background: linear-gradient(
+        rgba(255, 159, 70, 0.95),
+        rgba(255, 159, 70, 0.95)
+      ),
+      url("/images/bg1.jpg") no-repeat center/cover;
+  }
+  .bg-section-2 {
+    mix-blend-mode: multiply;
+    background: url("/images/bg2.webp") no-repeat center/cover;
+  }
+}
