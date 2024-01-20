@@ -1,5 +1,4 @@
 import React from "react";
-import DiscordIcon from "../icons/discordIcon";
 import Link from "next/link";
 import FacebookIcon from "../icons/FacebookIcon";
 import SocialIcon from "../icons/SocialIcon";
@@ -8,6 +7,7 @@ import TelegramIcon from "../icons/TelegramIcon";
 import YoutubeIcon from "../icons/YoutubeIcon";
 import TwitterIcon from "../icons/TwitterIcon";
 import MainLogo from "../icons/MainLogo";
+import DiscordIcon from "../icons/DiscordIcon";
 
 const MainHeader = () => {
   const HEADER_ICON = [
