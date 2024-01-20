@@ -21,4 +21,16 @@ body {
     mix-blend-mode: multiply;
     background: url("/images/bg2.webp") no-repeat center/cover;
   }
+  .bg-foil-1 {
+    background: url("/images/petcardfoil.png") no-repeat center/contain;
+  }
+  .bg-foil-2 {
+    background: url("/images/petcardfoil2.png") no-repeat center/contain;
+  }
+  .bg-foil-3 {
+    background: url("/images/petcardfoil3.png") no-repeat center/contain;
+  }
+  .bg-foil-4 {
+    background: url("/images/petcardfoil4.png") no-repeat center/contain;
+  }
 }

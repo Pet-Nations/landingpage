@@ -1,5 +1,24 @@
 import type { Config } from "tailwindcss";
 
+const generateTransFunc = () => {
+  let obj: any = {
+    "0%": { transform: " translateX(0) scale(1) rotate(-2deg)" },
+    "1%": {
+      transform: "translate(-30vw , -10vh ) scale(3.55) rotate(-15deg)",
+    },
+  };
+
+  for (let i = 2; i < 1000; i++) {
+    let h = i % 2 === 0 ? "-5vh" : "-10vh";
+
+    obj[`${i}%`] = {
+      transform: `translate(-30vw , ${h} ) scale(3.55) rotate(-15deg)`,
+    };
+  }
+
+  return obj;
+};
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,7 +36,10 @@ const config: Config = {
         heightUP: "heightUP 2.5s ease-out alternate",
         heightDOWN: "heightDOWN 2.5s ease-out alternate",
         wiggle: "wiggle 1s ease-in-out infinite",
-        moveAndScale: "moveAndScale 2s ease-in-out forwards",
+        moveAndScale: "moveAndScale 200s ease-in-out forwards ",
+        flashScreen: "flashScreen .5s ease-in-out forwards",
+        cardLeft: "cardLeft .5s ease-in-out forwards",
+        moveUp: "moveUp 2s linear forwards",
       },
       keyframes: {
         heightUP: {
@@ -32,17 +54,23 @@ const config: Config = {
           "0%, 100%": { transform: "rotate(-2deg)" },
           "50%": { transform: "rotate(2deg)" },
         },
-        moveAndScale: {
-          "0%": { transform: " translateX(0) scale(1) rotate(-2deg)" },
-          // "50%": { transform: "  rotate(2deg)" },
-          // "75%": {
-          "50%": {
-            transform: " translate(-30vw , 5vh ) scale(2)  rotate(-45deg)",
-          },
-          // },
-          "100%": {
-            transform: " translate(-30vw , -5vh ) scale(3) rotate(-45deg)",
-          },
+        moveAndScale: generateTransFunc(),
+        flashScreen: {
+          "0%, 100%": { background: "#ffffff" },
+          "50%": { background: "black" },
+        },
+        cardLeft: {
+          "0%, ": { right: "-100%" },
+          "100%": { right: "29px" },
+        },
+        kartTransY: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(5%)" },
+        },
+        moveUp: {
+          "0%, ": { bottom: "-300px" },
+          "80%, ": { bottom: "-300px" },
+          "100%": { bottom: "150px" },
         },
       },
     },

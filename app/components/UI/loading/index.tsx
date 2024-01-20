@@ -7,8 +7,6 @@ interface Props {
 }
 
 const Loading = ({ showLoading }: Props) => {
-  console.log(showLoading, "showLoading");
-
   return (
     <div>
       {showLoading ? (
