@@ -1,0 +1,10 @@
+include:
+  - project: "xgame-x/common/cicd-template"
+    ref: main
+    file:
+      - "base-cicd.yaml"
+
+variables:
+  APP_NAME: petnation-landingpage
+  APP_DIR: pets
+
