@@ -1,0 +1,27 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+	"name": "PetNation LandingPage",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	"features": {
+		"ghcr.io/devcontainers/features/sshd:1": {}
+	},
+
+	"otherPortsAttributes": {
+		"onAutoForward": "silent"
+	},
+	"forwardPorts": [3001],
+	"portsAttributes": {
+		"3001": {
+		  	"label": "web",
+		  	"onAutoForward": "notify",
+		  	"requireLocalPort": true
+		}
+	},
+
+	"postCreateCommand": ".devcontainer/post-create.sh",
+	"waitFor": "postCreateCommand"
+}
