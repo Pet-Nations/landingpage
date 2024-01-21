@@ -8,7 +8,7 @@ const PetCardList = ({ showMenu }: any) => {
     {
       id: 1,
       name: "OUR STORY",
-      imgUrl: "",
+      imgUrl: "/stories",
     },
     {
       id: 2,

@@ -10,7 +10,6 @@ body {
 
 @layer utilities {
   .bg-custom-bg {
-    mix-blend-mode: multiply;
     background: linear-gradient(
         rgba(255, 159, 70, 0.95),
         rgba(255, 159, 70, 0.95)
@@ -18,12 +17,14 @@ body {
       url("/images/bg1.jpg") no-repeat center/cover;
   }
   .bg-section-2 {
-    mix-blend-mode: multiply;
     background: url("/images/bg2.webp") no-repeat center/cover;
   }
   .bg-foil-1 {
     background: url("/images/petcardfoil.png") no-repeat center/contain;
   }
+  /* .bg-foil-2nd-1 {
+    background: url("/images/petcardfoil.png") no-repeat center/contain;
+  } */
   .bg-foil-2 {
     background: url("/images/petcardfoil2.png") no-repeat center/contain;
   }
@@ -32,5 +33,29 @@ body {
   }
   .bg-foil-4 {
     background: url("/images/petcardfoil4.png") no-repeat center/contain;
+  }
+  .bg-foil-5 {
+    background: url("/images/dogfootfoil.png") center/cover no-repeat;
+  }
+
+  .clippy {
+    clip-path: polygon(0 0, 100% 0, 93% 100%, 0% 100%);
+  }
+
+  .back-hover {
+    border: 1px solid var(--Logo-Text-color, #fff4e9);
+    background: var(--BG-DARK, #1a1a1a);
+    cursor: pointer;
+  }
+  .back-hover p {
+    color: #ff9f46;
+  }
+
+  .pet-card-1 {
+    backdrop-filter: blur(10.5px);
+  }
+
+  .pet-card-1:hover {
+    backdrop-filter: blur(0);
   }
 }
