@@ -5,7 +5,7 @@ import MainContent from "../../main-content";
 
 const MainPage = () => {
   return (
-    <div className="h-screen bg-white w-full flex flex-col">
+    <div className="h-screen w-full flex flex-col">
       <MainHeader />
       <MainContent />
       <MainFooter />

@@ -8,6 +8,12 @@ import YoutubeIcon from "../icons/YoutubeIcon";
 import TwitterIcon from "../icons/TwitterIcon";
 import MainLogo from "../icons/MainLogo";
 import DiscordIcon from "../icons/DiscordIcon";
+import HeaderFoil from "../icons/HeaderFoil";
+import NavItem from "../nav-item";
+import Scaleup from "../icons/Scaleup";
+import MediaIcon from "../icons/MediaIcon";
+import PartnersIcon from "../icons/PartnersIcon";
+import ComunityIcon from "../icons/ComunityIcon";
 
 const MainHeader = () => {
   const HEADER_ICON = [
@@ -41,6 +47,30 @@ const MainHeader = () => {
     },
   ];
 
+  const NAV_CONFIGS = [
+    {
+      name: "FAQ",
+      url: "/",
+      icon: <Scaleup />,
+    },
+    {
+      name: "MEDIA",
+      url: "/stories",
+      icon: <ComunityIcon />,
+    },
+    {
+      name: "Partners",
+      url: "/about",
+      icon: <PartnersIcon />,
+    },
+    {
+      name: "COMMUNITY",
+      url: "/faq",
+      icon: <MediaIcon />,
+    },
+  ];
+
+  // backdrop-blur-[94px]
   return (
     <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative">
       <div className="absolute top-[50%] z-10">
@@ -48,6 +78,15 @@ const MainHeader = () => {
           <MainLogo />
         </Link>
       </div>
+
+      <div className="absolute left-[185px] backdrop-blur-[100px]  top-[40px] z-10 flex flex-row  bg-foil-5 clippy bg-cover ">
+        <div className="h-[62px] flex items-center relative z-[2] ">
+          {NAV_CONFIGS.map((nav: any) => (
+            <NavItem key={nav.url} {...nav} />
+          ))}
+        </div>
+      </div>
+
       <div className="ml-auto w-fit h-full flex items-center justify-center gap-x-2 ">
         {HEADER_ICON.map((el: any) => (
           <Link

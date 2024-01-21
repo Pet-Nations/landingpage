@@ -8,8 +8,8 @@ const generateTransFunc = () => {
     },
   };
 
-  for (let i = 2; i < 1000; i++) {
-    let h = i % 2 === 0 ? "-5vh" : "-10vh";
+  for (let i = 2; i < 10000; i++) {
+    let h = i % 2 === 0 ? "-3vh" : "-10vh";
 
     obj[`${i}%`] = {
       transform: `translate(-30vw , ${h} ) scale(3.55) rotate(-15deg)`,
@@ -40,6 +40,22 @@ const config: Config = {
         flashScreen: "flashScreen .5s ease-in-out forwards",
         cardLeft: "cardLeft .5s ease-in-out forwards",
         moveUp: "moveUp 2s linear forwards",
+        fadeIn: "fadeIn 2s linear forwards",
+        pulselow: "pulselow 4s linear infinite",
+        pulselow1: "pulselow 3s ease-in-out infinite",
+        pulselow2: "pulselow 2s ease-in-out infinite",
+        pulselow3: "pulselow 1s ease-in-out infinite",
+        pulselow4: "pulselow 4s ease-in-out infinite",
+        petCardTextDOwn: "petCardTextDOwn .3s linear forwards",
+        moveRightThenDisappear: "moveRightThenDisappear 2.5s linear infinite",
+        moveRightThenSlowDisappear:
+          "moveRightThenSlowDisappear 3s ease-in-out infinite",
+        moveLeftThenSlowDisappear:
+          "moveLeftThenSlowDisappear 3s ease-in-out infinite",
+        leafFallWindBlowHozirontal:
+          "leafFallWindBlowHozirontal 20s ease-in-out infinite",
+        leafFallWindBlowHozirontal2:
+          "leafFallWindBlowHozirontal2 20s ease-in-out infinite",
       },
       keyframes: {
         heightUP: {
@@ -71,6 +87,75 @@ const config: Config = {
           "0%, ": { bottom: "-300px" },
           "80%, ": { bottom: "-300px" },
           "100%": { bottom: "150px" },
+        },
+        fadeIn: {
+          "0%, 100%": { opacity: "0" },
+          "50%": { opacity: "1" },
+        },
+        petCardTextDOwn: {
+          "0%": { transform: "translate(-13px,0)" },
+          "100%": { transform: "translate(0,5px)" },
+        },
+        moveRightThenDisappear: {
+          "0%": { transform: "translate(0, 0)", opacity: "1", scale: "1.5" },
+          "50%": { transform: "translate(50% , 0)", opacity: ".75" },
+          "100%": { transform: "translate(100%,-100%)", opacity: ".5" },
+        },
+        moveRightThenSlowDisappear: {
+          "0%": { transform: "translate(0, 0)", opacity: ".5", scale: ".5" },
+          "100%": { transform: "translate(100%,-100%)", opacity: ".75" },
+        },
+        moveLeftThenSlowDisappear: {
+          "0%": {
+            transform: "translate(0, 0) scaleX(-1)",
+            opacity: ".5",
+          },
+          "100%": {
+            transform: "translate(-50%,-100%) scaleX(-1) ",
+            opacity: ".75",
+          },
+        },
+        pulselow: {
+          "0%, 100%": {
+            opacity: "1",
+          },
+          "50%": {
+            opacity: "0",
+          },
+        },
+        leafFallWindBlowHozirontal: {
+          "0%": {
+            transform: "translate(0, 0) scaleX(-1)",
+          },
+          "4%": {
+            transform: "translate(-6vw, 6vh) scaleX(-1)",
+          },
+          "8%": {
+            transform: "translate(2vw, 12vh) scaleX(-1)",
+          },
+          "12%": {
+            transform: "translate(-0vw, 18vh) scaleX(-1)",
+          },
+          "16%": {
+            transform: "translate(6vw, 24vh) scaleX(-1)",
+          },
+          "20%": {
+            transform: "translate(0, 30vh) scaleX(-1) rotate(0)",
+          },
+
+          "100%": {
+            transform: "translate(100vh,0) scaleX(-1) rotate(360deg) ",
+          },
+        },
+
+        leafFallWindBlowHozirontal2: {
+          "0%": {
+            transform: "translate(0vw, 0vh) scaleX(2)",
+          },
+
+          "100%": {
+            transform: "translate(100vw,100vh) rotate(360deg) ",
+          },
         },
       },
     },
