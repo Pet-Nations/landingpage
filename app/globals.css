@@ -58,4 +58,39 @@ body {
   .pet-card-1:hover {
     backdrop-filter: blur(0);
   }
+
+  .stroketext {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  .bg-bottom-foil {
+    background: url("/images/bottomfoil.svg") repeat-x bottom;
+    animation: slide 100s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-3840px); /* The image width */
+    }
+  }
+
+  .card-border-1 {
+    border: 2px solid var(--BG-DARK, #1a1a1a);
+  }
+
+  .bg-story-page {
+    background: linear-gradient(
+        rgba(255, 159, 70, 0.95),
+        rgba(255, 159, 70, 0.95)
+      ),
+      url("/images/bottomfoil.svg") repeat;
+  }
+
+  .story-1 {
+    background: url("/images/bgnation.png") no-repeat;
+  }
 }
