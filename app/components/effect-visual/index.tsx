@@ -9,12 +9,36 @@ import Smoke4 from "../images/effect-ui/smoke/Smoke4";
 import Smoke5 from "../images/effect-ui/smoke/Smoke5";
 import Smoke6 from "../images/effect-ui/smoke/Smoke6";
 import Leaf1 from "../images/effect-ui/leaf/Leaf1";
+import Brick from "../images/effect-ui/brick";
+import Brick1 from "../images/effect-ui/brick/Brick1";
 
 const VisualsList = () => {
   const SMOKE_ANGLE = "-25deg";
 
   return (
     <>
+      <div
+        className={`absolute rotate-[${SMOKE_ANGLE}] scale-125 top-[75%] left-[18%] animate-pulselow1 z-10 `}
+      >
+        <Brick />
+      </div>
+      <div className={`absolute top-[75%] left-[55%] scale-50 opacity-50 `}>
+        <Brick1 />
+      </div>
+      <div
+        className={`absolute rotate-45 top-[74%] left-[56%] scale-50 opacity-50 `}
+      >
+        <Brick1 />
+      </div>
+      <div
+        className={`absolute rotate-90 top-[74%] left-[56%] scale-50 opacity-50 `}
+      >
+        <Brick1 />
+      </div>
+      <div className={`absolute top-[73%] left-[57%] scale-50 opacity-50 `}>
+        <Brick1 />
+      </div>
+
       <div
         className={`absolute rotate-[${SMOKE_ANGLE}] scale-125 top-[25%] left-[35%] animate-pulselow1 z-10 `}
       >

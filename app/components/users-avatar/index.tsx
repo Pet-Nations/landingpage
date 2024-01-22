@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Avatar from "/public/images/usersavatar.svg";
+import Avatar from "/public/images/users.png";
 
 const UserAvatar = ({ showMenu }: any) => {
   if (!showMenu) {

@@ -14,7 +14,7 @@ body {
         rgba(255, 159, 70, 0.95),
         rgba(255, 159, 70, 0.95)
       ),
-      url("/images/bg1.jpg") no-repeat center/cover;
+      url("/images/bgnation2.png") no-repeat center/cover;
   }
   .bg-section-2 {
     background: url("/images/bg2.webp") no-repeat center/cover;
@@ -22,9 +22,6 @@ body {
   .bg-foil-1 {
     background: url("/images/petcardfoil.png") no-repeat center/contain;
   }
-  /* .bg-foil-2nd-1 {
-    background: url("/images/petcardfoil.png") no-repeat center/contain;
-  } */
   .bg-foil-2 {
     background: url("/images/petcardfoil2.png") no-repeat center/contain;
   }
@@ -88,9 +85,5 @@ body {
         rgba(255, 159, 70, 0.95)
       ),
       url("/images/bottomfoil.svg") repeat;
-  }
-
-  .story-1 {
-    background: url("/images/bgnation.png") no-repeat;
   }
 }

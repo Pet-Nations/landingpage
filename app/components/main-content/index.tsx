@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import KartIcon from "../icons/KartIcon";
 import PetCardList from "../pet-card-list";
 import VisualsList from "../effect-visual";
+import Brick1 from "../images/effect-ui/brick/Brick1";
 
 const MainContent = () => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
@@ -21,7 +22,21 @@ const MainContent = () => {
         className={`absolute top-[55%] left-[50%]  animate-moveAndScale z-50`}
         onAnimationStart={handleAnimation}
       >
-        {<KartIcon />}
+        <KartIcon />
+      </div>
+      <div className={`absolute top-[57%] left-[75%]   z-10`}>
+        <div className={`absolute top-[75%] left-[55%] scale-50  `}>
+          <Brick1 />
+        </div>
+        <div className={`absolute rotate-45 top-[74%] left-[56%] scale-50 `}>
+          <Brick1 />
+        </div>
+        <div className={`absolute rotate-90 top-[74%] left-[56%] scale-50  `}>
+          <Brick1 />
+        </div>
+        <div className={`absolute top-[73%] left-[57%] scale-50 `}>
+          <Brick1 />
+        </div>
       </div>
 
       {showOtherVisuals && <VisualsList />}
