@@ -9,11 +9,11 @@ const HeaderFoil = () => {
       viewBox="0 0 909 61"
       fill="none"
     >
-      <path d="M909 -1L847.051 61H0V-1H909Z" fill="white" fill-opacity="0.21" />
+      <path d="M909 -1L847.051 61H0V-1H909Z" fill="white" fillOpacity="0.21" />
       <path
         d="M909 -1L847.051 61H0V-1H909Z"
         fill="url(#pattern0)"
-        fill-opacity="0.05"
+        fillOpacity="0.05"
       />
       <defs>
         <pattern

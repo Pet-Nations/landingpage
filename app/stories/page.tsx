@@ -1,7 +1,7 @@
-"use-client";
+"use client";
 
 import { Archivo_Black } from "next/font/google";
-import React from "react";
+import React, { useState } from "react";
 import StoryCard from "../components/story-card";
 import NationCard from "../components/images/story-page/NationCard";
 import WayHomeCard from "../components/images/story-page/NationCard1";
@@ -15,9 +15,8 @@ const archivo = Archivo_Black({
 });
 
 const StoriesPage = () => {
-  const backgroundId = 1;
+  const [backgroundId, setBackgroundId] = useState(1);
 
-  let bgClass = `story-${backgroundId}`;
   return (
     <div className="flex-auto relative bg-story-page">
       <p
@@ -27,7 +26,7 @@ const StoriesPage = () => {
       </p>
 
       <div className="flex justify-between mt-[100px] pl-[60px] pr-[60px]">
-        <div className="relative group">
+        <div onMouseEnter={() => setBackgroundId(1)} className="relative group">
           <p className="absolute top-[75px] left-[26px] text-[24px] font-[300] leading-[24px] text-[#FFF4E9]">
             Dream Walker
           </p>
@@ -47,13 +46,13 @@ const StoriesPage = () => {
                 d="M563 2V125H2V22.91L22.903 2H563Z"
                 fill="#1A1A1A"
                 stroke="#FFF4E9"
-                stroke-width="3"
+                strokeWidth="3"
                 stroke-miterlimit="10"
               />
             </svg>
           </div>
         </div>
-        <div className="relative group">
+        <div onMouseEnter={() => setBackgroundId(2)} className="relative group">
           <p className="absolute top-[75px] left-[26px] text-[24px] font-[300] leading-[24px] text-[#FFF4E9]">
             The Nation
           </p>
@@ -73,13 +72,13 @@ const StoriesPage = () => {
                 d="M563 2V125H2V22.91L22.903 2H563Z"
                 fill="#1A1A1A"
                 stroke="#FFF4E9"
-                stroke-width="3"
+                strokeWidth="3"
                 stroke-miterlimit="10"
               />
             </svg>
           </div>
         </div>
-        <div className="relative group">
+        <div onMouseEnter={() => setBackgroundId(3)} className="relative group">
           <p className="absolute top-[75px] left-[26px] text-[24px] font-[300] leading-[24px] text-[#FFF4E9]">
             Way Home
           </p>
@@ -99,7 +98,7 @@ const StoriesPage = () => {
                 d="M563 2V125H2V22.91L22.903 2H563Z"
                 fill="#1A1A1A"
                 stroke="#FFF4E9"
-                stroke-width="3"
+                strokeWidth="3"
                 stroke-miterlimit="10"
               />
             </svg>
@@ -137,7 +136,12 @@ const StoriesPage = () => {
             <span>Genji Le</span>, Founder
           </p>
         </div>
-        <div className={`flex-auto h-full ${bgClass}`}></div>
+        <div
+          style={{
+            backgroundImage: `url(/images/bgnation${backgroundId}.png)`,
+          }}
+          className={`flex-auto h-full border-solid border-dark-main border-[4px] transition-all`}
+        ></div>
       </div>
     </div>
   );
