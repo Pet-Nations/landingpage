@@ -13,7 +13,7 @@ const PetCardList = ({ showMenu }: any) => {
     {
       id: 2,
       name: "VISION MAP",
-      imgUrl: "",
+      imgUrl: "/vision",
     },
     {
       id: 3,
