@@ -22,22 +22,6 @@ const VisualsList = () => {
       >
         <Brick />
       </div>
-      <div className={`absolute top-[75%] left-[55%] scale-50 opacity-50 `}>
-        <Brick1 />
-      </div>
-      <div
-        className={`absolute rotate-45 top-[74%] left-[56%] scale-50 opacity-50 `}
-      >
-        <Brick1 />
-      </div>
-      <div
-        className={`absolute rotate-90 top-[74%] left-[56%] scale-50 opacity-50 `}
-      >
-        <Brick1 />
-      </div>
-      <div className={`absolute top-[73%] left-[57%] scale-50 opacity-50 `}>
-        <Brick1 />
-      </div>
 
       <div
         className={`absolute rotate-[${SMOKE_ANGLE}] scale-125 top-[25%] left-[35%] animate-pulselow1 z-10 `}

@@ -3,7 +3,6 @@ import React from "react";
 import SmallRegtangle from "../icons/SmallRegtangle";
 
 const NavItem = ({ name, url, icon }: any) => {
-  console.log(name, "name");
   const isLast = name === "COMMUNITY";
 
   return (
