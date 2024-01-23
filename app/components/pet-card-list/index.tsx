@@ -18,7 +18,7 @@ const PetCardList = ({ showMenu }: any) => {
     {
       id: 3,
       name: "OUR MODELS",
-      imgUrl: "",
+      imgUrl: "/models",
     },
     {
       id: 4,

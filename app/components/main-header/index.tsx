@@ -15,7 +15,11 @@ import MediaIcon from "../icons/MediaIcon";
 import PartnersIcon from "../icons/PartnersIcon";
 import ComunityIcon from "../icons/ComunityIcon";
 
-const MainHeader = () => {
+interface Props {
+  page?: "models";
+}
+
+const MainHeader = ({ page }: Props) => {
   const HEADER_ICON = [
     {
       icon: <DiscordIcon />,

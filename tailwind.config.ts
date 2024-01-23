@@ -31,6 +31,9 @@ const config: Config = {
         "dark-main": "#1A1A1A",
         "gray-main": "FFF4E9",
       },
+      screens: {
+        "3xl": "1650px",
+      },
       backgroundImage: {},
       animation: {
         heightUP: "heightUP 2.5s ease-out alternate",
@@ -56,6 +59,14 @@ const config: Config = {
           "leafFallWindBlowHozirontal 20s ease-in-out infinite",
         leafFallWindBlowHozirontal2:
           "leafFallWindBlowHozirontal2 20s ease-in-out infinite",
+        modelScale: "modelScale 2.4s ease-in-out infinite",
+
+        diamondMonveRight:
+          "diamondMonveRight 20s ease-in-out infinite alternate",
+        diamondMoveDown: "diamondMoveDown 10s ease-in-out infinite alternate",
+        diamondMoveDown1: "diamondMoveDown 10s ease-in-out infinite alternate",
+        diamondMoveDown2: "diamondMoveDown 5s ease-in-out infinite alternate",
+        diamondMoveLeft2: "diamondMoveLeft 3s ease-in-out infinite alternate",
       },
       keyframes: {
         heightUP: {
@@ -155,6 +166,44 @@ const config: Config = {
 
           "100%": {
             transform: "translate(100vw,100vh) rotate(360deg) ",
+          },
+        },
+
+        modelScale: {
+          "0%": {
+            transform: "scale(1 , 1)",
+          },
+
+          "50%": {
+            transform: "scale(1.2 , 1.15)",
+          },
+
+          "100%": {
+            transform: "scale(1,1)",
+          },
+        },
+        diamondMonveRight: {
+          "0%": {
+            transform: "translate(0,0)",
+          },
+          "100%": {
+            transform: "translate(25vw,-25vh)",
+          },
+        },
+        diamondMoveDown: {
+          "0%": {
+            transform: "translate(0,0)",
+          },
+          "100%": {
+            transform: "translate(0,50vh)",
+          },
+        },
+        diamondMoveLeft: {
+          "0%": {
+            transform: "translate(0,0)",
+          },
+          "100%": {
+            transform: "translate(-10vh,0)",
           },
         },
       },

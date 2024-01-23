@@ -48,6 +48,14 @@ body {
     color: #ff9f46;
   }
 
+  .back-hover-1 {
+    border: 1px solid var(--Logo-Text-color, #fff4e9);
+    cursor: pointer;
+  }
+  .back-hover-1 p {
+    color: #ff9f46;
+  }
+
   .pet-card-1 {
     backdrop-filter: blur(10.5px);
   }
@@ -85,5 +93,48 @@ body {
         rgba(255, 159, 70, 0.95)
       ),
       url("/images/bottomfoil.svg") repeat;
+  }
+
+  .model-hamster-price {
+    width: 393.685px;
+    height: 101.121px;
+    flex-shrink: 0;
+    border: 1px solid var(--Logo-Text-color, #fff4e9);
+    background: linear-gradient(
+      91deg,
+      rgba(255, 254, 254, 0.23) -47.11%,
+      rgba(255, 254, 254, 0.23) 110.32%
+    );
+    backdrop-filter: blur(15px);
+  }
+
+  .custom-bg-1 {
+    animation: glowAnimation 1.6s infinite alternate;
+    border-radius: 14px;
+    filter: blur(62px);
+    animation-delay: 1.6s;
+  }
+
+  .custom-bg-2 {
+    animation: glowAnimation 1.6s infinite alternate;
+    border-radius: 14px;
+    filter: blur(62px);
+    animation-delay: 1.6s;
+  }
+
+  @keyframes glowAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+
+  .moveUp {
+    animation: slide 1.6s infinite alternate;
+  }
+
+  .moveDown {
   }
 }
