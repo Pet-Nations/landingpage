@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ../..:/workspaces:cached
+    environment:
+      NODE_ENV: development
+      BIND: 0.0.0.0
+    command: sleep infinity
+    ports:
+      - '0.0.0.0:3001:3000'
+    networks:
+      - external_network
+      - internal_network
+
+networks:
+  external_network:
+  internal_network:
+    internal: true
