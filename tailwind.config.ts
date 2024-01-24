@@ -29,7 +29,10 @@ const config: Config = {
     extend: {
       colors: {
         "dark-main": "#1A1A1A",
-        "gray-main": "FFF4E9",
+        white1: "#FFF4e9",
+        white2: "rbga(255,255,255,0.6)",
+        white3: "rbga(255,255,255,0.48)",
+        orange1: "#FF9F46",
       },
       screens: {
         "3xl": "1650px",
@@ -67,6 +70,9 @@ const config: Config = {
         diamondMoveDown1: "diamondMoveDown 10s ease-in-out infinite alternate",
         diamondMoveDown2: "diamondMoveDown 5s ease-in-out infinite alternate",
         diamondMoveLeft2: "diamondMoveLeft 3s ease-in-out infinite alternate",
+        coinInHand: "coinInHand 10s ease-in-out infinite alternate",
+        stereoMovedUp: "stereoMovedUp 2s ease-in-out infinite alternate",
+        cloudMoveLeft: "cloudMoveLeft 20s linear infinite ",
       },
       keyframes: {
         heightUP: {
@@ -204,6 +210,35 @@ const config: Config = {
           },
           "100%": {
             transform: "translate(-10vh,0)",
+          },
+        },
+        coinInHand: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(270deg)",
+          },
+          "100%": {
+            transform: "rotate(0deg)",
+          },
+        },
+        stereoMovedUp: {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "100%": {
+            transform: "translateY(-20%)",
+          },
+        },
+
+        cloudMoveLeft: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+
+          "100%": {
+            transform: "translateX(-100%)",
           },
         },
       },

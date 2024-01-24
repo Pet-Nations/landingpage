@@ -19,6 +19,7 @@ import Icon6 from "../components/images/model-page/Icon6";
 import Icon7 from "../components/images/model-page/Icon7";
 import Icon8 from "../components/images/model-page/Icon8";
 import DotContainer from "../components/images/model-page/DotContainer";
+import Icon5 from "../components/images/model-page/Icon5";
 
 const items = [
   {
@@ -44,7 +45,7 @@ const items = [
   {
     title1: "GAMEHUB ",
     title2: "PETGAME",
-    icon: <Icon6 />,
+    icon: <Icon5 />,
   },
   {
     title1: "IP ",
@@ -148,7 +149,7 @@ const ModelsPage = () => {
           </div>
         </div>
 
-        <div className="absolute flex gap-[48px] flex-col left-[10vw] items-start  max-[1650px]:left-[32px]  ">
+        <div className="absolute flex gap-[48px] flex-col left-[10vw] items-start  max-[1650px]:left-[32px] min-[1921px]:left-[64px] ">
           {items.slice(0, 4).map((item: any, index: any) => {
             return (
               <div
@@ -169,7 +170,7 @@ const ModelsPage = () => {
           })}
         </div>
 
-        <div className="absolute flex gap-[48px] flex-col right-[10vw] items-start max-[1650px]:right-[32px]">
+        <div className="absolute flex gap-[48px] flex-col right-[10vw] items-start max-[1650px]:right-[32px] min-[1921px]:right-[64px]">
           {items.slice(4, 8).map((item: any, index: any) => {
             return (
               <div

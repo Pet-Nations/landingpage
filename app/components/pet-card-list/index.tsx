@@ -23,12 +23,12 @@ const PetCardList = ({ showMenu }: any) => {
     {
       id: 4,
       name: "ECONOMY",
-      imgUrl: "",
+      imgUrl: "/token",
     },
   ];
 
   return (
-    <div className="flex flex-col gap-[26px] h-screen absolute right-0 justify-center">
+    <div className="flex flex-col gap-[26px] h-full absolute right-0 justify-center">
       {PET_CARDS.map((card: Card) => (
         <PetCard key={card.id} {...card} showMenu={showMenu} />
       ))}

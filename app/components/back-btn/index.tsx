@@ -22,6 +22,7 @@ const BackBTN = ({ page }: any) => {
 
   switch (pathName) {
     case "/models":
+    case "/token":
       klassName =
         "bg-white flex w-[115px] h-10  absolute left-[7px] -top-[46px]  items-center justify-center gap-1 hover:back-hover-1";
       pName = "font-sm text-dark-main font-medium uppercase";

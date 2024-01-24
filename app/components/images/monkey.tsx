@@ -18,14 +18,14 @@ const MonekyImg = ({ isHover }: any) => {
           <path
             d="M558.5 1.5V198.5H1.5V25.7511L25.7415 1.5H558.5Z"
             stroke="white"
-            stroke-width="3"
+            strokeWidth="3"
           />
         </g>
       </svg>
     );
   }
 
-  return <Image src={DogFootPrint} alt={"img"} />;
+  return <Image className="h-full" src={DogFootPrint} alt={"img"} />;
 };
 
 export default MonekyImg;

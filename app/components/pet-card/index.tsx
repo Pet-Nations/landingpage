@@ -74,12 +74,12 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
     <Link
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`h-[200px]  w-[560px] -right-full relative inline-block transition-all ${
+      className={`h-[180px] w-[560px] -right-full relative inline-block transition-all ${
         show ? "animate-cardLeft" : ""
       }  `}
       href={imgUrl}
     >
-      <div className="absolute z-9 pet-card-1 ">
+      <div className="absolute z-9 pet-card-1 h-full ">
         {currentCard?.background}
         <div className="absolute z-10 bottom-[3px] left-[45%]">
           {currentCard?.avatar}
@@ -91,7 +91,7 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
       {isHover && (
         <div
           className={`
-          absolute h-[200px]z-20 w-full top-[13px] -right-[13px] z-10 `}
+          absolute h-[180px]z-20 w-full top-[13px] -right-[13px] z-10 `}
         >
           {currentCard?.background2}
 
