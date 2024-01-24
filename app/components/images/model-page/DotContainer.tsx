@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Dot from "./Dot";
 
 const DotContainer = () => {
-  const dotArr: any = [];
+  const [dotArr, setDotArr] = useState<any>([]);
 
   const calculateDots = () => {
+    let arr = [];
     const dotWidth = 217;
     const dotHeight = 227;
     const windowWidth = window.innerWidth;
@@ -15,12 +16,10 @@ const DotContainer = () => {
     for (let x = 150; x < windowWidth; x += dotWidth) {
       for (let y = 150; y < windowHeight; y += dotHeight) {
         const translateY =
-          dotArr.length % 2 === 0 ? "translateY(10px)" : "translateY(-10px)";
+          arr.length % 2 === 0 ? "translateY(10px)" : "translateY(-10px)";
         const className =
-          dotArr.length % 2 === 0
-            ? "animate-diamondMoveDown"
-            : "animate-pulselow";
-        dotArr.push(
+          arr.length % 2 === 0 ? "animate-diamondMoveDown" : "animate-pulselow";
+        arr.push(
           <div
             key={`${x}-${y}`}
             className={`${className}`}
@@ -37,9 +36,13 @@ const DotContainer = () => {
         );
       }
     }
+
+    setDotArr(arr);
   };
 
-  calculateDots();
+  useEffect(() => {
+    calculateDots();
+  }, []);
 
   return <div className="absolute top">{dotArr}</div>;
 };
