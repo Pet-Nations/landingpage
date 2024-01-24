@@ -74,6 +74,12 @@ body {
     animation: slide 100s linear infinite;
   }
 
+  .bg-bottom-foil1 {
+    background: #1a1a1a url("/images/bottomfoil.svg") repeat-x bottom;
+    animation: slide 100s linear infinite;
+    opacity: 0.9;
+  }
+
   @keyframes slide {
     0% {
       transform: translate(0);
@@ -136,5 +142,12 @@ body {
   }
 
   .moveDown {
+  }
+
+  .tokenomic-page {
+  }
+
+  .parenthoversvg:hover svg path {
+    fill: #1a1a1a; /* Change this to the desired color */
   }
 }
