@@ -8,7 +8,7 @@ const UserAvatar = ({ showMenu }: any) => {
   }
 
   return (
-    <div className="absolute -bottom-[300px] -left-[250px] animate-moveUp flex flex-col items-end">
+    <div className="absolute -bottom-[300px] -left-[365px] animate-moveUp flex flex-col items-end">
       <Image alt="user-avatar" src={Avatar} width={105} height={55} />
       <p className="text-[#FFF4E9] text-[32px] mt-4 font-bold leading-[32px]">
         1.8 Million+

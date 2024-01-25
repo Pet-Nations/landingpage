@@ -4,15 +4,15 @@ const generateTransFunc = () => {
   let obj: any = {
     "0%": { transform: " translateX(0) scale(1) rotate(-2deg)" },
     "1%": {
-      transform: "translate(-30vw , -10vh ) scale(3.55) rotate(-15deg)",
+      transform: "translate(-30vw , -20vh ) scale(4.5) rotate(-15deg)",
     },
   };
 
   for (let i = 2; i < 10000; i++) {
-    let h = i % 2 === 0 ? "-3vh" : "-10vh";
+    let h = i % 2 === 0 ? "-13vh" : "-20vh";
 
     obj[`${i}%`] = {
-      transform: `translate(-30vw , ${h} ) scale(3.55) rotate(-15deg)`,
+      transform: `translate(-30vw , ${h} ) scale(4.5) rotate(-15deg)`,
     };
   }
 
@@ -39,8 +39,10 @@ const config: Config = {
       },
       backgroundImage: {},
       animation: {
-        heightUP: "heightUP 2.5s ease-out alternate",
-        heightDOWN: "heightDOWN 2.5s ease-out alternate",
+        heightUP: "heightUP 1.5s ease-in-out forwards",
+        heightUP1: "heightUP1 1.5s ease-in-out forwards",
+        heightDOWN: "heightDOWN 1.5s ease-in-out forwards",
+        heightDOWN1: "heightDOWN1 1.5s ease-in-out forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
         moveAndScale: "moveAndScale 200s ease-in-out forwards ",
         flashScreen: "flashScreen .5s ease-in-out forwards",
@@ -53,11 +55,13 @@ const config: Config = {
         pulselow3: "pulselow 1s ease-in-out infinite",
         pulselow4: "pulselow 4s ease-in-out infinite",
         petCardTextDOwn: "petCardTextDOwn .3s linear forwards",
-        moveRightThenDisappear: "moveRightThenDisappear 2.5s linear infinite",
+        moveRightThenDisappear: "moveRightThenDisappear 900ms linear infinite",
+        moveRightThenDisappear1:
+          "moveRightThenDisappear1 900ms linear infinite",
         moveRightThenSlowDisappear:
-          "moveRightThenSlowDisappear 3s ease-in-out infinite",
+          "moveRightThenSlowDisappear 900ms ease-in-out infinite",
         moveLeftThenSlowDisappear:
-          "moveLeftThenSlowDisappear 3s ease-in-out infinite",
+          "moveLeftThenSlowDisappear 900ms ease-in-out infinite",
         leafFallWindBlowHozirontal:
           "leafFallWindBlowHozirontal 20s ease-in-out infinite",
         leafFallWindBlowHozirontal2:
@@ -73,15 +77,28 @@ const config: Config = {
         coinInHand: "coinInHand 10s ease-in-out infinite alternate",
         stereoMovedUp: "stereoMovedUp 2s ease-in-out infinite alternate",
         cloudMoveLeft: "cloudMoveLeft 20s linear infinite ",
+        coinMoveRight: "coinMoveRight 5s linear infinite ",
+        coinMoveRight1: "coinMoveRight1 5s linear infinite ",
+        coinMoveRight2: "coinMoveRight2 10s linear infinite ",
+        cloudKart2: "cloudKart 3200ms linear infinite ",
+        cloudKart1: "cloudKart1 3200ms ease-in infinite ",
       },
       keyframes: {
         heightUP: {
-          "0%,100%": { transform: "translateY(100%)" },
-          "50%": { transform: "translateY(40%)" },
+          "0%": { transform: "translateY(100%)" },
+          "100%": { transform: "translateY(50%)" },
+        },
+        heightUP1: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(-100%)" },
+        },
+        heightDOWN1: {
+          "0%": { transform: "translateY(50%)" },
+          "100%": { transform: "translateY(100%)" },
         },
         heightDOWN: {
-          "0%,100%": { transform: "translateY(-100%)" },
-          "50%": { transform: "translateY(-40%)" },
+          "0%%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(-50%)" },
         },
         wiggle: {
           "0%, 100%": { transform: "rotate(-2deg)" },
@@ -94,7 +111,7 @@ const config: Config = {
         },
         cardLeft: {
           "0%, ": { right: "-100%" },
-          "100%": { right: "29px" },
+          "100%": { right: "60px" },
         },
         kartTransY: {
           "0%, 100%": { transform: "translateY(0)" },
@@ -103,7 +120,7 @@ const config: Config = {
         moveUp: {
           "0%, ": { bottom: "-300px" },
           "80%, ": { bottom: "-300px" },
-          "100%": { bottom: "150px" },
+          "100%": { bottom: "20px" },
         },
         fadeIn: {
           "0%, 100%": { opacity: "0" },
@@ -115,8 +132,26 @@ const config: Config = {
         },
         moveRightThenDisappear: {
           "0%": { transform: "translate(0, 0)", opacity: "1", scale: "1.5" },
-          "50%": { transform: "translate(50% , 0)", opacity: ".75" },
-          "100%": { transform: "translate(100%,-100%)", opacity: ".5" },
+          "50%": { transform: "translate(50% , 0) scale(1.6)", opacity: ".3" },
+          "100%": {
+            transform: "translate(100%,-100%) scale(1.5)",
+            opacity: ".5",
+          },
+        },
+        moveRightThenDisappear1: {
+          "0%": {
+            transform: "translate(0, 0) rotate(-17.969deg)",
+            opacity: "1",
+            scale: "1.5",
+          },
+          "50%": {
+            transform: "translate(50% , 0) rotate(-17.969deg)",
+            opacity: ".3",
+          },
+          "100%": {
+            transform: "translate(100%,-100%) rotate(-17.969deg)",
+            opacity: ".5",
+          },
         },
         moveRightThenSlowDisappear: {
           "0%": { transform: "translate(0, 0)", opacity: ".5", scale: ".5" },
@@ -239,6 +274,103 @@ const config: Config = {
 
           "100%": {
             transform: "translateX(-100%)",
+          },
+        },
+
+        coinMoveRight: {
+          "0%": {
+            transform: "translate(0,0) rotate(0deg)",
+          },
+          "60%": {
+            transform: "translate(457px , 0) rotate(180deg)",
+            opacity: "1",
+          },
+          "85%": {
+            transform: "translate(457px , -135px)  rotate(0deg)",
+            opacity: "0.5",
+          },
+          "100%": {
+            transform: "translate(500px , -135px)  rotate(45deg)",
+            opacity: "0",
+          },
+        },
+        coinMoveRight1: {
+          "0%": {
+            transform: "translate(0,0) rotate(0deg)",
+          },
+          "80%": {
+            transform: "translate(475px , 0) rotate(180deg)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translate(475px , 100px)  rotate(0deg)",
+            opacity: "0",
+          },
+        },
+        coinMoveRight2: {
+          "0%": {
+            transform: "translate(0,0) rotate(0deg)",
+          },
+          "20%": {
+            transform: "translate(270px , 0) rotate(180deg)",
+            opacity: "1",
+          },
+          "40%": {
+            transform: "translate(270px , 235px) rotate(0deg)",
+            opacity: "1",
+          },
+          "60%": {
+            transform: "translate(690px , 235px) rotate(180deg)",
+            opacity: "1",
+          },
+          "75%": {
+            transform: "translate(690px , 60px)  rotate(0deg)",
+            opacity: "1",
+          },
+          "95%": {
+            transform: "translate(690px , 60px)  rotate(180deg)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translate(800px , 60px)  rotate(120deg)",
+            opacity: "0",
+          },
+        },
+        cloudKart: {
+          "0%": {
+            transform: "translate(0,0) scale(1.8) rotate(-45deg) ",
+          },
+
+          "15%": {
+            transform: "translate(15px , -15px)  scale(1.8) rotate(-45deg)  ",
+            opacity: "1",
+          },
+          "20%": {
+            transform: "translate(25px , -30px)  scale(1.8) rotate(-45deg)   ",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translate(25px , -30px)  scale(1.8) rotate(-45deg)   ",
+            opacity: "0",
+          },
+        },
+
+        cloudKart1: {
+          "0%": {
+            transform: "translate(0,0) scale(1.8) rotate(-45deg) ",
+          },
+
+          "15%": {
+            transform: "translate(30px , -30px)  scale(1.8) rotate(-45deg)  ",
+            opacity: "1",
+          },
+          "20%": {
+            transform: "translate(50px , -50px)  scale(1.8) rotate(-45deg)   ",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translate(25px , -30px)  scale(1.8) rotate(-45deg)   ",
+            opacity: "0",
           },
         },
       },

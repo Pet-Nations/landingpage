@@ -19,9 +19,17 @@ import TigerImage from "/public/images/tigerdude.png";
 const TokenNomic = () => {
   const [section1Width, setSection1Width] = useState(0);
 
+  const [isAnimateCoinText1, setIsAnimateCoinText1] = useState(false);
+
   useEffect(() => {
     setSection1Width(window?.innerWidth);
   }, []);
+
+  const handleCoin1Animation = (e: any) => {
+    if (e.animationName === "coinInHand") {
+      setIsAnimateCoinText1(true);
+    }
+  };
 
   return (
     <div className="overflow-x-hidden">
@@ -81,48 +89,131 @@ const TokenNomic = () => {
           </div>
         </div>
       </section>
-      <section className="h-[919px] bg-[#FFF4E9] flex items-center justify-center">
+      <section className="h-[919px] bg-[#FFF4E9] flex items-center justify-center z-30">
         <Image src={Section2Img} alt="image"></Image>
       </section>
       <section className="h-[1080px] flex bg-dark-main relative items-center justify-center ">
         <div className="relative flex  justify-end  p-[40.85px] max-w-[1920px] w-[1920px]">
-          <Image src={Section3Img} alt="image" className="mr-"></Image>
+          <Image
+            src={Section3Img}
+            alt="image"
+            className="relative z-10"
+          ></Image>
+
+          {/* dog head */}
           <Image
             src={Section3Img2}
             alt="image"
-            className="absolute left-[213px] top-[15px] z-10"
+            className="absolute left-[213px] top-[15px] z-30  max-[1650px]:left-[64px]   "
           ></Image>
+
+          {/* dog avatar */}
           <Image
             src={Section3Img1}
             alt="image"
-            className="absolute left-[213px] top-[88px]"
+            className="absolute left-[213px] top-[88px] z-20 max-[1650px]:left-[64px]  "
           ></Image>
-          <div className="absolute  left-[478px] top-[302px] animate-coinInHand ">
+
+          {/* coin in dog hand */}
+          <div
+            onAnimationIteration={handleCoin1Animation}
+            className="absolute  left-[478px] top-[302px] animate-coinInHand z-50  max-[1650px]:left-[325px]  "
+          >
             <Coin1 />
           </div>
 
-          <p className=" absolute uppercase leading-normal top-[163px] left-[545px] text-white text-[16px] font-normal tracking-[0.96px]">
-            Name ID:
-          </p>
-          <p className="text-white text-right text-[40px] font-bold tracking-[2.4px] uppercase absolute top-[173px] left-[444px]">
-            August
-          </p>
-          <p className="text-white text-[20px] italic font-[300] leading-normal uppercase tracking-[1.2px] absolute top-[222px] left-[518px]">
-            #PN1688
-          </p>
+          <div className="absolute w-[279px] h-[106px] z-50 top-[93.82px] left-[1107px]">
+            <p
+              // onAnimationEnd={() => setIsAnimateCoinText1(false)}
+              className={`text-white1 text-[32px] font-bold leading-normal ${
+                isAnimateCoinText1 ? "animcustom1" : ""
+              }`}
+            >
+              Pet Nations Rank
+            </p>
+            <p
+              className={`
+              text-white1 max-w-[83px] inline-block text-[16px] font-[300] leading-6 opacity-[0.7]
+              ${isAnimateCoinText1 ? "animcustom2" : ""}
+              `}
+            >
+              Earn more New feeds Priority
+            </p>
+          </div>
 
-          <p className=" absolute uppercase leading-normal top-[540px] left-[545px] text-white text-[16px] font-normal tracking-[0.96px]">
+          <div className="absolute w-[500px] h-[82px] z-50 top-[557px] right-[550.15px] max-[1650px]:right-[250px]">
+            <p
+              // onAnimationEnd={() => setIsAnimateCoinText1(false)}
+              className={`text-white1 text-[32px] font-bold leading-normal ${
+                isAnimateCoinText1 ? "animcustom3" : ""
+              }`}
+            >
+              Pet Nations Native Token
+            </p>
+            <p
+              className={`
+              text-white1 max-w-[260px] inline-block text-[16px] font-[300] leading-6 opacity-[0.7]
+              ${isAnimateCoinText1 ? "animcustom2" : ""}
+              `}
+            >
+              Voting rights Higher rank VIP club Spend to burn
+            </p>
+          </div>
+
+          <div className="absolute w-[500px] h-[82px] z-50 top-[760px] right-[100px] max-[1650px]:right-[0px] ">
+            <p
+              // onAnimationEnd={() => setIsAnimateCoinText1(false)}
+              className={`text-white1 text-[32px] font-bold leading-normal ${
+                isAnimateCoinText1 ? "animcustom4" : ""
+              }`}
+            >
+              Pet Nations Points
+            </p>
+            <p
+              className={`
+              text-white1 max-w-[260px] inline-block text-[16px] font-[300] leading-6 opacity-[0.7]
+              ${isAnimateCoinText1 ? "animcustom2" : ""}
+              `}
+            >
+              Spend in ecosystem
+            </p>
+          </div>
+
+          <div className="absolute  left-[550px] top-[230px] animate-coinMoveRight z-[11] ">
+            <Coin1 />
+          </div>
+          <div className="absolute  left-[550px] top-[465px] animate-coinMoveRight1 z-[11] ">
+            <Coin1 />
+          </div>
+
+          <div className="absolute  left-[550px] top-[695px] animate-coinMoveRight2 z-[11] ">
+            <Coin1 />
+          </div>
+
+          <div className="absolute top-[130px] left-[445px] z-50 flex flex-col gap-0 items-end max-[1650px]:left-[290px] ">
+            <p className=" uppercase leading-normal  text-white text-[16px] font-normal tracking-[0.96px] z-20">
+              Name ID:
+            </p>
+            <p className=" z-20 text-white text-right text-[40px] font-bold tracking-[2.4px] uppercase ]">
+              August
+            </p>
+            <p className="z-20 text-white text-[20px] italic font-[300] leading-normal uppercase tracking-[1.2px]  ">
+              #PN1688
+            </p>
+          </div>
+
+          <p className=" absolute uppercase leading-normal top-[540px] left-[545px] text-white text-[16px] font-normal tracking-[0.96px]  max-[1650px]:left-[390px]  z-50">
             GENUINE:
           </p>
 
-          <div className="flex items-center gap-2 absolute top-[560px] left-[475px] z-20">
+          <div className="flex items-center gap-2 absolute top-[560px] left-[475px]  z-50  max-[1650px]:left-[320px]">
             <StarIcon />
             <p className=" text-[24px] font-bold tracking-[1.44px]  text-white uppercase leading-normal   ">
               VERIFIED
             </p>
           </div>
 
-          <div className="w-[430px] h-[438px] absolute top-[520px] left-[214px] ">
+          <div className="w-[430px] h-[438px] absolute top-[520px] left-[214px] z-[40] max-[1650px]:left-[64px]  ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="430"
@@ -150,7 +241,7 @@ const TokenNomic = () => {
             </svg>
           </div>
 
-          <div className="absolute flex w-[380px] h-[45px] items-center justify-between top-[700px] left-[239px]">
+          <div className="absolute flex w-[380px] h-[45px] items-center justify-between top-[700px] left-[239px] max-[1650px]:left-[90px] z-50">
             <div className="flex flex-col justify-center items-center w-[94px]">
               <p className="text-[12px] font-[300] leading-normal uppercase text-dark-main">
                 BREED
@@ -183,7 +274,7 @@ const TokenNomic = () => {
 
           {/* Stereo Animation */}
 
-          <div className="absolute top-[810px] left-[252px] w-[360px] h-[168px]">
+          <div className="absolute top-[810px] left-[252px] w-[360px] h-[168px] max-[1650px]:left-[94px]  z-50">
             <StereosList />
           </div>
         </div>
@@ -197,8 +288,8 @@ const TokenNomic = () => {
               Pet Nations
             </span>
           </p>
-          <div className="absolute top-[280px] left-[212px] z-20 flex gap-6">
-            <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.1] ">
+          <div className="absolute top-[280px] left-[212px] flex gap-6 max-[1650px]:left-[64px] z-[51] ">
+            <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.05] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
@@ -220,7 +311,7 @@ const TokenNomic = () => {
               </p>
             </div>
 
-            <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.1] ">
+            <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.05] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="66"
@@ -240,7 +331,7 @@ const TokenNomic = () => {
                 Create NFT Create contents Conquer and complete tasks
               </p>
             </div>
-            <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.1] ">
+            <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.05] ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="80"
@@ -262,7 +353,7 @@ const TokenNomic = () => {
             </div>
           </div>
           <Image
-            className="absolute right-[212px] bottom-[-515px]"
+            className="absolute right-[212px] bottom-[-515px] z-50"
             src={TigerImage}
             alt="tigerimage"
           ></Image>

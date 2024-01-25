@@ -6,7 +6,7 @@ import PetCardList from "../pet-card-list";
 import VisualsList from "../effect-visual";
 import Brick1 from "../images/effect-ui/brick/Brick1";
 
-const MainContent = () => {
+const MainContent = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
 
   const handleAnimation = async (e: any) => {
@@ -19,7 +19,10 @@ const MainContent = () => {
   return (
     <div className="flex-auto bg-section-2 relative">
       <div
-        className={`absolute top-[55%] left-[50%]  animate-moveAndScale z-50`}
+        className={`absolute top-[58%] left-[55%] ${
+          showMainPage ? "animate-moveAndScale" : ""
+        } 
+        z-50`}
         onAnimationStart={handleAnimation}
       >
         <KartIcon />

@@ -74,7 +74,7 @@ const MainHeader = ({ page }: Props) => {
   ];
 
   return (
-    <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative">
+    <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative z-[1000]">
       <div className="absolute top-[50%] z-50">
         <Link href={"/"}>
           <MainLogo />
