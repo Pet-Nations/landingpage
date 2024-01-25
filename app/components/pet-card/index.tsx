@@ -17,7 +17,6 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
   const [show, setShow] = useState(false);
 
   const [isHover, setIsHover] = useState(false);
-
   useEffect(() => {
     const delay = (id - 1) * 200;
     let timer: any;
@@ -30,7 +29,7 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
     return () => clearTimeout(timer);
   }, [id, showMenu]);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (e: any) => {
     setIsHover(true);
   };
   const handleMouseLeave = () => {
@@ -72,9 +71,10 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
 
   return (
     <Link
+      id={`${currentCard?.id}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`h-[180px] w-[560px] -right-full relative inline-block transition-all ${
+      className={` group h-[160px] w-[448px] -right-full relative inline-block transition-all ${
         show ? "animate-cardLeft" : ""
       }  `}
       href={imgUrl}
@@ -91,7 +91,7 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
       {isHover && (
         <div
           className={`
-          absolute h-[180px]z-20 w-full top-[13px] -right-[13px] z-10 `}
+          absolute h-[160px] z-20 w-full top-[13px] -right-[13px] `}
         >
           {currentCard?.background2}
 

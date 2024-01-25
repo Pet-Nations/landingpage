@@ -9,8 +9,8 @@ const MonekyImg = ({ isHover }: any) => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="560"
-        height="200"
+        width="448"
+        height="160"
         viewBox="0 0 560 200"
         fill="none"
       >
@@ -25,7 +25,14 @@ const MonekyImg = ({ isHover }: any) => {
     );
   }
 
-  return <Image className="h-full" src={DogFootPrint} alt={"img"} />;
+  return (
+    <Image
+      style={{ width: "100%", height: "100%" }}
+      className="h-full"
+      src={DogFootPrint}
+      alt={"img"}
+    />
+  );
 };
 
 export default MonekyImg;

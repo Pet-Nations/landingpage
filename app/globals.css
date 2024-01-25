@@ -16,8 +16,12 @@ body {
       ),
       url("/images/bgnation2.png") no-repeat center/cover;
   }
+
+  .badkart {
+    transform: translate3d(-42px, 0px, 135px);
+  }
   .bg-section-2 {
-    background: url("/images/bg2.webp") no-repeat center/cover;
+    background: url("/images/bg2.png") no-repeat center/cover;
   }
   .bg-foil-1 {
     background: url("/images/petcardfoil.png") no-repeat center/contain;
@@ -149,5 +153,74 @@ body {
 
   .parenthoversvg:hover svg path {
     fill: #1a1a1a; /* Change this to the desired color */
+  }
+
+  .animcustom1 {
+    animation: ctext1 4s ease-in-out infinite alternate;
+  }
+
+  .animcustom2 {
+    animation: ctext2 4s ease-in-out infinite alternate;
+  }
+
+  .animcustom3 {
+    animation: ctext3 5s ease-in-out infinite alternate;
+  }
+  .animcustom4 {
+    animation: ctext4 5s ease-in-out infinite alternate;
+  }
+
+  @keyframes ctext1 {
+    from {
+      color: #fff4e9;
+      scale: 1;
+    }
+    50% {
+      color: #ff6058;
+      scale: 1.1;
+    }
+    to {
+      color: #fff4e9;
+      scale: 1;
+    }
+  }
+  @keyframes ctext2 {
+    from {
+      scale: 1;
+    }
+    50% {
+      scale: 1.1;
+    }
+    to {
+      scale: 1;
+    }
+  }
+  @keyframes ctext3 {
+    from {
+      color: #fff4e9;
+      scale: 1;
+    }
+    50% {
+      color: #ff9f46;
+      scale: 1.1;
+    }
+    to {
+      color: #fff4e9;
+      scale: 1;
+    }
+  }
+  @keyframes ctext4 {
+    from {
+      color: #fff4e9;
+      scale: 1;
+    }
+    50% {
+      color: #44b05c;
+      scale: 1.1;
+    }
+    to {
+      color: #fff4e9;
+      scale: 1;
+    }
   }
 }
