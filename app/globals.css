@@ -69,7 +69,12 @@ body {
   }
 
   .stroketext {
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-strokewidth: 2px;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  .stroketext1 {
+    -webkit-text-strokewidth: 1px;
     -webkit-text-stroke-color: #fff;
   }
 
@@ -222,5 +227,44 @@ body {
       color: #fff4e9;
       scale: 1;
     }
+  }
+
+  .B1650C1 {
+    animation: B1650C1 4s ease-in-out infinite;
+  }
+  .coinMoveRight {
+    animation: coinMoveRight 4s ease-in-out infinite;
+  }
+
+  @keyframes B1650C1 {
+    60% {
+      transform: translate(475px, 0) rotate(180deg);
+    }
+    85% {
+      transform: translate(475px, -135px) rotate(0deg);
+    }
+    100% {
+      transform: translate(500px, -135px) rotate(45deg);
+    }
+  }
+  @keyframes coinMoveRight {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    60% {
+      transform: translate(475px, 0) rotate(180deg);
+      opacity: 1;
+    }
+    85% {
+      transform: translate(475px, -135px) rotate(0deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(500px, -135px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  .flipdown {
+    transform: rotateX(180deg);
   }
 }

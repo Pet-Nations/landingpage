@@ -8,7 +8,7 @@ interface Props {
 
 const MainFooter = ({ page }: Props) => {
   return (
-    <div className="h-10 bg-dark-main relative z-50">
+    <div className="h-10 bg-dark-main relative z-[5000]">
       <BackBTN page={page} />
 
       <p className="h-full flex items-center justify-center text-sm leading-[26px] text-[#FFF4E9]">
