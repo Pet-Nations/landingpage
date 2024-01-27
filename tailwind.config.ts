@@ -35,7 +35,17 @@ const config: Config = {
         orange1: "#FF9F46",
       },
       screens: {
+        smallPhone: "460px",
         "3xl": "1650px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        laptop: "1200px",
+        tablet: "996px",
+        laptop1: "1450px",
+        laptopLarge: "1650px",
+        bigscreen: "1920px",
+        "2xl": "1536px",
       },
       backgroundImage: {},
       animation: {
@@ -77,9 +87,11 @@ const config: Config = {
         coinInHand: "coinInHand 10s ease-in-out infinite alternate",
         stereoMovedUp: "stereoMovedUp 2s ease-in-out infinite alternate",
         cloudMoveLeft: "cloudMoveLeft 20s linear infinite ",
-        coinMoveRight: "coinMoveRight 5s linear infinite ",
+        coinMoveRight1650: "coinMoveRightLap 5s linear infinite ",
         coinMoveRight1: "coinMoveRight1 5s linear infinite ",
         coinMoveRight2: "coinMoveRight2 10s linear infinite ",
+        coinMoveRightLap: "coinMoveRightLap 5s linear infinite ",
+        coin3MoveRight1650: "coin3MoveRight1650 5s linear infinite ",
         cloudKart2: "cloudKart 3200ms linear infinite ",
         cloudKart1: "cloudKart1 3200ms ease-in infinite ",
       },
@@ -277,20 +289,35 @@ const config: Config = {
           },
         },
 
-        coinMoveRight: {
+        coinMoveRight1650: {
           "0%": {
             transform: "translate(0,0) rotate(0deg)",
           },
           "60%": {
-            transform: "translate(457px , 0) rotate(180deg)",
+            transform: "translate(475px , 0) rotate(180deg)",
             opacity: "1",
           },
           "85%": {
-            transform: "translate(457px , -135px)  rotate(0deg)",
+            transform: "translate(475px , -135px)  rotate(0deg)",
             opacity: "0.5",
           },
           "100%": {
             transform: "translate(500px , -135px)  rotate(45deg)",
+            opacity: "0",
+          },
+        },
+
+        coinMoveRightLap: {
+          "0%": {
+            transform: "translate(0,0) rotate(0deg)",
+            opacity: "0",
+          },
+          "60%": {
+            transform: "translate(300px , 0) rotate(180deg)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translate(320px , -135px)  rotate(45deg)",
             opacity: "0",
           },
         },
@@ -307,28 +334,58 @@ const config: Config = {
             opacity: "0",
           },
         },
+
+        coin3MoveRight1650: {
+          "0%": {
+            transform: "translate(0,0) rotate(0deg)",
+          },
+          "20%": {
+            transform: "translate(240px , 0) rotate(180deg)",
+            opacity: "1",
+          },
+          "40%": {
+            transform: "translate(240px , 235px) rotate(0deg)",
+            opacity: "1",
+          },
+          "60%": {
+            transform: "translate(700px , 235px) rotate(180deg)",
+            opacity: "1",
+          },
+          "75%": {
+            transform: "translate(700px , 60px)  rotate(0deg)",
+            opacity: "1",
+          },
+          "95%": {
+            transform: "translate(700px , 60px)  rotate(180deg)",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translate(800px , 60px)  rotate(120deg)",
+            opacity: "0",
+          },
+        },
         coinMoveRight2: {
           "0%": {
             transform: "translate(0,0) rotate(0deg)",
           },
           "20%": {
-            transform: "translate(270px , 0) rotate(180deg)",
+            transform: "translate(285px , 0) rotate(180deg)",
             opacity: "1",
           },
           "40%": {
-            transform: "translate(270px , 235px) rotate(0deg)",
+            transform: "translate(285px , 235px) rotate(0deg)",
             opacity: "1",
           },
           "60%": {
-            transform: "translate(690px , 235px) rotate(180deg)",
+            transform: "translate(710px , 235px) rotate(180deg)",
             opacity: "1",
           },
           "75%": {
-            transform: "translate(690px , 60px)  rotate(0deg)",
+            transform: "translate(710px , 60px)  rotate(0deg)",
             opacity: "1",
           },
           "95%": {
-            transform: "translate(690px , 60px)  rotate(180deg)",
+            transform: "translate(710px , 60px)  rotate(180deg)",
             opacity: "1",
           },
           "100%": {

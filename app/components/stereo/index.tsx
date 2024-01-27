@@ -97,60 +97,106 @@ const StereosList = () => {
   ];
 
   return (
-    <div className="flex gap-4 ">
-      {Items.map((el: any, index: any) => {
-        return (
-          <div
-            key={index}
-            className="animate-stereoMovedUp relative"
-            style={{
-              animationDelay: `${el.delay}ms`,
-            }}
-          >
-            <div className="group w-[49px] h-[49px] flex items-center justify-center  absolute right-[1.5px] top-[10px] hover:scale-110 hover:bg-[#FA5252] transition-all">
-              {el?.iconMain}
+    <>
+      {/* 1450 hidden */}
+      <div className="flex gap-4 max-[1450px]:hidden  ">
+        {Items.map((el: any, index: any) => {
+          return (
+            <div
+              key={index}
+              className="animate-stereoMovedUp relative"
+              style={{
+                animationDelay: `${el.delay}ms`,
+              }}
+            >
+              <div className="group w-[49px] h-[49px] flex items-center justify-center  absolute right-[1.5px] top-[10px] hover:scale-110 hover:bg-[#FA5252] transition-all">
+                {el?.iconMain}
 
-              <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[55px] transition-all right-[-10px] text-white uppercase text-center ">
-                {el.text}
+                <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[55px] transition-all right-[-10px] text-white uppercase text-center ">
+                  {el.text}
+                </div>
+
+                {index === 1 || index === 3 ? (
+                  <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[85px] transition-all right-[-10px] text-white uppercase text-center">
+                    {el.text2}
+                  </div>
+                ) : null}
               </div>
 
-              {index === 1 || index === 3 ? (
-                <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[85px] transition-all right-[-10px] text-white uppercase text-center">
-                  {el.text2}
-                </div>
-              ) : null}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="78"
+                height="130"
+                viewBox="0 0 78 130"
+                fill="none"
+              >
+                <path
+                  d="M66.3069 1.00614L10.4324 1.00199L3.49268 9.09933L3.49279 128.651L66.3174 128.651L66.3069 1.00614Z"
+                  fill="#FFF4E9"
+                  stroke="#1F2326"
+                  strokeWidth="2"
+                />
+                <rect
+                  width="5.60983"
+                  height="34.9056"
+                  transform="matrix(-1 0 0 1 5.60986 79.1631)"
+                  fill="#1F2326"
+                />
+                <rect
+                  width="49.8652"
+                  height="49.8652"
+                  transform="matrix(-1 0 0 1 77.2905 9.97559)"
+                  fill="#1F2326"
+                />
+              </svg>
             </div>
+          );
+        })}
+      </div>
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="78"
-              height="130"
-              viewBox="0 0 78 130"
-              fill="none"
+      <div className=" hidden  gap-4 max-[1450px]:flex max-[1450px]:gap-6  ">
+        {Items.map((el: any, index: any) => {
+          return (
+            <div
+              key={index}
+              className="animate-stereoMovedUp relative"
+              style={{
+                animationDelay: `${el.delay}ms`,
+              }}
             >
-              <path
-                d="M66.3069 1.00614L10.4324 1.00199L3.49268 9.09933L3.49279 128.651L66.3174 128.651L66.3069 1.00614Z"
-                fill="#FFF4E9"
-                stroke="#1F2326"
-                strokeWidth="2"
-              />
-              <rect
-                width="5.60983"
-                height="34.9056"
-                transform="matrix(-1 0 0 1 5.60986 79.1631)"
-                fill="#1F2326"
-              />
-              <rect
-                width="49.8652"
-                height="49.8652"
-                transform="matrix(-1 0 0 1 77.2905 9.97559)"
-                fill="#1F2326"
-              />
-            </svg>
-          </div>
-        );
-      })}
-    </div>
+              <div className="group bg-dark-main w-[49px] h-[49px] flex items-center justify-center  absolute right-[1.5px] top-[10px] left-7 hover:scale-110 hover:bg-[#FA5252] transition-all">
+                {el?.iconMain}
+
+                <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[55px] transition-all right-[-10px] text-white uppercase text-center ">
+                  {el.text}
+                </div>
+
+                {index === 1 || index === 3 ? (
+                  <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[85px] transition-all right-[-10px] text-white uppercase text-center">
+                    {el.text2}
+                  </div>
+                ) : null}
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="57"
+                height="113"
+                viewBox="0 0 57 113"
+                fill="none"
+              >
+                <path
+                  d="M55.6784 1.00364L7.15452 1.00003L1.17383 7.97666L1.17392 112L55.6876 112L55.6784 1.00364Z"
+                  fill="#FFF4E9"
+                  stroke="#1F2326"
+                  strokeWidth="2"
+                />
+              </svg>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

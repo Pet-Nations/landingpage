@@ -8,13 +8,16 @@ const DotContainer = () => {
 
   const calculateDots = () => {
     let arr = [];
-    const dotWidth = 217;
-    const dotHeight = 227;
+    const dotWidth = 217 > window.innerWidth / 10 ? window.innerWidth : 217;
+    const dotHeight = 227 > window.innerWidth / 10 ? window.innerWidth : 227;
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
 
-    for (let x = 150; x < windowWidth; x += dotWidth) {
-      for (let y = 150; y < windowHeight; y += dotHeight) {
+    const startPointX = windowWidth <= 1200 ? 0 : 150;
+    const startPointY = windowWidth <= 1200 ? 0 : 150;
+
+    for (let x = startPointX; x < windowWidth; x += dotWidth) {
+      for (let y = startPointY; y < windowHeight; y += dotHeight) {
         const translateY =
           arr.length % 2 === 0 ? "translateY(10px)" : "translateY(-10px)";
         const className =

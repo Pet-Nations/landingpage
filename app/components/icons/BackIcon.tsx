@@ -6,7 +6,7 @@ import React from "react";
 const BackIcon = ({ isActive }: any) => {
   const pathName = usePathname();
 
-  const isModels = pathName === "/models";
+  const isModels = ["/models", "/token"].includes(pathName);
 
   return (
     <svg
