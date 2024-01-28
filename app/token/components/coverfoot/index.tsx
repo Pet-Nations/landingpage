@@ -3,7 +3,7 @@ import React from "react";
 const CoverFoot = () => {
   return (
     <>
-      <div className="w-[430px] max-[1450px]:hidden h-[438px] absolute top-[520px] left-[214px] z-[40] max-[1650px]:left-[64px]">
+      <div className="w-[430px] h-[438px] absolute top-[422px] left-[0] z-[40] ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="430px"
@@ -31,7 +31,7 @@ const CoverFoot = () => {
         </svg>
       </div>
 
-      <div className=" hidden w-[370px] max-[1450px]:block h-[438px] absolute top-[492px] left-[64px] z-[40]">
+      {/* <div className=" hidden w-[370px] max-[1450px]:block h-[438px] absolute top-[492px] left-[64px] z-[40]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="332"
@@ -57,7 +57,7 @@ const CoverFoot = () => {
             </linearGradient>
           </defs>
         </svg>
-      </div>
+      </div> */}
     </>
   );
 };

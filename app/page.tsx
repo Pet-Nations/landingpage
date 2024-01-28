@@ -11,13 +11,6 @@ export default function Home() {
   const [showBlackCover, setShowBlackCover] = useState(false);
   const [showBlackCover2, setShowBlackCover2] = useState(false);
 
-  // 1. load assets
-  // 2. show black cover animation
-  // 3. if black cover end  animation  hide loading screen
-
-  // if show loading => false ; trigger animation of second screen
-
-  // show black cover
   useEffect(() => {
     setShowBlackCover(true);
   }, []);

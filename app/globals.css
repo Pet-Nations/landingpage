@@ -233,38 +233,115 @@ body {
     animation: B1650C1 4s ease-in-out infinite;
   }
   .coinMoveRight {
-    animation: coinMoveRight 4s ease-in-out infinite;
+    animation: coinMoveRight 5s linear infinite;
+  }
+  .coinMoveRightb1450 {
+    animation: coinMoveRightb1450 3s linear infinite;
+  }
+  .coinMoveRight2 {
+    animation: coinMoveRight2 4s linear infinite;
+  }
+  .coinMoveRight2b1600 {
+    animation: coinMoveRight2b1600 4s linear infinite;
+  }
+  .coinMoveRight3 {
+    animation: coinMoveRight3 3s linear infinite;
   }
 
-  @keyframes B1650C1 {
-    60% {
-      transform: translate(475px, 0) rotate(180deg);
-    }
-    85% {
-      transform: translate(475px, -135px) rotate(0deg);
-    }
-    100% {
-      transform: translate(500px, -135px) rotate(45deg);
-    }
-  }
   @keyframes coinMoveRight {
     0% {
       transform: translate(0, 0) rotate(0deg);
     }
     60% {
-      transform: translate(475px, 0) rotate(180deg);
+      transform: translate(435px, 0) rotate(180deg);
       opacity: 1;
     }
-    85% {
-      transform: translate(475px, -135px) rotate(0deg);
-      opacity: 0.5;
+    80% {
+      transform: translate(435px, -160px) rotate(45deg);
+      opacity: 1;
     }
     100% {
-      transform: translate(500px, -135px) rotate(45deg);
+      transform: translate(530px, -160px) rotate(0deg);
+      opacity: 0;
+    }
+  }
+  @keyframes coinMoveRightb1450 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    40% {
+      transform: translate(14.5517241379vw, 0) rotate(360deg);
+      opacity: 1;
+    }
+    60% {
+      transform: translate(14.5517241379vw, -232px) rotate(0deg);
+      opacity: 1;
+    }
+    90% {
+      transform: translate(300px, -232px) rotate(180deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(400px, -232px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  @keyframes coinMoveRight2 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    60% {
+      transform: translate(435px, 0) rotate(180deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(435px, 100px) rotate(45deg);
+      opacity: 0;
+    }
+  }
+  @keyframes coinMoveRight2b1600 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    90% {
+      transform: translate(800px, 0) rotate(320deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(800px, 0) rotate(359deg);
+      opacity: 0;
+    }
+  }
+  @keyframes coinMoveRight3 {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+      transform: translate(240px, 0) rotate(180deg);
+      opacity: 1;
+    }
+    40% {
+      transform: translate(240px, 230px) rotate(0deg);
+      opacity: 1;
+    }
+    75% {
+      transform: translate(670px, 230px) rotate(180deg);
+      opacity: 1;
+    }
+    90% {
+      transform: translate(670px, 60px) rotate(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(750px, 60px) rotate(45deg);
       opacity: 0;
     }
   }
   .flipdown {
     transform: rotateX(180deg);
+  }
+
+  .customBG {
+    background: url("/images/tokens3.png") no-repeat 100% 0;
   }
 }

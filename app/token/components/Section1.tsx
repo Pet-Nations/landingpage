@@ -51,16 +51,14 @@ const Section1 = () => {
 
       <div
         className="
-        w-[601px] 
-        max-[1200px]:w-[288px] 
-        max-[786px]:w-[188px]
+        w-[601px]  max-[1200px]:w-[288px] max-[786px]:w-[188px]
+         max-[786px]:animate-moveLeft100
         h-[380px]   max-[1200px]:h-[334px] 
         absolute
+        z-[555]
          top-[300px] max-[1200px]:top-[10vw] max-[658px]:top-[10px] max-[600px]:top-[123px]
-          right-10 
-        max-[786px]:right-4
+          right-10  max-[786px]:right-0
           pr-[60px] max-[1200px]:px-[17px]  max-[786px]:p-4
-
          flex 
          flex-col 
          items-end 
@@ -69,8 +67,8 @@ const Section1 = () => {
          border-2 
          bg-white3 
          border-white2 
-         backdrop-blur-[24px]  z-30  
-         transition-all"
+         backdrop-blur-[24px]  
+     "
       >
         <p className="text-[16px] max-[1200px]:text-[12px] text-end font-bold leading-[31px]">
           The Economy
