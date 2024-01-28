@@ -112,9 +112,7 @@ const ModelsPage = () => {
           })}
         </div>
 
-        <div className="hidden max-laptop:flex relative -mt-[24px] pb-[100px]  gap-[32px] flex-col items-start overflow-y-hidden">
-          <Diamonds />
-
+        <div className="hidden max-laptop:flex relative -mt-[24px] pb-[150px]  gap-[32px] flex-col items-start overflow-y-hidden">
           {items.map((item: any, index: any) => {
             return (
               <div

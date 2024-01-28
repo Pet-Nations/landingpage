@@ -95,7 +95,7 @@ const VisionPage = () => {
           ))}
         </div>
       </section>
-      <section className="bg-[#1e1e1e] ">
+      <section className="">
         <div className="w-[7680px] h-[211px] mt-[78px] bg-bottom-foil overflow-hidden  z-1 opacity-20 max-[460px]:invisible"></div>
       </section>
     </div>
