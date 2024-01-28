@@ -16,67 +16,14 @@ import ComunityIcon from "../icons/ComunityIcon";
 import Image from "next/image";
 
 import headerBg from "/public/images/headerbg.png";
-import MobileHambugerButton from "./components/mobileMenu";
+import MobileHambugerButton from "./components/MobileHambugerButton";
+import { HEADER_ICON, NAV_CONFIGS } from "@/app/configs";
 
 interface Props {
   page?: "models";
 }
 
 const MainHeader = ({ page }: Props) => {
-  const HEADER_ICON = [
-    {
-      icon: <DiscordIcon />,
-      url: "/1",
-    },
-    {
-      icon: <FacebookIcon />,
-      url: "/2",
-    },
-    {
-      icon: <SocialIcon />,
-      url: "/3",
-    },
-    {
-      icon: <TiktokIcon />,
-      url: "/4",
-    },
-    {
-      icon: <TelegramIcon />,
-      url: "/5",
-    },
-    {
-      icon: <YoutubeIcon />,
-      url: "/6",
-    },
-    {
-      icon: <TwitterIcon />,
-      url: "/7",
-    },
-  ];
-
-  const NAV_CONFIGS = [
-    {
-      name: "FAQ",
-      url: "/",
-      icon: <Scaleup />,
-    },
-    {
-      name: "TEAM",
-      url: "/team",
-      icon: <MediaIcon />,
-    },
-    {
-      name: "Partners",
-      url: "/about",
-      icon: <PartnersIcon />,
-    },
-    {
-      name: "COMMUNITY",
-      url: "/faq",
-      icon: <ComunityIcon />,
-    },
-  ];
-
   return (
     <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   ">
       <div className="absolute top-[50%] z-50   max-laptop:static  max-laptop:flex items-center justify-between  ">

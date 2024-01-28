@@ -1,31 +1,47 @@
 "use client";
 
-import React, { useState } from "react";
+import { HEADER_ICON, NAV_CONFIGS } from "@/app/configs";
+// MobileMenu.jsx
+import React from "react";
+import NavItem from "../../nav-item";
+import NavItemHeader from "./NavItemHeader";
+import Link from "next/link";
 
-const MobileHambugerButton = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+const MobileMenu = ({ isOpen, onClose }: any) => {
   return (
-    <div className=" hidden text-white1 w-[40px] h-[40px]  flex-col items-center justify-center gap-2.5 border-solid border-[1px] border-[#2A343e] max-laptop:flex  hover:border-orange1 ">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="19"
-        viewBox="0 0 20 19"
-        fill="none"
+    <div
+      className={`fixed
+        flex flex-col
+      
+      top-0 right-0  h-[calc(100vh-40px)] w-1/2 max-[450px]:w-2/3 bg-dark-main  transform ${
+        isOpen ? "translate-x-0" : "translate-x-full"
+      } transition-transform duration-300 ease-in-out  z-[100]`}
+    >
+      <div
+        className="
+      flex flex-col gap:2 
+        z-[50] last:pr-0"
       >
-        <rect y="0.321289" width="20" height="2" fill="#FFF4E9" />
-        <rect
-          x="5.83301"
-          y="8.32129"
-          width="14.1667"
-          height="2"
-          fill="#FFF4E9"
-        />
-        <rect x="2.5" y="16.3213" width="17.5" height="2" fill="#FFF4E9" />
-      </svg>
+        {NAV_CONFIGS.map((nav: any) => (
+          <NavItemHeader key={nav.url} {...nav} />
+        ))}
+      </div>
+
+      <div className="flex-auto"></div>
+
+      <div className=" w-full h-[88px] pl-4 max-[450px]:pl-2 flex flex-wrap items-center justify-center gap-2 ">
+        {HEADER_ICON.map((el: any) => (
+          <Link
+            className="h-10 w-10 flex items-center justify-center hover:bg-[#FF9F46]"
+            key={el.url}
+            href={el.url}
+          >
+            {el.icon}
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default MobileHambugerButton;
+export default MobileMenu;

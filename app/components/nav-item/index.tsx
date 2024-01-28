@@ -36,16 +36,22 @@ const NavItem = ({ name, url, icon }: any) => {
         }}
       >
         <span className="mr-2">{React.cloneElement(icon, { isHover })}</span>
-        <p
-          className={`text-white inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main ${
-            isHover ? "text-[#1a1a1a] font-bold" : ""
-          }  hover:font-bold`}
-        >
-          {name}
-        </p>
+        {isHover ? (
+          <p
+            className={` inline-block   uppercase tracking-[2px] text-center text-[20px] leading-normal  hover:text-dark-main  text-[#1a1a1a] font-bold
+             hover:font-bold`}
+          >
+            {name}
+          </p>
+        ) : (
+          <p
+            className={`text-white inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main hover:font-bold`}
+          >
+            {name}
+          </p>
+        )}
       </div>
 
-      {/* <div className="ml-12">{!isLast && <SmallRegtangle />}</div> */}
       <div className="">{!isLast && <SmallRegtangle />}</div>
     </Link>
   );
