@@ -13,6 +13,9 @@ import Scaleup from "../icons/Scaleup";
 import MediaIcon from "../icons/MediaIcon";
 import PartnersIcon from "../icons/PartnersIcon";
 import ComunityIcon from "../icons/ComunityIcon";
+import Image from "next/image";
+
+import headerBg from "/public/images/headerbg.png";
 
 interface Props {
   page?: "models";
@@ -151,7 +154,7 @@ const MainHeader = ({ page }: Props) => {
           </svg>
         </Link>
 
-        {/* //menyusun menu */}
+        {/* //mobile hambuer menu */}
         <div className=" hidden text-white1 w-[40px] h-[40px]  flex-col items-center justify-center gap-2.5 border-solid border-[1px] border-[#2A343e] max-laptop:flex  hover:border-orange1 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -174,12 +177,14 @@ const MainHeader = ({ page }: Props) => {
       </div>
 
       {/* 1200px hidden */}
-      <div className="absolute left-[185px] backdrop-blur-[100px]  top-[40px] z-50 flex flex-row  bg-foil-5 clippy bg-cover max-laptop:hidden ">
-        <div className="h-[62px] flex items-center relative z-[50] ">
-          {NAV_CONFIGS.map((nav: any) => (
-            <NavItem key={nav.url} {...nav} />
-          ))}
-        </div>
+      <div className="absolute top-10  left-[183px]  clippy backdrop-blur-[100px]">
+        <Image src={headerBg} height={62} alt="img" />
+      </div>
+
+      <div className=" absolute top-10  left-[183px] h-[62px] flex items-center  z-[50] last:pr-0 ">
+        {NAV_CONFIGS.map((nav: any) => (
+          <NavItem key={nav.url} {...nav} />
+        ))}
       </div>
 
       {/* 1200px hidden */}

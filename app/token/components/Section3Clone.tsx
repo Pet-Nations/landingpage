@@ -40,7 +40,7 @@ const Section3Clone = () => {
           ></Image>
         </div>
       </div>
-      <div className="hidden max-[996px]:flex flex-col pt-[68px] pb-[85px]">
+      <div className="hidden max-[996px]:flex flex-col  pt-[68px] pb-[85px]">
         <DogBannerMobile />
       </div>
     </section>

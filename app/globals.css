@@ -80,21 +80,20 @@ body {
 
   .bg-bottom-foil {
     background: url("/images/bottomfoil.svg") repeat-x bottom;
-    animation: slide 100s linear infinite;
+    animation: slide 90s linear infinite;
   }
 
   .bg-bottom-foil1 {
-    background: #1a1a1a url("/images/bottomfoil.svg") repeat-x bottom;
-    animation: slide 100s linear infinite;
-    opacity: 0.9;
+    background: #1e1e1e url("/images/bottomfoil.svg") repeat-x bottom;
+    animation: slide 90s linear infinite;
   }
 
   @keyframes slide {
     0% {
-      transform: translate(0);
+      transform: translateX(-3840px);
     }
     100% {
-      transform: translate(-3840px); /* The image width */
+      transform: translateX(0); /* The image width */
     }
   }
 
@@ -154,6 +153,10 @@ body {
   }
 
   .tokenomic-page {
+  }
+
+  .flexcustom {
+    display: flex !important;
   }
 
   .parenthoversvg:hover svg path {
