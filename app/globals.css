@@ -84,9 +84,8 @@ body {
   }
 
   .bg-bottom-foil1 {
-    background: #1a1a1a url("/images/bottomfoil.svg") repeat-x bottom;
+    background: #1e1e1e url("/images/bottomfoil.svg") repeat-x bottom;
     animation: slide 90s linear infinite;
-    opacity: 0.9;
   }
 
   @keyframes slide {
@@ -154,6 +153,10 @@ body {
   }
 
   .tokenomic-page {
+  }
+
+  .flexcustom {
+    display: flex !important;
   }
 
   .parenthoversvg:hover svg path {
