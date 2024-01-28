@@ -27,19 +27,31 @@ const HamsterC = () => {
           ></Image>
         </div>
 
-        <div className="model-hamster-price  absolute left-[22px] -bottom-[26.51px] z-50  max-smallPhone:-left-[42px] ">
-          <p className="absolute text-white text-[16px] font-[300] leading-[28px] top-[23.56px] left-[19.64px]">
-            BUNNY
-          </p>
-          <p className="absolute text-[24px] font-bold leading-[28px] left-[19.64px] bottom-[20.56px]">
-            #088
-          </p>
-          <p className="absolute text-white text-[16px] font-[300] leading-[28px] top-[23.56px] left-[256.34px]">
-            Price
-          </p>
-          <p className="absolute text-[24px] font-bold leading-[28px] right-[98.34px] bottom-[20.56px]">
-            XX.XX SOL
-          </p>
+        <div
+          className="model-hamster-price 
+        max-[450px]:w-[90vw]
+        max-[450px]:left-[50%]
+        max-[450px]:translate-x-[-50%]
+
+
+         absolute left-[22px] -bottom-[26.51px] z-50  max-smallPhone:-left-[42px] "
+        >
+          <div className="flex justify-between items-center h-full ml-4 mr-[90.16px]">
+            <div>
+              <p className=" text-white text-[16px] font-[300] leading-[28px] ">
+                BUNNY
+              </p>
+              <p className=" text-[24px] font-bold leading-[28px]">#088</p>
+            </div>
+
+            <div>
+              <p className=" text-white text-[16px] font-[300] leading-[28px]">
+                Price
+              </p>
+              <p className=" text-[24px] font-bold leading-[28px]">XX.XX SOL</p>
+            </div>
+          </div>
+
           <Image
             className="absolute top-[23.56px] right-[19.64px]"
             src={SolanaImg}

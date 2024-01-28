@@ -13,7 +13,10 @@ const MainFooter = ({ page }: Props) => {
 
       <p className="h-full flex items-center justify-center text-sm leading-[26px] text-[#FFF4E9]">
         All Rights Reserved © &nbsp;
-        <span className="text-[#FF9F46]">PET NATIONS </span>&nbsp; 2024
+        <span className="text-[#FF9F46] leading-[26px] font-bold text-[14px]">
+          PET NATIONS{" "}
+        </span>
+        &nbsp; 2024
       </p>
     </div>
   );

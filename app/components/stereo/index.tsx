@@ -98,8 +98,7 @@ const StereosList = () => {
 
   return (
     <>
-      {/* 1450 hidden */}
-      <div className="flex gap-4 max-[1450px]:hidden  ">
+      <div className="flex gap-4 max-[996px]:hidden ">
         {Items.map((el: any, index: any) => {
           return (
             <div
@@ -154,7 +153,7 @@ const StereosList = () => {
         })}
       </div>
 
-      <div className=" hidden  gap-4 max-[1450px]:flex max-[1450px]:gap-6  ">
+      <div className=" hidden max-[996px]:flex  gap-4 max-[1450px]:gap-6  ">
         {Items.map((el: any, index: any) => {
           return (
             <div

@@ -9,6 +9,8 @@ import Icon7 from "../components/images/model-page/Icon7";
 import Icon8 from "../components/images/model-page/Icon8";
 import Diamonds from "./components/Diamonds";
 import HamsterC from "./components/Hamster";
+import Image from "next/image";
+import ImageTitle from "/public/images/visiontitle.png";
 
 const archivo = Archivo_Black({
   weight: ["400"],
@@ -64,16 +66,7 @@ const ModelsPage = () => {
       <Diamonds />
       <div className="max-w-[1920px] relative mx-auto flex items-center justify-center top-[23vh] max-laptop:top-[19px]  max-laptopLarge:top-[150px]  max-laptop:flex flex-col max-laptop:gap-[120px]   ">
         <div className="hidden max-laptop:block  ">
-          <p
-            className={`text-[60px] font-[400] uppercase ${archivo.className} text-transparent stroketext1 relative max-smallPhone:text-[48px] `}
-          >
-            Vision Map
-          </p>
-          <p
-            className={`text-[60px] opacity-[0.51] flipdown font-[400] uppercase ${archivo.className} text-transparent max-smallPhone:text-[48px]  stroketext1 relative -mt-[31px]`}
-          >
-            Vision Map
-          </p>
+          <Image src={ImageTitle} alt="img" />
         </div>
         <HamsterC />
         {/* 1200 hidden */}
@@ -119,7 +112,7 @@ const ModelsPage = () => {
           })}
         </div>
 
-        <div className="hidden max-laptop:flex relative -mt-[75px]  -left-[40px]  gap-[48px] flex-col right-[10vw] items-start max-laptopLarge:right-[32px]  max-laptop:py-[100px] max-smallPhone:pl-[32px] max-[375px]:pl-[60px]">
+        <div className="hidden max-laptop:flex relative -mt-[24px] pb-[100px]  gap-[32px] flex-col items-start overflow-y-hidden">
           <Diamonds />
 
           {items.map((item: any, index: any) => {
@@ -130,10 +123,10 @@ const ModelsPage = () => {
               >
                 {item.icon}
                 <div>
-                  <p className="text-[24px] font-[300] leading-[24px] text-[#ff4e9] uppercase">
+                  <p className="text-[14px] font-[300] leading-[24px] text-[#ff4e9] uppercase">
                     {item.title1}
                   </p>
-                  <p className="text-[56px] font-bold text-[#ff4e9] uppercase  max-laptopLarge:text-[40px]  ">
+                  <p className="text-[32px] font-bold text-[#ff4e9] uppercase leading-normal ">
                     {item.title2}
                   </p>
                 </div>

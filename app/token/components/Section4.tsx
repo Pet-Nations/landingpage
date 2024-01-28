@@ -21,8 +21,7 @@ const Section4 = () => {
         max-[1200px]:left-[32px] 
         inline-block
         w-full
-        text-center
-        
+        max-[996px]:text-center
         "
         >
           Earn with{" "}
