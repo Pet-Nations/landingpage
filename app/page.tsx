@@ -31,8 +31,6 @@ export default function Home() {
     }
   };
 
-  console.log(showMainPage, "showMainPage");
-
   return (
     <main
       className={`flex z-20 flex-col relative items-center justify-center h-screen  overflow-hidden`}
