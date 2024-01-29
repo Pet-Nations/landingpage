@@ -7,7 +7,7 @@ import NavItem from "../../nav-item";
 import NavItemHeader from "./NavItemHeader";
 import Link from "next/link";
 
-const MobileMenu = ({ isOpen, onClose }: any) => {
+const MobileMenuComponent = ({ isOpen, onClose }: any) => {
   return (
     <div
       className={`fixed
@@ -44,4 +44,4 @@ const MobileMenu = ({ isOpen, onClose }: any) => {
   );
 };
 
-export default MobileMenu;
+export default MobileMenuComponent;

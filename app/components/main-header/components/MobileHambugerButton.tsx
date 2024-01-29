@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import MobileMenu from "./MobileMenu";
+import MobileMenuComponent from "./MobileMenu";
 
 const MobileHambugerButton = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const MobileHambugerButton = () => {
         />
         <rect x="2.5" y="16.3213" width="17.5" height="2" fill="#FFF4E9" />
       </svg>
-      <MobileMenu
+      <MobileMenuComponent
         isOpen={isMenuOpen}
         onClose={(e: any) => {
           setIsMenuOpen(false);
