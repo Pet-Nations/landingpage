@@ -10,7 +10,7 @@ import Section4 from "./components/Section4";
 
 const TokenNomic = () => {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden mt-12">
       <Section1 />
       <section className="max-h-[919px] bg-[#FFF4E9] p-16 flex items-center justify-center z-30">
         <Image

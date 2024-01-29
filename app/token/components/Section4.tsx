@@ -7,7 +7,7 @@ import SwiperC from "./Swiper";
 const Section4 = () => {
   return (
     <section className=" bg-[#44b05c]">
-      <div className="max-w-[1920px] m-auto relative h-[515px] max-[996px]:h-[919px]">
+      <div className="max-w-[1920px] m-auto relative h-[515px] max-[996px]:h-[919px] max-[480px]:h-[724px]">
         <p
           className=" 
         text-[32px] 

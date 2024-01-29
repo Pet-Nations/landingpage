@@ -13,7 +13,8 @@ interface Props {
 
 const MainHeader = ({ page }: Props) => {
   return (
-    <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   ">
+    // <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   ">
+    <div className="h-10 bg-dark-main pl-[60px] pr-[68px] fixed w-full z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   ">
       <div className="absolute top-[50%] z-50   max-laptop:static  max-laptop:flex items-center justify-between  ">
         <Link className="inline-block max-laptop:hidden  " href={"/"}>
           <MainLogo />

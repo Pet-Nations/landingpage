@@ -23,7 +23,7 @@ const Story = () => {
   };
   return (
     <>
-      <div className="flex-auto  relative min-[996.99px]:bg-story-page max-[996px]:bg-orange1 overflow-auto ">
+      <div className="flex-auto  mt-12 relative min-[996.99px]:bg-story-page max-[996px]:bg-orange1 overflow-auto ">
         <section className="max-w-[1920px] mx-auto pb-[100px] max-[996px]:flex flex-col items-center pt-[19px]">
           <Image
             className="absolute right-[49px] top-[18px] max-[996px]:hidden"
