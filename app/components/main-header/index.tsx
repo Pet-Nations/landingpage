@@ -1,23 +1,11 @@
-import React from "react";
-import Link from "next/link";
-import FacebookIcon from "../icons/FacebookIcon";
-import SocialIcon from "../icons/SocialIcon";
-import TiktokIcon from "../icons/TiktokIcon";
-import TelegramIcon from "../icons/TelegramIcon";
-import YoutubeIcon from "../icons/YoutubeIcon";
-import TwitterIcon from "../icons/TwitterIcon";
-import MainLogo from "../icons/MainLogo";
-import DiscordIcon from "../icons/DiscordIcon";
-import NavItem from "../nav-item";
-import Scaleup from "../icons/Scaleup";
-import MediaIcon from "../icons/MediaIcon";
-import PartnersIcon from "../icons/PartnersIcon";
-import ComunityIcon from "../icons/ComunityIcon";
 import Image from "next/image";
+import Link from "next/link";
+import MainLogo from "../icons/MainLogo";
+import NavItem from "../nav-item";
 
-import headerBg from "/public/images/headerbg.png";
-import MobileHambugerButton from "./components/MobileHambugerButton";
 import { HEADER_ICON, NAV_CONFIGS } from "@/app/configs";
+import MobileHambugerButton from "./components/MobileHambugerButton";
+import headerBg from "/public/images/headerbg.png";
 
 interface Props {
   page?: "models";
@@ -103,7 +91,9 @@ const MainHeader = ({ page }: Props) => {
         </Link>
 
         {/* //mobile hambuer menu */}
-        <MobileHambugerButton />
+        <div className="hidden max-[1200px]:block">
+          <MobileHambugerButton />
+        </div>
       </div>
 
       {/* 1200px hidden */}
