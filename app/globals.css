@@ -21,7 +21,10 @@ body {
     transform: translate3d(-42px, 0px, 135px);
   }
   .bg-section-2 {
-    background: url("/images/bg2.png") no-repeat center/cover;
+    background: url("/images/bg2.jpg") no-repeat center/cover;
+  }
+  .bg-section-2-mb {
+    background: url("/images/bg2m.png") no-repeat bottom/cover;
   }
   .bg-foil-1 {
     background: url("/images/petcardfoil.png") no-repeat center/contain;

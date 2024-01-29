@@ -19,6 +19,25 @@ const generateTransFunc = () => {
   return obj;
 };
 
+const generateTransFunc480 = () => {
+  let obj: any = {
+    "0%": { transform: " translateX(0) scale(.3) rotate(15deg)" },
+    "1%": {
+      transform: "translate(-30vw , -10vh ) scale(1.5) rotate(15deg)",
+    },
+  };
+
+  for (let i = 2; i < 10000; i++) {
+    let h = i % 2 === 0 ? "-3vh" : "-10vh";
+
+    obj[`${i}%`] = {
+      transform: `translate(-30vw , ${h} ) scale(1.5) rotate(15deg)`,
+    };
+  }
+
+  return obj;
+};
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -35,6 +54,7 @@ const config: Config = {
         orange1: "#FF9F46",
       },
       screens: {
+        vsm: "480px",
         smallPhone: "460px",
         "3xl": "1650px",
         sm: "640px",
@@ -55,6 +75,7 @@ const config: Config = {
         heightDOWN1: "heightDOWN1 1.5s ease-in-out forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
         moveAndScale: "moveAndScale 200s ease-in-out forwards ",
+        moveAndScale480: "moveAndScale480 200s ease-out forwards ",
         flashScreen: "flashScreen .5s ease-in-out forwards",
         cardLeft: "cardLeft .5s ease-in-out forwards",
         moveUp: "moveUp 2s linear forwards",
@@ -93,6 +114,7 @@ const config: Config = {
         coinMobile2: "coinMobile2 4s linear infinite ",
         coinMobile3: "coinMobile3 3s linear infinite ",
         moveLeft100: "moveLeft100 1s ease-out forwards ",
+        mobileScaleHome: "mobileScaleHome 2s ease-out forwards ",
       },
       keyframes: {
         heightUP: {
@@ -116,6 +138,7 @@ const config: Config = {
           "50%": { transform: "rotate(2deg)" },
         },
         moveAndScale: generateTransFunc(),
+        moveAndScale480: generateTransFunc480(),
         flashScreen: {
           "0%, 100%": { background: "#ffffff" },
           "50%": { background: "black" },
@@ -392,6 +415,14 @@ const config: Config = {
           "100%": {
             transform: "translateX(0%)",
             opacity: "1",
+          },
+        },
+        mobileScaleHome: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "100%": {
+            transform: "scale(1.3)",
           },
         },
       },

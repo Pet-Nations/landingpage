@@ -10,8 +10,6 @@ const MobileHambugerButton = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  console.log(isMenuOpen, "isMenuOpen");
-
   return (
     <div
       className={`  w-[40px] h-[40px] flex-col items-center justify-center gap-2.5 border-solid border-[1px] border-[#2A343e] flex hover:border-orange1 ${

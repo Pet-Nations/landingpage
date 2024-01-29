@@ -31,6 +31,8 @@ export default function Home() {
     }
   };
 
+  console.log(showMainPage, "showMainPage");
+
   return (
     <main
       className={`flex z-20 flex-col relative items-center justify-center h-screen  overflow-hidden`}
@@ -63,7 +65,7 @@ export default function Home() {
       >
         <div
           onAnimationEnd={startMainPage}
-          className={`absolute inset-0  bg-dark-main h-screen w-screen tiki z-10 ${
+          className={`absolute inset-0  bg-dark-main h-screen w-screen  z-[51] ${
             showBlackCover2 ? "animate-heightUP1" : ""
           }  `}
         />
