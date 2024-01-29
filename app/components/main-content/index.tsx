@@ -1,10 +1,11 @@
-"use-client";
+"use client";
 
-import React, { useEffect, useState } from "react";
-import KartIcon from "../icons/KartIcon";
-import PetCardList from "../pet-card-list";
+import { useState } from "react";
 import VisualsList from "../effect-visual";
+import KartIcon from "../icons/KartIcon";
 import Brick1 from "../images/effect-ui/brick/Brick1";
+import MainContentMobile from "../mobile-maincontent/MainContent";
+import PetCardList from "../pet-card-list";
 
 const MainContent = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
@@ -17,35 +18,38 @@ const MainContent = ({ showMainPage }: any) => {
   };
 
   return (
-    <div className="flex-auto bg-section-2 relative">
-      <div
-        className={`absolute top-[58%] left-[55%] ${
-          showMainPage ? "animate-moveAndScale" : ""
-        } 
+    <>
+      <div className="flex-auto bg-section-2 relative max-vsm:hidden">
+        <div
+          className={`absolute top-[58%] left-[55%] ${
+            showMainPage ? "animate-moveAndScale" : ""
+          } 
         z-50`}
-        onAnimationStart={handleAnimation}
-      >
-        <KartIcon />
-      </div>
-      <div className={`absolute top-[57%] left-[75%]   z-10`}>
-        <div className={`absolute top-[75%] left-[55%] scale-50  `}>
-          <Brick1 />
+          onAnimationStart={handleAnimation}
+        >
+          <KartIcon />
         </div>
-        <div className={`absolute rotate-45 top-[74%] left-[56%] scale-50 `}>
-          <Brick1 />
+        <div className={`absolute top-[57%] left-[75%]   z-10`}>
+          <div className={`absolute top-[75%] left-[55%] scale-50  `}>
+            <Brick1 />
+          </div>
+          <div className={`absolute rotate-45 top-[74%] left-[56%] scale-50 `}>
+            <Brick1 />
+          </div>
+          <div className={`absolute rotate-90 top-[74%] left-[56%] scale-50  `}>
+            <Brick1 />
+          </div>
+          <div className={`absolute top-[73%] left-[57%] scale-50 `}>
+            <Brick1 />
+          </div>
         </div>
-        <div className={`absolute rotate-90 top-[74%] left-[56%] scale-50  `}>
-          <Brick1 />
-        </div>
-        <div className={`absolute top-[73%] left-[57%] scale-50 `}>
-          <Brick1 />
-        </div>
-      </div>
 
-      {showOtherVisuals && <VisualsList />}
+        {showOtherVisuals && <VisualsList />}
 
-      <PetCardList showMenu={showOtherVisuals} />
-    </div>
+        <PetCardList showMenu={showOtherVisuals} />
+      </div>
+      <MainContentMobile showMainPage={showMainPage} />
+    </>
   );
 };
 

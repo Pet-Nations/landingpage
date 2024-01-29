@@ -7,7 +7,7 @@ import MainContent from "../../main-content";
 
 const MainPage = ({ showMainPage }: any) => {
   return (
-    <div className="h-screen w-full flex flex-col">
+    <div className=" h-[calc(100dvh)]  w-full flex flex-col overflow-hidden">
       <MainHeader />
       <MainContent showMainPage={showMainPage} />
       <MainFooter />
