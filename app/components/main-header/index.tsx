@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import MainLogo from "../icons/MainLogo";
@@ -6,15 +7,39 @@ import NavItem from "../nav-item";
 import { HEADER_ICON, NAV_CONFIGS } from "@/app/configs";
 import MobileHambugerButton from "./components/MobileHambugerButton";
 import headerBg from "/public/images/headerbg.png";
+import { useEffect, useRef } from "react";
 
 interface Props {
   page?: "models";
 }
 
 const MainHeader = ({ page }: Props) => {
+  const refmain = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleTouchMove = (event: TouchEvent) => {
+      event.preventDefault();
+    };
+
+    const mainElement = refmain.current;
+    if (mainElement) {
+      mainElement.addEventListener("touchmove", handleTouchMove, {
+        passive: false,
+      });
+    }
+
+    return () => {
+      if (mainElement) {
+        mainElement.removeEventListener("touchmove", handleTouchMove);
+      }
+    };
+  }, []);
   return (
     // <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   ">
-    <div className="h-10 bg-dark-main pl-[60px] pr-[68px] fixed w-full z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   ">
+    <div
+      ref={refmain}
+      className="h-10 bg-dark-main pl-[60px] pr-[68px] fixed w-full z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   "
+    >
       <div className="absolute top-[50%] z-50   max-laptop:static  max-laptop:flex items-center justify-between  ">
         <Link className="inline-block max-laptop:hidden  " href={"/"}>
           <MainLogo />

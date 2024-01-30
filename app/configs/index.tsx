@@ -10,6 +10,9 @@ import TiktokIcon from "../components/icons/TiktokIcon";
 import TwitterIcon from "../components/icons/TwitterIcon";
 import YoutubeIcon from "../components/icons/YoutubeIcon";
 
+export const COMMUNITY_FB_LINK =
+  "https://www.facebook.com/groups/242848220423686/";
+
 export const NAV_CONFIGS = [
   {
     name: "FAQ",
@@ -28,7 +31,7 @@ export const NAV_CONFIGS = [
   },
   {
     name: "COMMUNITY",
-    url: "/faq",
+    url: COMMUNITY_FB_LINK,
     icon: <ComunityIcon />,
   },
 ];

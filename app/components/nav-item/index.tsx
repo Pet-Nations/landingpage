@@ -25,7 +25,12 @@ const NavItem = ({ name, url, icon }: any) => {
   };
 
   return (
-    <Link className={` inline-flex items-center `} key={url} href={url}>
+    <Link
+      target="_blank"
+      className={` inline-flex items-center `}
+      key={url}
+      href={url}
+    >
       <div
         className={`flex items-center justify-center  h-[62px] ${getWidth()}`}
         onMouseEnter={() => {

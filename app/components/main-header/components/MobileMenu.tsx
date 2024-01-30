@@ -12,8 +12,7 @@ const MobileMenuComponent = ({ isOpen, onClose }: any) => {
     <div
       className={`fixed
         flex flex-col
-      
-      top-0 right-0  h-[calc(100vh-40px)] w-1/2 max-[450px]:w-2/3 bg-dark-main  transform ${
+      top-[50px] right-0  h-[calc(100dvh-90px)] w-1/2 max-[450px]:w-2/3 bg-dark-main  transform ${
         isOpen ? "translate-x-0" : "translate-x-full"
       } transition-transform duration-300 ease-in-out  z-[100]`}
     >

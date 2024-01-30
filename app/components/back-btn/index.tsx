@@ -24,13 +24,13 @@ const BackBTN = ({ page }: any) => {
     case "/models":
     case "/token":
       klassName =
-        "bg-white flex w-[115px] h-10  absolute left-[7px] -top-[46px]  items-center justify-center gap-1 hover:back-hover-1";
+        "bg-white flex w-[115px] h-10  absolute left-[7px] -top-[46px]  items-center justify-center gap-1 hover:back-hover-1 max-[480px]:hidden";
       pName = "font-sm text-dark-main font-medium uppercase";
       break;
 
     default:
       klassName =
-        " bg-dark-main flex w-[115px] h-10  absolute left-[7px] -top-[46px]  items-center justify-center gap-1 hover:back-hover";
+        " bg-dark-main flex w-[115px] h-10  absolute left-[7px] -top-[46px]  items-center justify-center gap-1 hover:back-hover max-[480px]:hidden";
       pName = "font-sm text-[#FFF4E9] font-medium uppercase";
   }
 
