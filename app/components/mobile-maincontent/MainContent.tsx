@@ -15,8 +15,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 const MainContentMobile = ({ showMainPage }: any) => {
-  const refmain = useRef<HTMLDivElement>(null);
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
+  const refmain = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleTouchMove = (event: TouchEvent) => {
