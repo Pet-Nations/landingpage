@@ -16,6 +16,8 @@ import RabbitAvatar from "../images/RabbitAvatar";
 const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
   const [show, setShow] = useState(false);
 
+  const [isTablet, setIsTablet] = useState(false);
+
   const [isHover, setIsHover] = useState(false);
   useEffect(() => {
     const delay = (id - 1) * 200;
@@ -35,6 +37,22 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
+
+  useEffect(() => {
+    setIsTablet(window.innerWidth <= 1366);
+
+    const handleResize = () => {
+      setIsTablet(window.innerWidth <= 1366);
+    };
+
+    handleResize(); // Set initial value
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const CARD_CONFIG = [
     {
@@ -60,6 +78,7 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
     },
     {
       id: 4,
+
       background: <MonekyImg isHover={isHover} />,
       background2: <Economy />,
       avatar: <CatAvatar />,
@@ -70,37 +89,75 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
   const currentCard = CARD_CONFIG.find((c) => c.id === id);
 
   return (
-    <Link
-      id={`${currentCard?.id}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className={` group h-[160px] w-[448px] -right-full relative inline-block transition-all ${
-        show ? "animate-cardLeft" : ""
+    <>
+      <Link
+        id={`${currentCard?.id}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={` group 
+      h-[160px]  max-[1440px]:h-[140px] 
+      w-[448px] max-[1440px]:w-[380px] max-[1366px]:hidden 
+      -right-full 
+      relative inline-block transition-all ${
+        show
+          ? "max-[1600px]:animate-cardLeft1600   min-[1601px]:animate-cardLeft   "
+          : ""
       }  `}
-      href={imgUrl}
-    >
-      <div className="absolute z-9 pet-card-1 h-full ">
-        {currentCard?.background}
-        <div className="absolute z-10 bottom-[3px] left-[45%]">
-          {currentCard?.avatar}
+        href={imgUrl}
+      >
+        <div className="absolute z-9 pet-card-1 h-full max-[1366px]:hidden ">
+          {currentCard?.background}
+          <div
+            className="absolute
+        bottom-[3px]   
+         z-10 max-[1366px]:hidden
+         left-[45%]"
+          >
+            {currentCard?.avatar}
+          </div>
         </div>
-      </div>
-      <p className="absolute z-9 text-[32px] text-white leading-normal font-normal uppercase bottom-[17px] left-[28px] ">
-        {currentCard?.title}
-      </p>
-      {isHover && (
-        <div
-          className={`
-          absolute h-[160px] z-20 w-full top-[13px] -right-[13px] `}
-        >
-          {currentCard?.background2}
+        <p className="absolute max-[1366px]:hidden z-9 text-[32px] max-[1440px]:text-[24px] text-white leading-normal font-normal uppercase bottom-[17px] left-[28px] ">
+          {currentCard?.title}
+        </p>
+        {isHover && (
+          <div
+            className={`
+          absolute 
+          
+          h-[160px] max-[1440px]:h-[140px] 
+          max-[1366px]:origin-right
+          max-[1366px]:hover:scale-105 transition-all
+          
+          z-20 w-full top-[13px] -right-[13px] `}
+          >
+            {currentCard?.background2}
 
-          <p className="absolute z-9 text-[32px]  leading-normal font-bold uppercase bottom-[17px] left-[28px] animate-petCardTextDOwn">
-            {currentCard?.title}
-          </p>
-        </div>
-      )}
-    </Link>
+            <p className="absolute z-9 text-[32px] max-[1440px]:text-[24px] leading-normal font-bold uppercase bottom-[17px] left-[28px] animate-petCardTextDOwn">
+              {currentCard?.title}
+            </p>
+          </div>
+        )}
+
+        {isTablet && (
+          <div
+            className={`
+        absolute 
+        
+        h-[160px] max-[1440px]:h-[140px] 
+        max-[1366px]:origin-right
+        max-[1366px]:hover:scale-105 transition-all
+        
+        z-20 w-full top-[13px] -right-[13px] `}
+          >
+            {currentCard?.background2}
+
+            <p className="absolute z-9 text-[32px] max-[1440px]:text-[24px] leading-normal font-bold uppercase bottom-[17px] left-[28px] animate-petCardTextDOwn">
+              {currentCard?.title}
+            </p>
+          </div>
+        )}
+      </Link>
+    </>
   );
 };
 

@@ -37,6 +37,24 @@ const generateTransFunc480 = () => {
 
   return obj;
 };
+const generateTransFunc1366 = () => {
+  let obj: any = {
+    "0%": { transform: " translate(0,0) scale(1) rotate(15deg)" },
+    "1%": {
+      transform: "translate(-30vw , -10vh ) scale(3) rotate(15deg)",
+    },
+  };
+
+  for (let i = 2; i < 10000; i++) {
+    let h = i % 2 === 0 ? "-3vh" : "-10vh";
+    let w = i % 2 === 0 ? "-30vw" : "-25vw";
+    obj[`${i}%`] = {
+      transform: `translate(${w} , ${h} ) scale(1.5) rotate(15deg)`,
+    };
+  }
+
+  return obj;
+};
 
 const config: Config = {
   content: [
@@ -80,6 +98,7 @@ const config: Config = {
         moveAndScale480: "moveAndScale480 100s ease-out forwards ",
         flashScreen: "flashScreen .5s ease-in-out forwards",
         cardLeft: "cardLeft .5s ease-in-out forwards",
+        cardLeft1600: "cardLeft1600 .5s ease-in-out forwards",
         moveUp: "moveUp 2s linear forwards",
         fadeIn: "fadeIn 2s linear forwards",
         pulselow: "pulselow 4s linear infinite",
@@ -176,6 +195,7 @@ const config: Config = {
         },
         moveAndScale: generateTransFunc(),
         moveAndScale480: generateTransFunc480(),
+        moveAndScale1366: generateTransFunc1366(),
         flashScreen: {
           "0%, 100%": { background: "#ffffff" },
           "50%": { background: "black" },
@@ -195,7 +215,7 @@ const config: Config = {
         moveUp: {
           "0%, ": { bottom: "-300px" },
           "80%, ": { bottom: "-300px" },
-          "100%": { bottom: "20px" },
+          "100%": { bottom: "60px" },
         },
         fadeIn: {
           "0%, 100%": { opacity: "0" },

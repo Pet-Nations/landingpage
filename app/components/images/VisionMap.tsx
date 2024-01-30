@@ -6,6 +6,7 @@ import PetCard1 from "/public/images/petcard2.png";
 const VisionMap = () => {
   return (
     <Image
+      loading="eager"
       style={{ width: "100%", height: "100%" }}
       src={PetCard1}
       alt="img"

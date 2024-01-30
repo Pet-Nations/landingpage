@@ -35,16 +35,18 @@ const MainHeader = ({ page }: Props) => {
     };
   }, []);
   return (
-    // <div className="h-10 bg-dark-main pl-[60px] pr-[68px] relative z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   ">
     <div
       ref={refmain}
-      className="h-10 bg-dark-main pl-[60px] pr-[68px] fixed w-full z-[1000] max-laptop:h-[50.6px]  max-laptop:px-[16px]   "
+      className="h-10 bg-dark-main 
+      max-[1600px]:pl-[16px]
+      max-[1366px]:px-[16px] 
+      pl-[60px] pr-[68px] fixed w-full z-[1000] max-[1366px]:h-[50.6px]   "
     >
-      <div className="absolute top-[50%] z-50   max-laptop:static  max-laptop:flex items-center justify-between  ">
-        <Link className="inline-block max-laptop:hidden  " href={"/"}>
+      <div className="absolute top-[50%] z-50  max-[1366px]:static max-[1366px]:flex items-center justify-between  ">
+        <Link className="inline-block max-[1366px]:hidden  " href={"/"}>
           <MainLogo />
         </Link>
-        <Link className=" hidden max-laptop:inline-block  " href={"/"}>
+        <Link className="hidden max-[1366px]:block " href={"/"}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="62"
@@ -115,26 +117,35 @@ const MainHeader = ({ page }: Props) => {
             />
           </svg>
         </Link>
-
         {/* //mobile hambuer menu */}
-        <div className="hidden max-[1200px]:block">
+        <div className="hidden max-[1366px]:block">
           <MobileHambugerButton />
         </div>
       </div>
 
-      {/* 1200px hidden */}
-      <div className="absolute top-10  left-[183px]  clippy backdrop-blur-[100px] max-[1200px]:hidden">
+      <div
+        className="absolute 
+        top-10
+      left-[139px] 
+      max-[1600px]:left-[105px]
+      
+      clippy backdrop-blur-[100px] max-[1366px]:hidden"
+      >
         <Image src={headerBg} height={62} alt="img" />
       </div>
 
-      <div className=" absolute top-10  left-[183px] h-[62px] flex items-center  z-[50] last:pr-0 max-[1200px]:hidden ">
+      <div
+        className=" absolute top-10 
+       left-[183px] max-[1600px]:left-[105px]
+
+        h-[62px] flex items-center  z-[50] last:pr-0 max-[1366px]:hidden "
+      >
         {NAV_CONFIGS.map((nav: any) => (
           <NavItem key={nav.url} {...nav} />
         ))}
       </div>
 
-      {/* 1200px hidden */}
-      <div className="ml-auto w-fit h-full flex items-center justify-center gap-x-2  max-laptop:hidden  ">
+      <div className="ml-auto w-fit h-full flex items-center justify-center gap-x-2  max-[1366px]:hidden  ">
         {HEADER_ICON.map((el: any) => (
           <Link
             className="h-10 w-10 flex items-center justify-center hover:bg-[#FF9F46]"
