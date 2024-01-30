@@ -4,8 +4,8 @@ const Icon6 = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="79"
-      height="80"
+      width="100%"
+      height="100%"
       viewBox="0 0 79 80"
       fill="none"
     >

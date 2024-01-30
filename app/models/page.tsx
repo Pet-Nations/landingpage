@@ -62,7 +62,7 @@ const items = [
 
 const ModelsPage = () => {
   return (
-    <div className="flex-auto relative bg-dark-main text-white overflow-hidden max-laptop:overflow-y-auto">
+    <div className="flex-auto relative mt-10 bg-dark-main text-white overflow-hidden max-laptop:overflow-y-auto">
       <Diamonds />
       <div className="max-w-[1920px] relative mx-auto flex items-center justify-center top-[23vh] max-laptop:top-[19px]  max-laptopLarge:top-[150px]  max-laptop:flex flex-col max-laptop:gap-[120px]   ">
         <div className="hidden max-laptop:block  ">
@@ -77,7 +77,7 @@ const ModelsPage = () => {
                 key={index}
                 className="flex gap-4 items-center justify-center "
               >
-                {item.icon}
+                <div className="relative  top-[-6px]  size-20">{item.icon}</div>
                 <div>
                   <p className="text-[24px]  font-[300] leading-[24px] text-[#ff4e9] uppercase">
                     {item.title1}
@@ -98,7 +98,8 @@ const ModelsPage = () => {
                 key={index}
                 className="flex gap-4 items-center justify-center "
               >
-                {item.icon}
+                <div className="relative top-[-6px] size-20">{item.icon}</div>
+
                 <div>
                   <p className="text-[24px] font-[300] leading-[24px] text-[#ff4e9] uppercase">
                     {item.title1}
@@ -112,16 +113,18 @@ const ModelsPage = () => {
           })}
         </div>
 
-        <div className="hidden max-laptop:flex relative -mt-[24px] pb-[150px]  gap-[32px] flex-col items-start overflow-y-hidden">
+        <div className="hidden max-laptop:flex relative -mt-[0px] pb-[150px]  gap-[32px] flex-col items-start overflow-y-hidden">
           {items.map((item: any, index: any) => {
             return (
               <div
                 key={index}
                 className="flex gap-4 items-center justify-center relative z-50 "
               >
-                <div className="size-20">{item.icon}</div>
+                <div className=" relative size-[55px] -top-[5px] flex items-center justify-center">
+                  {item.icon}
+                </div>
                 <div>
-                  <p className="text-[14px] font-[300] leading-[24px] text-[#ff4e9] uppercase">
+                  <p className="text-[14px] font-[300] leading-normal text-[#ff4e9] uppercase">
                     {item.title1}
                   </p>
                   <p className="text-[32px] font-bold text-[#ff4e9] uppercase leading-normal ">

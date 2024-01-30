@@ -36,7 +36,7 @@ const Detail = ({ params: { id } }: any) => {
         </section>
       </div>
 
-      <div className=" hidden max-[996px]:block bg-orange1 flex-auto min-h-0 relative pb-[100px]">
+      <div className=" hidden max-[996px]:block mt-10 bg-orange1 flex-auto min-h-0 relative pb-[100px]">
         <div className="w-screen relative">
           <Image src={getHeroImage()} alt="img" />
           <div className="h-[51px] backdrop-blur-[15px] absolute z-40 bottom-0 w-full flex items-center justify-center ">
