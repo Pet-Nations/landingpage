@@ -11,7 +11,8 @@ import TwitterIcon from "../components/icons/TwitterIcon";
 import YoutubeIcon from "../components/icons/YoutubeIcon";
 
 export const COMMUNITY_FB_LINK =
-  "https://www.facebook.com/groups/242848220423686/";
+  // "https://www.facebook.com/groups/242848220423686/";
+  "comingsoon";
 
 export const NAV_CONFIGS = [
   {
