@@ -119,7 +119,7 @@ const ModelsPage = () => {
                 key={index}
                 className="flex gap-4 items-center justify-center relative z-50 "
               >
-                {item.icon}
+                <div className="size-20">{item.icon}</div>
                 <div>
                   <p className="text-[14px] font-[300] leading-[24px] text-[#ff4e9] uppercase">
                     {item.title1}
