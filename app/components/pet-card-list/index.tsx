@@ -28,7 +28,14 @@ const PetCardList = ({ showMenu }: any) => {
   ];
 
   return (
-    <div className="flex flex-col gap-[35px] h-full absolute right-0 justify-center">
+    <div
+      className="flex flex-col
+     gap-[35px] max-[1366px]:gap-4
+     
+     
+     
+     h-full absolute right-0 justify-center z-40"
+    >
       {PET_CARDS.map((card: Card) => (
         <PetCard key={card.id} {...card} showMenu={showMenu} />
       ))}

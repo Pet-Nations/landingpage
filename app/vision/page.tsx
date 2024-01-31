@@ -62,7 +62,7 @@ const VisionPage = () => {
   ];
 
   return (
-    <div className="flex-auto mt-12 flex flex-col bg-[#fa5252] overflow-x-hidden ">
+    <div className="flex-auto mt-10 flex flex-col bg-[#fa5252] overflow-x-hidden ">
       {/* <p
         className={`uppercase text-[64px] leading-normal absolute inline-block top-5 right-[60px] stroketext   ${archivo.className} `}
       >

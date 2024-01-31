@@ -21,9 +21,15 @@ const MainContent = ({ showMainPage }: any) => {
     <>
       <div className="flex-auto bg-section-2 relative max-vsm:hidden">
         <div
-          className={`absolute top-[58%] left-[55%] ${
-            showMainPage ? "animate-moveAndScale" : ""
-          } 
+          className={`
+            absolute 
+            top-[60vh] max-[1366px]:top-[55vh] 
+            left-[52vw] max-[1600px]:left-[50vw]   max-[1366px]:left-[48vw] 
+            ${
+              showMainPage
+                ? "animate-moveAndScale max-[1366px]:animate-moveAndScale1366"
+                : ""
+            } 
         z-50`}
           onAnimationStart={handleAnimation}
         >

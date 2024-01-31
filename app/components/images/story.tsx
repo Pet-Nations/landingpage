@@ -9,6 +9,7 @@ const Story = () => {
       style={{ width: "100%", height: "100%" }}
       src={PetCard1}
       alt="img"
+      loading="eager"
     ></Image>
   );
 };
