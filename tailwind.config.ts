@@ -21,17 +21,22 @@ const generateTransFunc = () => {
 
 const generateTransFunc480 = () => {
   let obj: any = {
-    "0%": { transform: " translate(0,0) scale(1) rotate(15deg)" },
+    "0%": {
+      transform: " translate(0,0) scale(.5) ",
+      opacity: "1",
+    },
     ".1%": {
-      transform: "translate(-30vw , -10vh ) scale(3.44) rotate(15deg)",
+      transform: "translate(-25vw , -10vh) scale(1) ",
+      opacity: "1",
     },
   };
 
   for (let i = 2; i < 100000; i++) {
     let h = i % 2 === 0 ? "-3vh" : "-10vh";
-    let w = i % 2 === 0 ? "-30vw" : "-25vw";
+    let w = i % 2 === 0 ? "-25vw" : "-30vw";
     obj[`${i / 10}%`] = {
-      transform: `translate(${w} , ${h} ) scale(3.44) rotate(15deg)`,
+      transform: `translate(${w} , ${h} ) scale(1)`,
+      opacity: "1",
     };
   }
 
@@ -39,7 +44,7 @@ const generateTransFunc480 = () => {
 };
 const generateTransFunc1366 = () => {
   let obj: any = {
-    "0%": { transform: " translate(0,0) scale(1) rotate(15deg)" },
+    "0%": { transform: " translate(0,0) scale(1) " },
     "1%": {
       transform: "translate(-30vw , -10vh ) scale(3) rotate(15deg)",
     },
@@ -87,7 +92,7 @@ const config: Config = {
       },
       backgroundImage: {},
       animation: {
-        smokemobile1: "smokemobile1 4s ease-in-out infinite",
+        smokemobile1: "smokemobile1 4s ease-out infinite",
         smokemobile2: "smokemobile2 4s ease-in-out infinite",
         heightUP: "heightUP 1.5s ease-in-out forwards",
         heightUP1: "heightUP1 1.5s ease-in-out forwards",
@@ -111,7 +116,13 @@ const config: Config = {
         moveRightThenDisappear1:
           "moveRightThenDisappear1 900ms linear infinite",
         moveRightThenDisappear1Mobile:
-          "moveRightThenDisappear1Mobile 900ms linear infinite",
+          "moveRightThenDisappear1Mobile 1800ms linear infinite",
+        moveRightThenDisappear1MobileFrame2:
+          "moveRightThenDisappear1MobileFrame2 1800ms linear infinite",
+        moveRightThenDisappear1MobileFrame3:
+          "moveRightThenDisappear1MobileFrame3 1800ms linear infinite",
+        moveRightThenDisappear1MobileFrame4:
+          "moveRightThenDisappear1MobileFrame4 1800ms linear infinite",
         moveRightThenSlowDisappear:
           "moveRightThenSlowDisappear 900ms ease-in-out infinite",
         moveLeftThenSlowDisappearMobile:
@@ -123,6 +134,7 @@ const config: Config = {
         leafFallWindBlowHozirontal2:
           "leafFallWindBlowHozirontal2 20s ease-in-out infinite",
         modelScale: "modelScale 2.4s ease-in-out infinite",
+        modelScaletest: "modelScaletest 2.4s ease-in-out infinite",
 
         diamondMonveRight:
           "diamondMonveRight 20s ease-in-out infinite alternate",
@@ -145,25 +157,33 @@ const config: Config = {
         transUp: "transUp 1s ease-out forwards ",
       },
       keyframes: {
+        modelScaletest: {
+          "0%": {
+            transform: "scale(0.1)",
+          },
+          "100%": {
+            transform: "scale(1)",
+          },
+        },
         smokemobile1: {
-          "0%": { transform: "translate(0%,0%) rotate(-55deg)" },
-          "25%": {
-            transform: "translate(5px,-15px) rotate(-55deg)",
+          "0%": { transform: "translate(0%,0%) rotate(-45deg) ", opacity: "1" },
+          "15 %": {
+            transform: "translate(15px,-15px) rotate(-45deg) ",
             opacity: "1",
           },
-          "26%": {
-            transform: "translate(50%,-50%) rotate(-55deg)",
+          "26 %": {
+            transform: "translate(15px,-15px) rotate(-45deg) ",
             opacity: "0",
           },
           "100%": {
-            transform: "translate(50%,-50%) rotate(-55deg)",
+            transform: "translate(15px,-15px) rotate(-45deg)  ",
             opacity: "0",
           },
         },
         smokemobile2: {
-          "0%": { transform: "translate(0%,0%) rotate(-55deg)" },
-          "25%": {
-            transform: "translate(5px,-30px) rotate(-55deg)",
+          "0%": { transform: "translate(0%,0%) " },
+          "15%": {
+            transform: "translate(5px,-30px)",
             opacity: "1",
           },
           "26%": {
@@ -251,20 +271,62 @@ const config: Config = {
         moveRightThenDisappear1Mobile: {
           "0%": {
             transform: "translate(0, 0)",
-            opacity: ".5",
-            scale: ".3",
+            opacity: "1",
           },
-          "50%": {
+          "33%": {
             transform: "translate(50% , 0) ",
-            opacity: ".6",
-          },
-          "75%": {
-            transform: "translate(75% , 0) ",
-            opacity: ".4",
+            opacity: "0",
           },
           "100%": {
             transform: "translate(100%,-100%) ",
-            opacity: ".3",
+            opacity: "0",
+          },
+        },
+        moveRightThenDisappear1MobileFrame2: {
+          "0%": {
+            transform: "translate(0, 0)",
+            opacity: "0",
+          },
+          "33%": {
+            transform: "translate(50% , 0) scale(1.6)",
+            opacity: "1",
+          },
+          "66%": {
+            transform: "translate(50% , 0) scale(1) ",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translate(100%,-100%) ",
+            opacity: "0",
+          },
+        },
+        moveRightThenDisappear1MobileFrame3: {
+          "0%": {
+            transform: "translate(0, 0)",
+            opacity: "0",
+          },
+          "33%": {
+            transform: "translate(50% , 0) scale(1.6)",
+            opacity: "0",
+          },
+          "66%": {
+            transform: "translate(50% , 0) scale(1) ",
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translate(100%,-100%) ",
+            opacity: ".5",
+          },
+        },
+        moveRightThenDisappear1MobileFrame4: {
+          "0%": {
+            opacity: "0",
+          },
+          "66%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
           },
         },
         moveRightThenSlowDisappear: {
