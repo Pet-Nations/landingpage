@@ -10,75 +10,32 @@ const SmokeList = () => {
   return (
     <>
       <div
-        className={`
-        opacity-0
-        animate-smokemobile1
-          absolute
-           top-[10px]
-           right-[15px]
-           rotate-[-55deg]
-          z-[1]  
-           `}
+        style={{ animationDelay: "1ms" }}
+        className=" absolute animate-smokemobile1 -right-[10px] top-[0] opacity-0 w-[100px] h-[100px]"
       >
         <SmokeMobile1 />
       </div>
       <div
         style={{ animationDelay: "600ms" }}
-        className={`
-        opacity-0
-
-        animate-smokemobile2
-          absolute
-           top-[30px]
-           -right-[50px]
-           rotate-[-55deg]
-          z-[1]  
-           `}
+        className=" absolute animate-smokemobile1 w-[100px] opacity-0  top-[0px] -right-[10px] rotate-45  h-[100px]"
       >
         <SmokeMobile2 />
       </div>
       <div
         style={{ animationDelay: "1200ms" }}
-        className={`
-        opacity-0
-
-        animate-smokemobile2
-          absolute
-           top-[30px]
-           -right-[50px]
-           rotate-[-55deg]
-          z-[1]  
-           `}
+        className=" absolute animate-smokemobile1 w-[100px]  opacity-0 -top-[0px] -right-[10px] rotate-45  h-[100px]"
       >
         <SmokeMobile3 />
       </div>
       <div
         style={{ animationDelay: "1800ms" }}
-        className={`
-        opacity-0
-
-        animate-smokemobile2
-          absolute
-           top-[20px]
-           -right-[60px]
-           rotate-[-55deg]
-          z-[1]  
-           `}
+        className="absolute animate-smokemobile1 w-[50px] opacity-0  -top-[10px] -right-[20px] rotate-45  h-[50px]"
       >
         <SmokeMobile4 />
       </div>
       <div
         style={{ animationDelay: "2400ms" }}
-        className={`
-        opacity-0
-
-        animate-smokemobile2
-          absolute
-           top-[20px]
-        right-[0px]
-           rotate-[-55deg]
-          z-[1]  
-           `}
+        className="absolute animate-smokemobile1 w-[50px] opacity-0  -top-[10px] -right-[20px] rotate-45  h-[50px]"
       >
         <SmokeMobile5 />
       </div>

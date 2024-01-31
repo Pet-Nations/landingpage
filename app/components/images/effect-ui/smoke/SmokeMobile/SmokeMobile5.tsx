@@ -4,8 +4,8 @@ const SmokeMobile5 = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="85"
-      height="27"
+      width="100%"
+      height="100%"
       viewBox="0 0 85 112"
       fill="none"
     >

@@ -8,7 +8,7 @@ import IMGleft1 from "/public/images/imgleft1.png";
 import IMGleft2 from "/public/images/imgleft2.png";
 import IMGleft3 from "/public/images/imgleft3.png";
 import IMGleft4 from "/public/images/imgleft4.png";
-import usersmobile from "/public/images/usersmobile.png";
+import usersmobile from "/public/images/users.png";
 import brickmobiile from "/public/images/brickmobile.png";
 
 import Image from "next/image";
@@ -18,24 +18,24 @@ const MainContentMobile = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
   const refmain = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleTouchMove = (event: TouchEvent) => {
-      event.preventDefault();
-    };
+  // useEffect(() => {
+  //   const handleTouchMove = (event: TouchEvent) => {
+  //     event.preventDefault();
+  //   };
 
-    const mainElement = refmain.current;
-    if (mainElement) {
-      mainElement.addEventListener("touchmove", handleTouchMove, {
-        passive: false,
-      });
-    }
+  //   const mainElement = refmain.current;
+  //   if (mainElement) {
+  //     mainElement.addEventListener("touchmove", handleTouchMove, {
+  //       passive: false,
+  //     });
+  //   }
 
-    return () => {
-      if (mainElement) {
-        mainElement.removeEventListener("touchmove", handleTouchMove);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (mainElement) {
+  //       mainElement.removeEventListener("touchmove", handleTouchMove);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <div
@@ -51,6 +51,7 @@ const MainContentMobile = ({ showMainPage }: any) => {
         className={`absolute z-10 ${
           showMainPage ? `animate-mobileScaleHome` : ""
         } origin-[0%_60%]`}
+        // className={`absolute z-10 ${showMainPage ? `` : ""} origin-[0%_60%]`}
         src={BG}
         fill
         sizes="auto"
@@ -61,9 +62,10 @@ const MainContentMobile = ({ showMainPage }: any) => {
       <div
         className={`absolute
         max-[420px]:w-[45vw]
+        max-[480px]:w-[45vw]
         max-[420px]:left-2
         max-[420px]:gap-2
-        z-20 left-[13px] top-[90px] opacity-0 flex flex-col gap-5  ${
+        z-20 left-[13px] top-[86px] opacity-0 flex flex-col gap-5  ${
           showOtherVisuals ? `animate-transLeft` : ""
         }`}
       >
@@ -71,6 +73,7 @@ const MainContentMobile = ({ showMainPage }: any) => {
           <Image
             className={` ${showMainPage ? `` : ""}  `}
             src={IMGleft1}
+            style={{ width: "100%", height: "100%" }}
             quality={100}
             alt="bg"
           />
@@ -81,6 +84,7 @@ const MainContentMobile = ({ showMainPage }: any) => {
             className={` ${showMainPage ? `` : ""} `}
             src={IMGleft2}
             quality={100}
+            style={{ width: "100%", height: "100%" }}
             alt="bg"
           />
         </Link>
@@ -90,7 +94,7 @@ const MainContentMobile = ({ showMainPage }: any) => {
         className={`absolute z-20 right-[13px] 
         max-[420px]:right-2 max-[420px]:gap-2
         max-[420px]:w-[45vw]
-
+        max-[480px]:w-[45vw]
          top-[83px] opacity-0 flex flex-col gap-5 
                   ${showOtherVisuals ? `animate-transRight` : ""}`}
       >
@@ -98,7 +102,6 @@ const MainContentMobile = ({ showMainPage }: any) => {
           <Image
             className={` ${showMainPage ? `` : ""} `}
             src={IMGleft3}
-            sizes="40vw"
             quality={100}
             alt="bg"
           />
@@ -108,7 +111,6 @@ const MainContentMobile = ({ showMainPage }: any) => {
             className={` ${showMainPage ? `` : ""} `}
             src={IMGleft4}
             quality={100}
-            sizes="40vw"
             alt="bg"
           />
         </Link>
@@ -121,6 +123,8 @@ const MainContentMobile = ({ showMainPage }: any) => {
         <Image
           className={` ${showMainPage ? `` : ""} `}
           src={usersmobile}
+          width={80}
+          height={60}
           quality={100}
           alt="bg"
         />

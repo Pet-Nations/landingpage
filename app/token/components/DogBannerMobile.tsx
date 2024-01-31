@@ -13,7 +13,13 @@ const DogBannerMobile = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="relative">
-        <Image src={DogMobileImg} className="relative z-10" alt="img"></Image>
+        <Image
+          src={DogMobileImg}
+          width={331}
+          height={762}
+          className="relative z-10"
+          alt="img"
+        ></Image>
 
         <BreedInfo />
         <div className="absolute left-[8px]  bottom-[60px] z-40  ">
