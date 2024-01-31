@@ -1,21 +1,17 @@
 "use client";
 import Image from "next/image";
-import kartIcon from "/public/images/kart.svg";
-import Brick1 from "./images/effect-ui/brick/Brick1";
-import Brick from "./images/effect-ui/brick";
 import { useState } from "react";
-import Wind3 from "./images/effect-ui/Wind3";
-import Wind1 from "./images/effect-ui/Wind1";
-import Wind2 from "./images/effect-ui/Wind2";
-import Wind4 from "./images/effect-ui/Wind4";
 import Wind5 from "./images/Wind5";
 import Wind6 from "./images/effect-ui/Wind6";
 import Wind7 from "./images/effect-ui/Wind7";
+import Brick from "./images/effect-ui/brick";
+import Brick1 from "./images/effect-ui/brick/Brick1";
 import SmokeList from "./images/effect-ui/smoke/SmokeMobile/SmokeList";
+import kartIcon from "/public/images/kart.png";
 
 const KartM = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
-
+  // ${showMainPage ? "animate-moveAndScale480" : ""}
   return (
     <div
       onAnimationStart={() => {
@@ -24,19 +20,26 @@ const KartM = ({ showMainPage }: any) => {
         }, 2000);
       }}
       className={`
+        w-[86.6px]
+        h-[90.536px]
         absolute 
-        -right-[5vw]
-        bottom-[13vh]
-        scale-[0.5]
+        rotate-[15deg]
+        right-[15vw]
+        bottom-[20vh]
         z-[11]
-        ${showMainPage ? "animate-moveAndScale480" : ""}
-
+  ${showMainPage ? "animate-moveAndScale480" : ""}
         `}
     >
-      <Image src={kartIcon} alt="kartIcon"></Image>
+      <Image
+        style={{ width: "100%", height: "100%" }}
+        src={kartIcon}
+        alt="kartIcon"
+        loading="eager"
+      ></Image>
+
       {showOtherVisuals && (
         <>
-          <div className="absolute -right-[20px] bottom-0 opacity-50 scale-[.3] animate-moveRightThenDisappear1Mobile">
+          {/* <div className="absolute -right-[20px] bottom-0 opacity-50 scale-[.3] animate-moveRightThenDisappear1Mobile">
             <Wind5 />
           </div>
           <div
@@ -49,7 +52,7 @@ const KartM = ({ showMainPage }: any) => {
             className={`absolute top-[70%] z-[1]  scale-x-[-1] -left-[20px] animate-moveLeftThenSlowDisappearMobile  `}
           >
             <Wind7 />
-          </div>
+          </div> */}
 
           <SmokeList />
         </>

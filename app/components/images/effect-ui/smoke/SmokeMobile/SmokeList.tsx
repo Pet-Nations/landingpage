@@ -14,8 +14,8 @@ const SmokeList = () => {
         opacity-0
         animate-smokemobile1
           absolute
-           top-[10px]
-           right-[15px]
+           -top-[40px]
+           -right-[10px]
            rotate-[-55deg]
           z-[1]  
            `}
@@ -26,11 +26,10 @@ const SmokeList = () => {
         style={{ animationDelay: "600ms" }}
         className={`
         opacity-0
-
         animate-smokemobile2
           absolute
-           top-[30px]
-           -right-[50px]
+          -top-[10px]
+          -right-[75px]
            rotate-[-55deg]
           z-[1]  
            `}
@@ -41,11 +40,10 @@ const SmokeList = () => {
         style={{ animationDelay: "1200ms" }}
         className={`
         opacity-0
-
         animate-smokemobile2
           absolute
-           top-[30px]
-           -right-[50px]
+          -top-[10px]
+          -right-[75px]
            rotate-[-55deg]
           z-[1]  
            `}
@@ -56,11 +54,10 @@ const SmokeList = () => {
         style={{ animationDelay: "1800ms" }}
         className={`
         opacity-0
-
         animate-smokemobile2
           absolute
-           top-[20px]
-           -right-[60px]
+          -top-[10px]
+          -right-[75px]
            rotate-[-55deg]
           z-[1]  
            `}
@@ -71,11 +68,10 @@ const SmokeList = () => {
         style={{ animationDelay: "2400ms" }}
         className={`
         opacity-0
-
         animate-smokemobile2
           absolute
-           top-[20px]
-        right-[0px]
+          -top-[10px]
+          -right-[75px]
            rotate-[-55deg]
           z-[1]  
            `}

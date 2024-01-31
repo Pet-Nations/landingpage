@@ -21,17 +21,17 @@ const generateTransFunc = () => {
 
 const generateTransFunc480 = () => {
   let obj: any = {
-    "0%": { transform: " translate(0,0) scale(.5) rotate(15deg)" },
-    "1%": {
-      transform: "translate(-30vw , -10vh ) scale(1.5) rotate(15deg)",
+    "0%": { transform: " translate(0,0) scale(1) rotate(15deg)" },
+    ".1%": {
+      transform: "translate(-30vw , -10vh ) scale(3.44) rotate(15deg)",
     },
   };
 
-  for (let i = 2; i < 10000; i++) {
+  for (let i = 2; i < 100000; i++) {
     let h = i % 2 === 0 ? "-3vh" : "-10vh";
     let w = i % 2 === 0 ? "-30vw" : "-25vw";
-    obj[`${i}%`] = {
-      transform: `translate(${w} , ${h} ) scale(1.5) rotate(15deg)`,
+    obj[`${i / 10}%`] = {
+      transform: `translate(${w} , ${h} ) scale(3.44) rotate(15deg)`,
     };
   }
 
@@ -95,7 +95,7 @@ const config: Config = {
         heightDOWN1: "heightDOWN1 1.5s ease-in-out forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
         moveAndScale: "moveAndScale 200s ease-in-out forwards ",
-        moveAndScale480: "moveAndScale480 100s ease-out forwards ",
+        moveAndScale480: "moveAndScale480 1000s ease-out forwards ",
         flashScreen: "flashScreen .5s ease-in-out forwards",
         cardLeft: "cardLeft .5s ease-in-out forwards",
         cardLeft1600: "cardLeft1600 .5s ease-in-out forwards",
