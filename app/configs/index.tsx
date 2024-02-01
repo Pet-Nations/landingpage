@@ -12,7 +12,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon";
 
 export const COMMUNITY_FB_LINK =
   // "https://www.facebook.com/groups/242848220423686/";
-  "comingsoon";
+  "/";
 
 export const NAV_CONFIGS = [
   {
@@ -22,12 +22,12 @@ export const NAV_CONFIGS = [
   },
   {
     name: "TEAM",
-    url: "/team",
+    url: "/",
     icon: <MediaIcon />,
   },
   {
     name: "Partners",
-    url: "/about",
+    url: "/",
     icon: <PartnersIcon />,
   },
   {

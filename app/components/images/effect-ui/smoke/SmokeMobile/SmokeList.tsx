@@ -17,25 +17,25 @@ const SmokeList = () => {
       </div>
       <div
         style={{ animationDelay: "600ms" }}
-        className=" absolute animate-smokemobile1 w-[100px] opacity-0  top-[0px] -right-[10px] rotate-45  h-[100px]"
+        className=" absolute animate-smokemobile1 w-[100px] opacity-0  top-[35px] right-[15px] rotate-45  h-[100px]"
       >
         <SmokeMobile2 />
       </div>
       <div
         style={{ animationDelay: "1200ms" }}
-        className=" absolute animate-smokemobile1 w-[100px]  opacity-0 -top-[0px] -right-[10px] rotate-45  h-[100px]"
+        className=" absolute animate-smokemobile1 w-[100px]  opacity-0 top-[35px] right-[15px]  rotate-45  h-[100px]"
       >
         <SmokeMobile3 />
       </div>
       <div
         style={{ animationDelay: "1800ms" }}
-        className="absolute animate-smokemobile1 w-[50px] opacity-0  -top-[10px] -right-[20px] rotate-45  h-[50px]"
+        className="absolute animate-smokemobile1 w-[50px] opacity-0  top-[35px] right-[15px]  rotate-45  h-[50px]"
       >
         <SmokeMobile4 />
       </div>
       <div
         style={{ animationDelay: "2400ms" }}
-        className="absolute animate-smokemobile1 w-[50px] opacity-0  -top-[10px] -right-[20px] rotate-45  h-[50px]"
+        className="absolute animate-smokemobile1 w-[50px] opacity-0  top-[35px] right-[15px]  rotate-45  h-[50px]"
       >
         <SmokeMobile5 />
       </div>

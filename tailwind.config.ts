@@ -22,7 +22,7 @@ const generateTransFunc = () => {
 const generateTransFunc480 = () => {
   let obj: any = {
     "0%": {
-      transform: " translate(0,0) scale(.5) ",
+      transform: " translate(0,0) scale(.4) ",
       opacity: "1",
     },
     ".1%": {

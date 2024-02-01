@@ -25,16 +25,27 @@ const KartM = ({ showMainPage }: any) => {
         }, 2000);
       }}
       className={`
-        w-[75vw]
-        h-[36.3vh]
+        w-[100vw]
+        h-[50.3vh]
         absolute
-        scale-[.5]
+        scale-[.4]
         -rotate-[15deg]
-        -right-[9vw] 
-        bottom-[9dvh]
+        -right-[21vw] 
+        -bottom-[1dvh]
         z-[11]
         ${showMainPage ? "animate-moveAndScale480" : ""}
         `}
+      // className={`
+      //   w-[75vw]
+      //   h-[36.3vh]
+      //   absolute
+      //   scale-[.5]
+      //   -rotate-[15deg]
+      //   -right-[9vw]
+      //   bottom-[9dvh]
+      //   z-[11]
+      //   ${showMainPage ? "animate-moveAndScale480" : ""}
+      //   `}
     >
       <Image
         style={{ width: "100%", height: "100%" }}
@@ -50,8 +61,8 @@ const KartM = ({ showMainPage }: any) => {
           absolute 
           left-[32vw]
           bottom-[5vh] 
-          w-[139px]
-          h-[60px]
+          w-[156px]
+          h-[83px]
           z-[1]
           animate-moveRightThenDisappear1Mobile"
           >
@@ -64,8 +75,8 @@ const KartM = ({ showMainPage }: any) => {
           z-[2]
           bottom-[5vh] 
           opacity-0
-          w-[139px]
-          h-[60px]
+          w-[156px]
+          h-[83px]
            animate-moveRightThenDisappear1MobileFrame2  
            `}
           >
@@ -78,8 +89,8 @@ const KartM = ({ showMainPage }: any) => {
           z-[4]
           bottom-[5vh] 
           opacity-0
-          w-[139px]
-          h-[60px]
+          w-[156px]
+          h-[83px]
            animate-moveRightThenDisappear1MobileFrame2  
            `}
           >
@@ -92,8 +103,8 @@ const KartM = ({ showMainPage }: any) => {
           z-[4]
           bottom-[5vh] 
           opacity-0
-          w-[139px]
-          h-[60px]
+          w-[156px]
+          h-[83px]
            animate-moveRightThenDisappear1MobileFrame3  
            `}
           >
@@ -102,9 +113,9 @@ const KartM = ({ showMainPage }: any) => {
           <div
             className={`
             absolute 
-            left-[50vw]
+            left-[71vw]
           z-[4]
-          bottom-[10vh] 
+          bottom-[15vh] 
           opacity-0
           w-[93px]
           h-[48px]
