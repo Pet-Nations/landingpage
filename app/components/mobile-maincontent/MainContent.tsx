@@ -79,7 +79,7 @@ const MainContentMobile = ({ showMainPage }: any) => {
           />
         </Link>
 
-        <Link href="/models">
+        <Link href="/models" className="relative -top-[3px]">
           <Image
             className={` ${showMainPage ? `` : ""} `}
             src={IMGleft2}
