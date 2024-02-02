@@ -29,7 +29,7 @@ const items = [
     icon: <Icon2 />,
   },
   {
-    title1: "PET Nations",
+    title1: "PETVERSES",
     title2: "multiverse",
     icon: <Icon3 />,
   },
@@ -65,9 +65,24 @@ const ModelsPage = () => {
     <div className="flex-auto relative mt-10 bg-dark-main text-white1 overflow-hidden max-laptop:overflow-y-auto">
       <Diamonds />
       <div className="max-w-[1920px] relative mx-auto flex items-center justify-center top-[23vh] max-laptop:top-[19px]  max-laptopLarge:top-[150px]  max-laptop:flex flex-col max-laptop:gap-[120px]   ">
-        <div className="hidden max-laptop:block  ">
+        {/* <div className="hidden max-laptop:block  ">
           <Image src={ImageTitle} alt="img" />
+        </div> */}
+        <div className="hidden relative max-laptop:flex items-center flex-col justify-center ">
+          <p
+            className={`uppercase  font-[400] text-transparent text-[3rem] text-center tsx leading-[52.22px] ${archivo.className}`}
+          >
+            Our Models
+          </p>
+          <p
+            style={{ transform: "rotateX(-180deg)", marginTop: "-12px" }}
+            className={`opacity-[0.2]  uppercase  font-[400] text-transparent text-[3rem] text-center tsx leading-[52.22px] ${archivo.className}`}
+          >
+            Our Models
+          </p>
+          {/* <div className="blurlayer"></div> */}
         </div>
+
         <HamsterC />
         {/* 1200 hidden */}
         <div className="absolute flex gap-[48px] flex-col left-[10vw] items-start  max-laptopLarge:left-[32px]  max-laptop:hidden  min-[1920px]:left-[4vw] ">

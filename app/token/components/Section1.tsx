@@ -7,6 +7,7 @@ import Cloud2 from "/public/images/cloud2.png";
 import Sky from "/public/images/sky.png";
 import Section1Img from "/public/images/tokenbg.png";
 import Section1ImgM from "/public/images/tokenbgm.png";
+import StaticCloud from "/public/images/staticcloud.png";
 
 const Section1 = () => {
   const [section1Width, setSection1Width] = useState(0);
@@ -23,29 +24,37 @@ const Section1 = () => {
         src={Section1Img}
         width={section1Width}
         alt="image "
+        priority={true}
         className="relative z-30 max-[600px]:hidden"
       ></Image>
       <Image
         src={Section1ImgM}
         width={section1Width}
+        priority={true}
         alt="image "
         className=" hidden relative z-30 max-[600px]:block"
       ></Image>
       <Image
+        src={StaticCloud}
+        width={section1Width}
+        alt="image "
+        className=" hidden absolute top-0 z-20 max-[600px]:block"
+      ></Image>
+      <Image
         src={Cloud1}
-        className="absolute top-[0%] left-[0%] z-20 animate-cloudMoveLeft"
+        className="absolute top-[0%] left-[0%] z-[25] animate-cloudMoveLeft"
         alt="image"
       />
       <Image
         src={Cloud2}
-        className="absolute top-[0%] left-[200px] z-20 animate-cloudMoveLeft"
+        className="absolute top-[0%] left-[200px] z-[25] animate-cloudMoveLeft"
         alt="image"
       />
 
       <Image
         src={Sky}
         width={section1Width}
-        className="absolute top-[0] z-10 "
+        className="absolute h-60vh top-[0] z-10 "
         alt="image"
       ></Image>
 

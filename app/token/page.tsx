@@ -12,7 +12,7 @@ const TokenNomic = () => {
   return (
     <div className="overflow-x-hidden mt-12">
       <Section1 />
-      <section className="max-h-[919px] bg-[#FFF4E9] p-16 flex items-center justify-center z-30">
+      <section className="max-h-[919px] bg-[#FFF4E9] p-16 flex items-center justify-center z-40">
         <Image
           src={Section2Img}
           className="max-[600px]:hidden"
