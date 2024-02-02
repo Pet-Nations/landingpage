@@ -16,7 +16,6 @@ import Frame4 from "./effect-visual/WindMobile/Frame4";
 
 const KartM = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
-  // ${showMainPage ? "animate-moveAndScale480" : ""}
   return (
     <div
       onAnimationStart={() => {

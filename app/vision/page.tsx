@@ -89,7 +89,7 @@ const VisionPage = () => {
           </div>
         </div>
 
-        <div className="mt-[60px] flex gap-6 flex-wrap justify-center">
+        <div className="mt-[60px] flex gap-6 flex-wrap justify-center max-[450px]:px-4">
           {CARD_CONFIG.map((card, index) => (
             <VisionCard key={index} {...card} />
           ))}

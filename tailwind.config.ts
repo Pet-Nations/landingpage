@@ -43,16 +43,18 @@ const generateTransFunc480 = () => {
   return obj;
 };
 const generateTransFunc1366 = () => {
-  return {
-    "0%": {
-      transform: `translate(0, 0) scale(1)`,
+  let obj: any = {
+    "0% , 100%": {
+      transform: " translate(0,0) scale(1) ",
+      opacity: "1",
     },
-    "100%": {
-      transform: `translate(0,3vh ) scale(1)`,
+    "50%": {
+      transform: "translate(5vw , -5vh) scale(1) ",
+      opacity: "1",
     },
   };
+  return obj;
 };
-
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -93,7 +95,7 @@ const config: Config = {
         wiggle: "wiggle 1s ease-in-out infinite",
         moveAndScale: "moveAndScale 200s ease-in-out forwards ",
         moveAndScale480: "moveAndScale480 1000s ease-out forwards ",
-        moveAndScale1366: "moveAndScale1366 1000s ease-out infinite ",
+        moveAndScale1366: "moveAndScale1366 1.4s linear infinite ",
         flashScreen: "flashScreen .5s ease-in-out forwards",
         cardLeft: "cardLeft .5s ease-in-out forwards",
         cardLeft1600: "cardLeft1600 .5s ease-in-out forwards",

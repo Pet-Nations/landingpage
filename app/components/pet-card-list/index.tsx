@@ -30,7 +30,7 @@ const PetCardList = ({ showMenu }: any) => {
   return (
     <div
       className="flex flex-col
-     gap-[35px] max-[1366px]:gap-4
+     gap-[35px] max-[1366px]:gap-4 max-[1024px]:hidden
      
      
      
