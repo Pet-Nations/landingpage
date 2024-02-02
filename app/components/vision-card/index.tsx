@@ -4,11 +4,11 @@ import React from "react";
 const VisionCard = (card: any) => {
   return (
     <div className=" group w-[432px] h-[156px] bg-white hover:bg-dark-main  p-6 max-[480px]:p-4 card-border-1 relative  transition-all cursor-pointer ">
-      <div className="max-w-[231px] break-words group-hover:text-white relative">
-        <p className="break-words text-[24px] font-[500] group-hover:text-white">
+      <div className="max-w-[231px] break-words group-hover:text-white1 relative">
+        <p className="break-words text-[24px] font-[500] group-hover:text-white1">
           {card.text1}
         </p>
-        <p className="max-[480px]:mt-1 break-words font-[300] leading-[26px] group-hover:text-white">
+        <p className="max-[480px]:mt-1 break-words font-[300] leading-[26px] group-hover:text-white1">
           {card.text2}
         </p>
       </div>

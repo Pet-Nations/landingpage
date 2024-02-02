@@ -146,10 +146,10 @@ const MainHeader = ({ page }: Props) => {
       </div>
 
       <div className="ml-auto w-fit h-full flex items-center justify-center gap-x-2  max-[1366px]:hidden  ">
-        {HEADER_ICON.map((el: any) => (
+        {HEADER_ICON.map((el: any, index: any) => (
           <Link
             className="h-10 w-10 flex items-center justify-center hover:bg-[#FF9F46]"
-            key={el.url}
+            key={index}
             href={el.url}
           >
             {el.icon}

@@ -39,30 +39,30 @@ export const NAV_CONFIGS = [
 export const HEADER_ICON = [
   {
     icon: <DiscordIcon />,
-    url: "/1",
+    url: "/",
   },
   {
     icon: <FacebookIcon />,
-    url: "/2",
+    url: "/",
   },
   {
     icon: <SocialIcon />,
-    url: "/3",
+    url: "/",
   },
   {
     icon: <TiktokIcon />,
-    url: "/4",
+    url: "/",
   },
   {
     icon: <TelegramIcon />,
-    url: "/5",
+    url: "/",
   },
   {
     icon: <YoutubeIcon />,
-    url: "/6",
+    url: "/",
   },
   {
     icon: <TwitterIcon />,
-    url: "/7",
+    url: "/",
   },
 ];

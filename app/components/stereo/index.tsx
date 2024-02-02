@@ -111,12 +111,12 @@ const StereosList = () => {
               <div className="group w-[49px] h-[49px] flex items-center justify-center  absolute right-[1.5px] top-[10px] hover:scale-110 hover:bg-[#FA5252] transition-all">
                 {el?.iconMain}
 
-                <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[55px] transition-all right-[-10px] text-white uppercase text-center ">
+                <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[55px] transition-all right-[-10px] text-white1 uppercase text-center ">
                   {el.text}
                 </div>
 
                 {index === 1 || index === 3 ? (
-                  <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[85px] transition-all right-[-10px] text-white uppercase text-center">
+                  <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[85px] transition-all right-[-10px] text-white1 uppercase text-center">
                     {el.text2}
                   </div>
                 ) : null}
@@ -166,12 +166,12 @@ const StereosList = () => {
               <div className="group bg-dark-main w-[49px] h-[49px] flex items-center justify-center  absolute right-[1.5px] top-[10px] left-7 hover:scale-110 hover:bg-[#FA5252] transition-all">
                 {el?.iconMain}
 
-                <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[55px] transition-all right-[-10px] text-white uppercase text-center ">
+                <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[55px] transition-all right-[-10px] text-white1 uppercase text-center ">
                   {el.text}
                 </div>
 
                 {index === 1 || index === 3 ? (
-                  <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[85px] transition-all right-[-10px] text-white uppercase text-center">
+                  <div className="hidden group-hover:block absolute w-[70px] bg-dark-main h-[24px] top-[85px] transition-all right-[-10px] text-white1 uppercase text-center">
                     {el.text2}
                   </div>
                 ) : null}

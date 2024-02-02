@@ -62,7 +62,7 @@ const items = [
 
 const ModelsPage = () => {
   return (
-    <div className="flex-auto relative mt-10 bg-dark-main text-white overflow-hidden max-laptop:overflow-y-auto">
+    <div className="flex-auto relative mt-10 bg-dark-main text-white1 overflow-hidden max-laptop:overflow-y-auto">
       <Diamonds />
       <div className="max-w-[1920px] relative mx-auto flex items-center justify-center top-[23vh] max-laptop:top-[19px]  max-laptopLarge:top-[150px]  max-laptop:flex flex-col max-laptop:gap-[120px]   ">
         <div className="hidden max-laptop:block  ">

@@ -38,14 +38,14 @@ const HamsterC = () => {
         >
           <div className="flex justify-between items-center h-full ml-4 mr-[90.16px]">
             <div>
-              <p className=" text-white text-[16px] font-[300] leading-[28px] ">
+              <p className=" text-white1 text-[16px] font-[300] leading-[28px] ">
                 BUNNY
               </p>
               <p className=" text-[24px] font-bold leading-[28px]">#088</p>
             </div>
 
             <div>
-              <p className=" text-white text-[16px] font-[300] leading-[28px]">
+              <p className=" text-white1 text-[16px] font-[300] leading-[28px]">
                 Price
               </p>
               <p className=" text-[24px] font-bold leading-[28px]">XX.XX SOL</p>
