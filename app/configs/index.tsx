@@ -45,14 +45,14 @@ export const HEADER_ICON = [
     icon: <FacebookIcon />,
     url: "/",
   },
-  {
-    icon: <SocialIcon />,
-    url: "/",
-  },
-  {
-    icon: <TiktokIcon />,
-    url: "/",
-  },
+  // {
+  //   icon: <SocialIcon />,
+  //   url: "/",
+  // },
+  // {
+  //   icon: <TiktokIcon />,
+  //   url: "/",
+  // },
   {
     icon: <TelegramIcon />,
     url: "/",
@@ -63,6 +63,6 @@ export const HEADER_ICON = [
   },
   {
     icon: <TwitterIcon />,
-    url: "/",
+    url: "https://twitter.com/pet_nations",
   },
 ];

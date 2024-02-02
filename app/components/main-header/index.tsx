@@ -151,6 +151,7 @@ const MainHeader = ({ page }: Props) => {
             className="h-10 w-10 flex items-center justify-center"
             key={index}
             href={el.url}
+            target="_blank"
           >
             {el.icon}
           </Link>
