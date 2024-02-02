@@ -10,7 +10,7 @@ import IMGleft4 from "/public/images/imgleft4.png";
 
 const TopTabletPetCard = ({ showOtherVisuals, showMainPage }: any) => {
   return (
-    <div className="min-[1024px]:hidden max-[480px]:hidden absolute z-40 w-full h-auto flex justify-between">
+    <div className="min-[1024.98px]:hidden max-[480px]:hidden absolute z-40 w-full h-auto flex justify-between">
       <div
         className={`absolute
         w-[45vw] h-auto

@@ -98,7 +98,7 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
             {currentCard?.avatar}
           </div>
         </div>
-        <p className="absolute  z-9 text-[32px] max-[1440px]:text-[24px] text-white leading-normal font-normal uppercase bottom-[17px] left-[28px] ">
+        <p className="absolute  z-9 text-[32px] max-[1440px]:text-[24px] text-white1 leading-normal font-normal uppercase bottom-[17px] left-[28px] ">
           {currentCard?.title}
         </p>
         {isHover && (

@@ -50,7 +50,7 @@ const NavItem = ({ name, url, icon }: any) => {
           </p>
         ) : (
           <p
-            className={`text-white inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main hover:font-bold`}
+            className={`text-white1 inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main hover:font-bold`}
           >
             {name}
           </p>

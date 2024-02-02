@@ -75,14 +75,14 @@ const VisionPage = () => {
       <section className="flex-auto mt-[151px] max-[1200px]:mt-[24px] max-w-[1920px] w-full mx-auto ">
         <div className="flex items-center justify-center relative z-20">
           <div className="flex flex-col">
-            <p className="text-white text-center text-[18px] font-[300] leading-[28px] inline-block max-width max-w-[890px] mx-auto">
+            <p className="text-white1 text-center text-[18px] font-[300] leading-[28px] inline-block max-width max-w-[890px] mx-auto">
               Pet Nations is an infinite pet ecosystem
             </p>
-            <p className="text-white text-center text-[18px] font-[300] leading-[28px] inline-block max-width max-w-[890px] mx-auto">
+            <p className="text-white1 text-center text-[18px] font-[300] leading-[28px] inline-block max-width max-w-[890px] mx-auto">
               Experience, play, connect, and earn rewards worthy of your own
               collections.
             </p>
-            <p className="text-white text-center text-[18px] font-[300] leading-[28px] inline-block max-width max-w-[890px] mx-auto">
+            <p className="text-white1 text-center text-[18px] font-[300] leading-[28px] inline-block max-width max-w-[890px] mx-auto">
               A place where users can experience pet-related products and
               services at a new level through WEB3
             </p>
