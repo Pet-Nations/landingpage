@@ -18,25 +18,6 @@ const MainContentMobile = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
   const refmain = useRef<HTMLDivElement>(null);
 
-  // useEffect(() => {
-  //   const handleTouchMove = (event: TouchEvent) => {
-  //     event.preventDefault();
-  //   };
-
-  //   const mainElement = refmain.current;
-  //   if (mainElement) {
-  //     mainElement.addEventListener("touchmove", handleTouchMove, {
-  //       passive: false,
-  //     });
-  //   }
-
-  //   return () => {
-  //     if (mainElement) {
-  //       mainElement.removeEventListener("touchmove", handleTouchMove);
-  //     }
-  //   };
-  // }, []);
-
   return (
     <div
       ref={refmain}

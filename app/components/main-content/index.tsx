@@ -2,18 +2,18 @@
 
 import { useState } from "react";
 import VisualsList from "../effect-visual";
-import KartIcon from "../icons/KartIcon";
 import Brick1 from "../images/effect-ui/brick/Brick1";
 import MainContentMobile from "../mobile-maincontent/MainContent";
 import PetCardList from "../pet-card-list";
 import Kart1368 from "../kart/Kart1368";
 import KartDesktop from "../kart/KartDesktop";
+import TopTabletPetCard from "../kart/TopTabletPetCard";
 
 const MainContent = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
 
   const handleAnimation = async (e: any) => {
-    if (e.animationName === "moveAndScale") {
+    if (["moveAndScale1366", "moveAndScale"].includes(e.animationName)) {
       await new Promise((resolve) => setTimeout(resolve, 2000));
       setShowOtherVisuals(true);
     }
@@ -26,10 +26,17 @@ const MainContent = ({ showMainPage }: any) => {
           handleAnimation={handleAnimation}
           showMainPage={showMainPage}
         />
+
         <Kart1368
           handleAnimation={handleAnimation}
           showMainPage={showMainPage}
         />
+
+        <TopTabletPetCard
+          showMainPage={showMainPage}
+          showOtherVisuals={showOtherVisuals}
+        />
+
         <div className={`absolute top-[57%] left-[75%]   z-10`}>
           <div className={`absolute top-[75%] left-[55%] scale-50  `}>
             <Brick1 />
