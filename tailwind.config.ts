@@ -43,22 +43,14 @@ const generateTransFunc480 = () => {
   return obj;
 };
 const generateTransFunc1366 = () => {
-  let obj: any = {
-    "0%": { transform: " translate(0,0) scale(1) " },
-    "1%": {
-      transform: "translate(-30vw , -10vh ) scale(3) rotate(15deg)",
+  return {
+    "0%": {
+      transform: `translate(0, 0) scale(1)`,
+    },
+    "100%": {
+      transform: `translate(0,3vh ) scale(1)`,
     },
   };
-
-  for (let i = 2; i < 10000; i++) {
-    let h = i % 2 === 0 ? "-3vh" : "-10vh";
-    let w = i % 2 === 0 ? "-30vw" : "-25vw";
-    obj[`${i}%`] = {
-      transform: `translate(${w} , ${h} ) scale(1.5) rotate(15deg)`,
-    };
-  }
-
-  return obj;
 };
 
 const config: Config = {
@@ -101,6 +93,7 @@ const config: Config = {
         wiggle: "wiggle 1s ease-in-out infinite",
         moveAndScale: "moveAndScale 200s ease-in-out forwards ",
         moveAndScale480: "moveAndScale480 1000s ease-out forwards ",
+        moveAndScale1366: "moveAndScale1366 1000s ease-out infinite ",
         flashScreen: "flashScreen .5s ease-in-out forwards",
         cardLeft: "cardLeft .5s ease-in-out forwards",
         cardLeft1600: "cardLeft1600 .5s ease-in-out forwards",

@@ -8,8 +8,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Pet Nations",
-  description: "Pet Nations",
+  title: "Pet Nations - No man land",
+  description: "The limitless web3 ecosystem for pets #desoc #ip",
 };
 
 export default function RootLayout({

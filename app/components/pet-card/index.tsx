@@ -16,8 +16,6 @@ import RabbitAvatar from "../images/RabbitAvatar";
 const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
   const [show, setShow] = useState(false);
 
-  const [isTablet, setIsTablet] = useState(false);
-
   const [isHover, setIsHover] = useState(false);
   useEffect(() => {
     const delay = (id - 1) * 200;
@@ -37,22 +35,6 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
   const handleMouseLeave = () => {
     setIsHover(false);
   };
-
-  useEffect(() => {
-    setIsTablet(window.innerWidth <= 1366);
-
-    const handleResize = () => {
-      setIsTablet(window.innerWidth <= 1366);
-    };
-
-    handleResize(); // Set initial value
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const CARD_CONFIG = [
     {
@@ -96,7 +78,7 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
         onMouseLeave={handleMouseLeave}
         className={` group 
       h-[160px]  max-[1440px]:h-[140px] 
-      w-[448px] max-[1440px]:w-[380px] max-[1366px]:hidden 
+      w-[448px] max-[1440px]:w-[380px] 
       -right-full 
       relative inline-block transition-all ${
         show
@@ -105,18 +87,18 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
       }  `}
         href={imgUrl}
       >
-        <div className="absolute z-9 pet-card-1 h-full max-[1366px]:hidden ">
+        <div className="absolute z-9 pet-card-1 h-full ">
           {currentCard?.background}
           <div
             className="absolute
         bottom-[3px]   
-         z-10 max-[1366px]:hidden
+         z-10 
          left-[45%]"
           >
             {currentCard?.avatar}
           </div>
         </div>
-        <p className="absolute max-[1366px]:hidden z-9 text-[32px] max-[1440px]:text-[24px] text-white leading-normal font-normal uppercase bottom-[17px] left-[28px] ">
+        <p className="absolute  z-9 text-[32px] max-[1440px]:text-[24px] text-white leading-normal font-normal uppercase bottom-[17px] left-[28px] ">
           {currentCard?.title}
         </p>
         {isHover && (
@@ -125,29 +107,7 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
           absolute 
           
           h-[160px] max-[1440px]:h-[140px] 
-          max-[1366px]:origin-right
-          max-[1366px]:hover:scale-105 transition-all
-          
           z-20 w-full top-[13px] -right-[13px] `}
-          >
-            {currentCard?.background2}
-
-            <p className="absolute z-9 text-[32px] max-[1440px]:text-[24px] leading-normal font-bold uppercase bottom-[17px] left-[28px] animate-petCardTextDOwn">
-              {currentCard?.title}
-            </p>
-          </div>
-        )}
-
-        {isTablet && (
-          <div
-            className={`
-        absolute 
-        
-        h-[160px] max-[1440px]:h-[140px] 
-        max-[1366px]:origin-right
-        max-[1366px]:hover:scale-105 transition-all
-        
-        z-20 w-full top-[13px] -right-[13px] `}
           >
             {currentCard?.background2}
 

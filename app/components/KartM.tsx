@@ -35,17 +35,6 @@ const KartM = ({ showMainPage }: any) => {
         z-[11]
         ${showMainPage ? "animate-moveAndScale480" : ""}
         `}
-      // className={`
-      //   w-[75vw]
-      //   h-[36.3vh]
-      //   absolute
-      //   scale-[.5]
-      //   -rotate-[15deg]
-      //   -right-[9vw]
-      //   bottom-[9dvh]
-      //   z-[11]
-      //   ${showMainPage ? "animate-moveAndScale480" : ""}
-      //   `}
     >
       <Image
         style={{ width: "100%", height: "100%" }}

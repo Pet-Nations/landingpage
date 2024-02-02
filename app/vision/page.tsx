@@ -27,37 +27,37 @@ const VisionPage = () => {
     {
       image: <Image2 />,
       text1: "IP and global brand",
-      text2: "Description",
+      text2: "Pet famous, with us",
     },
     {
       image: <Image3 />,
       text1: "Collaboration worldwide",
-      text2: "Description",
+      text2: "Globally, pet domination",
     },
     {
       image: <Image4 />,
       text1: "Socialfi",
-      text2: "Description",
+      text2: "Make it decentralize for pet society",
     },
     {
       image: <Image5 />,
       text1: "Limited NFT Collectibles",
-      text2: "Description",
+      text2: "Limited and high price",
     },
     {
       image: <Image6 />,
       text1: "Master broker",
-      text2: "Description",
+      text2: "Buy & sell good things for pet",
     },
     {
       image: <Image7 />,
       text1: "Harmonization (token)",
-      text2: "Description",
+      text2: "Instant rewards for long lasting",
     },
     {
       image: <Image8 />,
       text1: "Global communities",
-      text2: "Description",
+      text2: "Together pet growth",
     },
   ];
 
