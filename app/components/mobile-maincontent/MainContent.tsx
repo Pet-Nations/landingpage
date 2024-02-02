@@ -65,7 +65,7 @@ const MainContentMobile = ({ showMainPage }: any) => {
         max-[480px]:w-[45vw]
         max-[420px]:left-2
         max-[420px]:gap-2
-        z-20 left-[13px] top-[86px] opacity-0 flex flex-col gap-5  ${
+        z-20 left-[13px] top-[90px] opacity-0 flex flex-col gap-5  ${
           showOtherVisuals ? `animate-transLeft` : ""
         }`}
       >
@@ -79,10 +79,10 @@ const MainContentMobile = ({ showMainPage }: any) => {
           />
         </Link>
 
-        <Link href="/models" className="relative -top-[3px]">
+        <Link href="/models" className="relative ">
           <Image
             className={` ${showMainPage ? `` : ""} `}
-            src={IMGleft2}
+            src={IMGleft3}
             quality={100}
             style={{ width: "100%", height: "100%" }}
             alt="bg"
@@ -101,7 +101,7 @@ const MainContentMobile = ({ showMainPage }: any) => {
         <Link href="/vision">
           <Image
             className={` ${showMainPage ? `` : ""} `}
-            src={IMGleft3}
+            src={IMGleft2}
             quality={100}
             alt="bg"
           />
