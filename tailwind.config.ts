@@ -86,6 +86,7 @@ const config: Config = {
       },
       backgroundImage: {},
       animation: {
+        fadeIn1: "fadeIn1 600ms linear forwards",
         smokemobile1: "smokemobile1 4s ease-out infinite",
         smokemobile2: "smokemobile2 4s ease-in-out infinite",
         heightUP: "heightUP 1.5s ease-in-out forwards",
@@ -235,6 +236,10 @@ const config: Config = {
         fadeIn: {
           "0%, 100%": { opacity: "0" },
           "50%": { opacity: "1" },
+        },
+        fadeIn1: {
+          "0%,": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         petCardTextDOwn: {
           "0%": { transform: "translate(-13px,0)" },

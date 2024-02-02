@@ -77,6 +77,11 @@ body {
     color: #ff9f46;
   }
 
+  .bgdogfoil5 {
+    background: #bababa url("/images/dogfootprint.png") center/cover repeat;
+    opacity: 0.05;
+  }
+
   .pet-card-1 {
     backdrop-filter: blur(10.5px);
   }
@@ -368,10 +373,10 @@ body {
     clip-path: polygon(5% 0, 100% 0, 100% 100%, 0 100%, 0 14%);
   }
   .fadeIn {
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 600s ease-in-out forwards;
   }
   .fadeOut {
-    animation: fadeOut 1s ease-in-out forwards;
+    animation: fadeOut 600s ease-in-out forwards;
   }
   @keyframes fadeIn {
     0% {
