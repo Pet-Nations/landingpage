@@ -18,6 +18,19 @@ body {
       url("/images/bgnation2.png") no-repeat center/cover;
   }
 
+  .blurlayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    top: 46px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .tsx {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff4e9;
+  }
   .badkart {
     transform: translate3d(-42px, 0px, 135px);
   }

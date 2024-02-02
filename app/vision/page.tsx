@@ -69,7 +69,7 @@ const VisionPage = () => {
         Vision map
       </p> */}
       <div className="hidden max-[1200px]:block mx-auto mt-[19.36px]">
-        <Image src={visionMobile} alt="img"></Image>
+        <Image src={visionMobile} width={323} height={96} alt="img"></Image>
       </div>
 
       <section className="flex-auto mt-[151px] max-[1200px]:mt-[24px] max-w-[1920px] w-full mx-auto ">
