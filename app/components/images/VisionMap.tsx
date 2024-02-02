@@ -6,11 +6,11 @@ import PetCard1 from "/public/images/petcard2.png";
 const VisionMap = () => {
   return (
     <Image
-      loading="eager"
-      style={{ width: "100%", height: "100%" }}
+      className="opacity-100 absolute w-[451px] h-[163px] -right-[3px] -bottom-[3px] "
       src={PetCard1}
-      alt="img"
-    ></Image>
+      alt="1"
+      style={{ maxWidth: "none" }}
+    />
   );
 };
 

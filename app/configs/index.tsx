@@ -9,10 +9,53 @@ import TelegramIcon from "../components/icons/TelegramIcon";
 import TiktokIcon from "../components/icons/TiktokIcon";
 import TwitterIcon from "../components/icons/TwitterIcon";
 import YoutubeIcon from "../components/icons/YoutubeIcon";
+import CatAvatar from "../components/images/CatAvatar";
+import DogAvatar from "../components/images/DogAvatar";
+import Economy from "../components/images/Economy";
+import OurModel from "../components/images/OurModel";
+import RabbitAvatar from "../components/images/RabbitAvatar";
+import VisionMap from "../components/images/VisionMap";
+import MonkeyAvatar from "../components/images/monkeyAvatar";
+import Story from "../stories/page";
 
 export const COMMUNITY_FB_LINK =
   // "https://www.facebook.com/groups/242848220423686/";
   "/";
+
+export const PET_CARDS: any[] = [
+  {
+    id: 1,
+    background2: <Story />,
+    avatar: <MonkeyAvatar />,
+    name: "OUR STORY",
+    imgUrl: "/stories",
+    src: "/images/petcard1.png",
+  },
+  {
+    id: 2,
+    name: "VISION MAP",
+    imgUrl: "/vision",
+    background2: <VisionMap />,
+    avatar: <DogAvatar />,
+    src: "/images/petcard2.png",
+  },
+  {
+    id: 3,
+    name: "OUR MODELS",
+    imgUrl: "/models",
+    background2: <OurModel />,
+    avatar: <RabbitAvatar />,
+    src: "/images/petcard3.png",
+  },
+  {
+    id: 4,
+    name: "ECONOMY",
+    imgUrl: "/token",
+    background2: <Economy />,
+    avatar: <CatAvatar />,
+    src: "/images/petcard4.png",
+  },
+];
 
 export const NAV_CONFIGS = [
   {
