@@ -24,12 +24,14 @@ const Section1 = () => {
         src={Section1Img}
         width={section1Width}
         alt="image "
+        loading={"eager"}
         priority={true}
         className="relative z-30 max-[600px]:hidden"
       ></Image>
       <Image
         src={Section1ImgM}
         width={section1Width}
+        loading={"eager"}
         priority={true}
         alt="image "
         className=" hidden relative z-30 max-[600px]:block"

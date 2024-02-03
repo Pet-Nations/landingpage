@@ -77,8 +77,8 @@ const PetCard = ({ name, id, imgUrl, showMenu }: Card) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         className={` group 
-      h-[160px]  max-[1440px]:h-[140px]  max-[1366px]:h-[125px]
-      w-[448px] max-[1440px]:w-[380px] max-[1366px]:w-[350px]
+      h-[160px] 
+      w-[448px] 
       -right-full 
       relative inline-block transition-all ${
         show
