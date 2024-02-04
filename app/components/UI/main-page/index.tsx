@@ -5,12 +5,7 @@ import MainHeader from "../../main-header";
 import MainFooter from "../../main-footer";
 import MainContent from "../../main-content";
 
-const MainPage = ({ showMainPage }: any) => {
-  useEffect(() => {
-    document.body.addEventListener("touchmove", function (e) {
-      e.preventDefault();
-    });
-  }, []);
+const MainPage = ({ showMainPage, staticCarPNG }: any) => {
 
   return (
     <div className=" h-[100dvh]  w-full flex flex-col overflow-hidden">

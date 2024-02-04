@@ -11,6 +11,8 @@ export default function Home() {
   const [showBlackCover, setShowBlackCover] = useState(false);
   const [showBlackCover2, setShowBlackCover2] = useState(false);
 
+
+
   // const isLoaded = !!sessionStorage?.getItem("loaded");
   const isLoaded = false;
 
@@ -21,6 +23,7 @@ export default function Home() {
   //     setShowLoading(false);
   //   }
   // }, [isLoaded]);
+
 
   useEffect(() => {
     setShowBlackCover(true);
@@ -49,45 +52,37 @@ export default function Home() {
     >
       {/* loading screen */}
       <div
-        className={`absolute inset-0 bg-custom-bg flex items-center justify-center z-20 ${
-          showLoading ? "visible" : "invisible"
-        }  `}
+        className={`absolute inset-0 bg-custom-bg flex items-center justify-center z-20 ${showLoading ? "visible" : "invisible"
+          }  `}
       >
         <div
           onAnimationEnd={hideLoadingScreen}
-          className={`absolute top-0 -translate-y-full bg-dark-main h-screen w-full z-50 ${
-            showBlackCover ? "animate-heightDOWN" : ""
-          }  `}
+          className={`absolute top-0 -translate-y-full bg-dark-main h-screen w-full z-50 ${showBlackCover ? "animate-heightDOWN" : ""
+            }  `}
         />
         <Loading showLoading={showLoading} />
         <div
-          className={`absolute top-0 z-20 -translate-y-full bg-dark-main h-screen w-full ${
-            showBlackCover ? "animate-heightUP" : ""
-          }  `}
+          className={`absolute top-0 z-20 -translate-y-full bg-dark-main h-screen w-full ${showBlackCover ? "animate-heightUP" : ""
+            }  `}
         />
       </div>
 
       {/* kart page */}
       <div
-        className={`h-full w-full absolute z-[51] inset-0  ${
-          showLoading ? "opacity-0" : "opacity-100"
-        } `}
+        className={`h-full w-full absolute z-[51] inset-0  ${showLoading ? "opacity-0" : "opacity-100"
+          } `}
       >
         <div
           onAnimationEnd={startMainPage}
-          className={`absolute inset-0 ${
-            isLoaded ? "opacity-0" : ""
-          }  bg-dark-main h-screen w-screen  z-[51] ${
-            showBlackCover2 ? "animate-heightUP1" : ""
-          }  `}
+          className={`absolute inset-0 ${isLoaded ? "opacity-0" : ""
+            }  bg-dark-main h-screen w-screen  z-[555555551] ${showBlackCover2 ? "animate-heightUP1" : ""
+            }  `}
         />
         <MainPage showMainPage={showMainPage} />
         <div
-          className={`absolute ${
-            isLoaded ? "opacity-0" : ""
-          } inset-0 z-[51] -translate-y-full bg-dark-main h-screen w-full ${
-            showBlackCover2 ? "animate-heightDOWN1" : ""
-          }  `}
+          className={`absolute ${isLoaded ? "opacity-0" : ""
+            } inset-0  z-[555555551] -translate-y-full bg-dark-main h-screen w-full ${showBlackCover2 ? "animate-heightDOWN1" : ""
+            }  `}
         />
       </div>
     </main>

@@ -1,60 +1,5 @@
 import type { Config } from "tailwindcss";
 
-const generateTransFunc = () => {
-  let obj: any = {
-    "0%": { transform: " translateX(0) scale(1) rotate(-2deg)" },
-    "1%": {
-      transform: "translate(-30vw , -20vh ) scale(4.5) rotate(-15deg)",
-    },
-  };
-
-  for (let i = 2; i < 10000; i++) {
-    let h = i % 2 === 0 ? "-13vh" : "-20vh";
-
-    obj[`${i}%`] = {
-      transform: `translate(-30vw , ${h} ) scale(4.5) rotate(-15deg)`,
-    };
-  }
-
-  return obj;
-};
-
-const generateTransFunc480 = () => {
-  let obj: any = {
-    "0%": {
-      transform: " translate(0,0) scale(.4) ",
-      opacity: "1",
-    },
-    ".1%": {
-      transform: "translate(-25vw , -10vh) scale(1) ",
-      opacity: "1",
-    },
-  };
-
-  for (let i = 2; i < 100000; i++) {
-    let h = i % 2 === 0 ? "-3vh" : "-10vh";
-    let w = i % 2 === 0 ? "-25vw" : "-30vw";
-    obj[`${i / 10}%`] = {
-      transform: `translate(${w} , ${h} ) scale(1)`,
-      opacity: "1",
-    };
-  }
-
-  return obj;
-};
-const generateTransFunc1366 = () => {
-  let obj: any = {
-    "0% , 100%": {
-      transform: " translate(0,0) scale(1) ",
-      opacity: "1",
-    },
-    "50%": {
-      transform: "translate(5vw , -5vh) scale(1) ",
-      opacity: "1",
-    },
-  };
-  return obj;
-};
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -86,6 +31,11 @@ const config: Config = {
       },
       backgroundImage: {},
       animation: {
+        fallLeaf: "fallLeaf 3s linear infinite",
+        fallLeaf1: "fallLeaf1 3s linear infinite",
+        carMove: "carMove 1s linear forwards",
+        brickMove: "brickMove 1s linear forwards",
+        carStatic: "carStatic 1.6s linear infinite",
         fadeIn1: "fadeIn1 600ms linear forwards",
         smokemobile1: "smokemobile1 4s ease-out infinite",
         smokemobile2: "smokemobile2 4s ease-in-out infinite",
@@ -122,9 +72,9 @@ const config: Config = {
         moveRightThenSlowDisappear:
           "moveRightThenSlowDisappear 900ms ease-in-out infinite",
         moveLeftThenSlowDisappearMobile:
-          "moveLeftThenSlowDisappearMobile 900ms ease-in-out infinite",
+          "moveLeftThenSlowDisappearMobile 1s ease-in-out infinite",
         moveLeftThenSlowDisappear:
-          "moveLeftThenSlowDisappear 900ms ease-in-out infinite",
+          "moveLeftThenSlowDisappear 1s linear infinite",
         leafFallWindBlowHozirontal:
           "leafFallWindBlowHozirontal 20s ease-in-out infinite",
         leafFallWindBlowHozirontal2:
@@ -147,12 +97,81 @@ const config: Config = {
         coinMobile2: "coinMobile2 4s linear infinite ",
         coinMobile3: "coinMobile3 3s linear infinite ",
         moveLeft100: "moveLeft100 1s ease-out forwards ",
-        mobileScaleHome: "mobileScaleHome 2s ease-out forwards ",
+        mobileScaleHome: "mobileScaleHome 1s ease-out forwards ",
         transRight: "transRight 1s ease-out forwards ",
         transLeft: "transLeft 1s ease-out forwards ",
         transUp: "transUp 1s ease-out forwards ",
       },
       keyframes: {
+        fallLeaf: {
+          "0% , 100%": {
+            filter: "blur(0px)",
+            transform: "translate(0,0) rotate(0deg)",
+          },
+          "20%": {
+            filter: "blur(4px)",
+            transform: "translate(2vw,10vh) rotate(40deg)",
+          },
+          "40%": {
+            filter: "blur(0px)",
+            transform: "translate(4vw,20vh) rotate(270deg)",
+          },
+          "60%": {
+            filter: "blur(0px)",
+            transform: "translate(8vw,25vh) rotate(40deg)",
+          },
+          "80%": {
+            filter: "blur(4px)",
+            transform: "translate(10vw,28vh) rotate(213deg)",
+          },
+        },
+        fallLeaf1: {
+          "0% , 80%": {
+            filter: "blur(4px)",
+            transform: "translate(0,0) rotate(0deg)",
+            opacity: "1",
+          },
+          "20%": {
+            filter: "blur(4px)",
+            transform: "translate(10vw,2vh) rotate(270deg)",
+            opacity: "1",
+          },
+          "40%": {
+            filter: "blur(4px)",
+            transform: "translate(5vw,3vh) rotate(40deg)",
+            opacity: "1",
+          },
+          "60%": {
+            filter: "blur(4px)",
+            transform: "translate(4vw,10vh) rotate(135deg)",
+            opacity: "1",
+          },
+          "100%": {
+            filter: "blur(4px)",
+            transform: "translate(0,0) rotate(0deg)",
+            opacity: "0",
+          },
+        },
+        brickMove: {
+          "0%": { transform: "translate(0,0) scale(1) " },
+          "100%": {
+            transform: "translate(-5vw,-5vh) scale(3.5) ",
+          },
+        },
+        carMove: {
+          "0%": { transform: " translate(0,0) scale(1) rotate(-14.65deg)" },
+          "100%": {
+            transform: "translate(-30vw,-20vh) scale(3.5) rotate(0deg)",
+          },
+        },
+        carStatic: {
+          "0% , 100%": {
+            transform: " translate(0 , 0)",
+          },
+          "50%": {
+            transform: `translate(0, 7vh)`,
+          },
+        },
         modelScaletest: {
           "0%": {
             transform: "scale(0.1)",
@@ -209,9 +228,6 @@ const config: Config = {
           "0%, 100%": { transform: "rotate(-2deg)" },
           "50%": { transform: "rotate(2deg)" },
         },
-        moveAndScale: generateTransFunc(),
-        moveAndScale480: generateTransFunc480(),
-        moveAndScale1366: generateTransFunc1366(),
         flashScreen: {
           "0%, 100%": { background: "#ffffff" },
           "50%": { background: "black" },
@@ -335,12 +351,10 @@ const config: Config = {
         },
         moveLeftThenSlowDisappear: {
           "0%": {
-            transform: "translate(0, 0) scaleX(-1)",
-            opacity: ".5",
+            transform: "translate(0,0) scale(1.2) rotate(-326deg) ",
           },
           "100%": {
-            transform: "translate(-50%,-100%) scaleX(-1) ",
-            opacity: ".75",
+            transform: "translate(-50%,-50%) scale(1.2) rotate(-326deg)  ",
           },
         },
         moveLeftThenSlowDisappearMobile: {
