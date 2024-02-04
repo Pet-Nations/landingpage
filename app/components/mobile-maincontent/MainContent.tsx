@@ -57,8 +57,9 @@ const MainContentMobile = ({ showMainPage }: any) => {
       <div className={`absolute
         w-[100px]
         h-auto
-        bottom-[21vh]
+        bottom-[20svh]
         right-[16vw]
+        rotate-[15deg]
         ${showOtherVisuals ? "hidden" : ""}
         ${showMainPage ? `animate-carMove` : ""}
         z-[100]

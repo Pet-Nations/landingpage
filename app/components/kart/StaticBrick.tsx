@@ -11,7 +11,7 @@ const StaticBrick = ({ showMainPage, handleAnimationEnd }: any) => {
     w-[80.53px] max-[480px]:w-[50.53px]
     h-[88.07px] max-[480px]:h-auto
     rotate-[14.35deg]
-    top-[72vh] max-[480px]:top-74px
+    top-[72vh] max-[480px]:top-[74svh]
     left-[56vw]  max-[480px]:left-[72vw]
     ${showMainPage ? "animate-brickMove" : ""} 
     `}
