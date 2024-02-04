@@ -10,14 +10,13 @@ import IMGleft4 from "/public/images/imgleft4.png";
 
 const TopTabletPetCard = ({ showOtherVisuals, showMainPage }: any) => {
   return (
-    <div className="min-[1024.98px]:hidden max-[480px]:hidden absolute z-40 w-full h-auto flex justify-between">
+    <div className="min-[1024.98px]:hidden max-[480px]:hidden absolute z-[10000] w-full h-auto flex justify-between">
       <div
         className={`absolute
         w-[45vw] h-auto
         max-w-[300px]
-        z-20 left-[13px] top-[90px] opacity-0 flex flex-col gap-5  ${
-          showOtherVisuals ? `animate-transLeft` : ""
-        }`}
+        z-20 left-[13px] top-[90px] opacity-0 flex flex-col gap-5  ${showOtherVisuals ? `animate-transLeft` : ""
+          }`}
       >
         <Link href="/stories">
           <Image

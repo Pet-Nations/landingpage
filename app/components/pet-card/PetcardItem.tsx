@@ -6,9 +6,6 @@ import Link from "next/link";
 import { PET_CARDS } from "@/app/configs";
 
 const PetcardItem = ({ item, showMenu }: any) => {
-  console.log(item, "item");
-  console.log(showMenu, "showMenu");
-
   const { id } = item;
 
   const [show, setShow] = useState(false);
@@ -38,11 +35,10 @@ const PetcardItem = ({ item, showMenu }: any) => {
        inline-block
        transition-all
   
-       ${
-         show
-           ? "max-[1600px]:animate-cardLeft1600   min-[1601px]:animate-cardLeft   "
-           : ""
-       } `}
+       ${show
+          ? "max-[1600px]:animate-cardLeft1600   min-[1601px]:animate-cardLeft   "
+          : ""
+        } `}
     >
       <p className="absolute group-hover:invisible  z-[41] text-[32px] max-[1440px]:text-[24px] text-white1 leading-normal font-normal uppercase bottom-[8px] left-[26px] ">
         {item?.name}
@@ -62,11 +58,10 @@ const PetcardItem = ({ item, showMenu }: any) => {
       relative 
       w-[448px] 
 
-      ${
-        deviceHeight <= 768 && deviceWidth >= 1500
-          ? "   min-[1500px]:h-[115px]   min-[1500px]:w-[300px] "
-          : ""
-      }
+      ${deviceHeight <= 768 && deviceWidth >= 1500
+            ? "   min-[1500px]:h-[115px]   min-[1500px]:w-[300px] "
+            : ""
+          }
       max-[1440px]:h-[16vh]  
       max-[1440px]:w-[25.75vw] 
       z-40 h-[160px] border-solid border-white1 border-[3px] overflow-hidden petcardclip  bg-[#bababa] group-hover:bg-transparent transition-opacity duration-600 "

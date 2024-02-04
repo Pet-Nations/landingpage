@@ -22,6 +22,13 @@ export const COMMUNITY_FB_LINK =
   // "https://www.facebook.com/groups/242848220423686/";
   "/";
 
+export const CAR_SIZE = {
+  "19201080": {
+    width: "767px",
+    height: "801px",
+  },
+};
+
 export const PET_CARDS: any[] = [
   {
     id: 1,
