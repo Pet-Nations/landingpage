@@ -4,9 +4,7 @@ import FacebookIcon from "../components/icons/FacebookIcon";
 import MediaIcon from "../components/icons/MediaIcon";
 import PartnersIcon from "../components/icons/PartnersIcon";
 import Scaleup from "../components/icons/Scaleup";
-import SocialIcon from "../components/icons/SocialIcon";
 import TelegramIcon from "../components/icons/TelegramIcon";
-import TiktokIcon from "../components/icons/TiktokIcon";
 import TwitterIcon from "../components/icons/TwitterIcon";
 import YoutubeIcon from "../components/icons/YoutubeIcon";
 import CatAvatar from "../components/images/CatAvatar";
@@ -82,7 +80,7 @@ export const NAV_CONFIGS = [
   },
   {
     name: "COMMUNITY",
-    url: COMMUNITY_FB_LINK,
+    url: "/community",
     icon: <ComunityIcon />,
   },
 ];

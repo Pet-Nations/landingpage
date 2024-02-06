@@ -5,7 +5,7 @@ import BackIcon from "../icons/BackIcon";
 import BackBTN from "../back-btn";
 
 interface Props {
-  page?: "models";
+  page?: "models" | "community";
 }
 
 const MainFooter = ({ page }: Props) => {
