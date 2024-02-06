@@ -65,12 +65,12 @@ export const PET_CARDS: any[] = [
 export const NAV_CONFIGS = [
   {
     name: "FAQ",
-    url: "/",
+    url: "/faq",
     icon: <Scaleup />,
   },
   {
     name: "TEAM",
-    url: "/",
+    url: "/team",
     icon: <MediaIcon />,
   },
   {
