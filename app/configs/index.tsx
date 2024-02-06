@@ -75,7 +75,7 @@ export const NAV_CONFIGS = [
   },
   {
     name: "Partners",
-    url: "/",
+    url: "/partners",
     icon: <PartnersIcon />,
   },
   {

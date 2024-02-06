@@ -46,7 +46,7 @@ const CommunityPage = () => {
 
     return (
         <div className='bg-orange1 h-screen flex flex-col overflow-x-hidden relative '>
-            <p className={` max-[1366px]:hidden uppercase tsx absolute z-[41] right-[86px] top-[56px] font-[400] text-[46px] text-transparent leading-[50.05px] ${archivo.className}`}>Comunity</p>
+            <p className={` max-[1366px]:hidden uppercase tsx absolute z-[41] right-[86px] top-[56px] font-[400] text-[46px] text-transparent leading-[50.05px] ${archivo.className}`}>community</p>
             <div className='flex flex-col items-center justify-center flex-auto max-w-[80vw] mx-auto 
              max-[996px]:min-h-[100vh] 
              max-[996px]:mb-[300px] 
