@@ -10,7 +10,7 @@ import headerBg from "/public/images/headerbg.png";
 import { useEffect, useRef } from "react";
 
 interface Props {
-  page?: "models";
+  page?: "models" | "community";
 }
 
 const MainHeader = ({ page }: Props) => {

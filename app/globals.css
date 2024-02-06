@@ -31,6 +31,17 @@ body {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #fff4e9;
   }
+  .bggradientorange {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0) 0%,
+      #FF9F46 100%
+    );
+  }
+  .tsx2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff4e9;
+  }
   .badkart {
     transform: translate3d(-42px, 0px, 135px);
   }
@@ -198,6 +209,13 @@ body {
   }
   .animcustom4 {
     animation: ctext4 5s ease-in-out infinite alternate;
+  }
+
+  .isHover {
+    cursor: pointer;
+    transform: translate(-10px,10px);
+    transition-duration: 400ms ;
+    transition-timing-function: ease-in-out;
   }
 
   @keyframes ctext1 {
