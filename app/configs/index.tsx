@@ -107,7 +107,7 @@ export const HEADER_ICON = [
   },
   {
     icon: <YoutubeIcon />,
-    url: "/",
+    url: "https://www.youtube.com/channel/UCzYllb_kpUHdzuDKuz1Lylw",
   },
   {
     icon: <TwitterIcon />,
