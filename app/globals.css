@@ -18,6 +18,20 @@ body {
       url("/images/bgnation2.png") no-repeat center/cover;
   }
 
+  .blurtext1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff4e9;
+    color: transparent;
+    background: linear-gradient(#FF9F46);
+    -webkit-background-clip: text;
+  }
+  .blurtext2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: transparent;
+    color: #FF9F46;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0) );
+    -webkit-background-clip: text;
+  }
   .blurlayer {
     position: absolute;
     top: 0;
