@@ -15,7 +15,7 @@ const Card = ({ item, setHoverId, hoverId }: any) => {
              h-[122px] 
 
              `}>
-            <div className=' w-[470px] h-[122px] 
+            <div className=' w-[470px] h-[120px] 
                 max-[1650px]:w-full max-[1650px]:h-auto
                 absolute top-0 z-40 border-solid border-black border-[1px]' />
             <div className={` ${hover ? 'isHover' : ""

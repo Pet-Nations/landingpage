@@ -3,6 +3,12 @@
 import { useEffect, useState } from "react";
 import Loading from "./components/UI/loading";
 import MainPage from "./components/UI/main-page";
+import Car1 from "./components/kart/Car1";
+import Image from "next/image";
+import Section1Img from "/public/images/tokenbg.png";
+import Section1ImgM from "/public/images/tokenbgm.png";
+import Sky from "/public/images/sky.png";
+
 
 export default function Home() {
   const [showLoading, setShowLoading] = useState(true);
@@ -60,6 +66,29 @@ export default function Home() {
           className={`absolute top-0 -translate-y-full bg-dark-main h-screen w-full z-50 ${showBlackCover ? "animate-heightDOWN" : ""
             }  `}
         />
+        <div className="opacity-0 absolute">
+        <Image
+        src={Sky}
+        className="absolute h-60vh top-[0] z-10 "
+        alt="image"
+      ></Image>
+
+        <Car1/>
+        <Image
+        src={Section1Img}
+        alt="image "
+        loading={"eager"}
+        priority={true}
+        className="relative z-30 max-[600px]:hidden"
+      ></Image>
+      <Image
+        src={Section1ImgM}
+        loading={"eager"}
+        priority={true}
+        alt="image "
+        className=" hidden relative z-30 max-[600px]:block"
+      ></Image>
+        </div>
         <Loading showLoading={showLoading} />
         <div
           className={`absolute top-0 z-20 -translate-y-full bg-dark-main h-screen w-full ${showBlackCover ? "animate-heightUP" : ""
