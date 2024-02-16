@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ComunityIcon from "../components/icons/ComunityIcon";
 import DiscordIcon from "../components/icons/DiscordIcon";
 import FacebookIcon from "../components/icons/FacebookIcon";
@@ -15,6 +16,13 @@ import RabbitAvatar from "../components/images/RabbitAvatar";
 import VisionMap from "../components/images/VisionMap";
 import MonkeyAvatar from "../components/images/monkeyAvatar";
 import Story from "../stories/page";
+
+import CharacterImgs1 from '../assests/team1.png';
+import CharacterImgs2 from '../assests/team2.png';
+import CharacterImgs3 from '../assests/team3.png';
+import CharacterImgs4 from '../assests/team4.png';
+import CharacterImgs5 from '../assests/team5.png';
+
 
 export const COMMUNITY_FB_LINK =
   // "https://www.facebook.com/groups/242848220423686/";
@@ -62,10 +70,46 @@ export const PET_CARDS: any[] = [
   },
 ];
 
+export const IMAGE_COMUNITY_CONFIGS = [
+  {
+      id: 1,
+      title: "CO-FOUNDER & CEO",
+      name: 'Genjile',
+      imgUrl: "/token",
+      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs1} alt="img" />
+
+  },
+  {
+      id: 2,
+      title: "CO-FOUNDER",
+      name: 'HOANG NGUYEN',
+      imgUrl: "/token",
+      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs2} alt="img" />
+
+  },
+  {
+      id: 3,
+      title: "CMO",
+      name: 'lewandowski',
+      imgUrl: "/token",
+      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs3} alt="img" />
+
+  },
+  {
+      id: 4,
+      title: "CTO",
+      name: 'LELE NGUYEN',
+      imgUrl: "/token",
+      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs4} alt="img" />
+
+  },
+
+]
+
 export const NAV_CONFIGS = [
   {
     name: "FAQ",
-    url: "/faq",
+    url: "/",
     icon: <Scaleup />,
   },
   {
@@ -106,6 +150,7 @@ export const HEADER_ICON = [
     url: "/",
   },
   {
+    tag: 'youtube',
     icon: <YoutubeIcon />,
     url: "https://www.youtube.com/channel/UCzYllb_kpUHdzuDKuz1Lylw",
   },
