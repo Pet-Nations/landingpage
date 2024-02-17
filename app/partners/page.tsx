@@ -6,6 +6,8 @@ import React, { useState } from 'react'
 import CharacterImgs from '../assests/characters1.png';
 import PartnerImg1 from '../assests/partner1.png';
 import Card from './components/Card';
+import BlurText from '../community/components/blurtext';
+import Runing from './components/Runing';
 
 const archivo = Archivo_Black({
     weight: ["400"],
@@ -49,27 +51,42 @@ const PartnerPage = () => {
     })
 
     return (
-        <div className='bg-orange1 h-screen flex flex-col overflow-x-hidden relative '>
-            <p className={` max-[1366px]:hidden uppercase tsx absolute z-[41] right-[86px] top-[56px] font-[400] text-[46px] text-transparent leading-[50.05px] ${archivo.className}`}>partners</p>
-            <div className='flex flex-col items-center justify-center flex-auto 
+        <>
+            <div className='hidden min-[1920px]:flex h-screen flex-col overflow-x-hidden relative'>
+                <p className={` max-[1366px]:hidden uppercase tsx absolute z-[41] right-[86px] top-[56px] font-[400] text-[46px] text-transparent leading-[50.05px] ${archivo.className}`}>partners</p>
+                <div className='flex flex-col items-center justify-center flex-auto 
          '>
-                <p className={`tsx2 mt-[108px] text-transparent bigtextblur uppercase font-[400] ${archivo.className}
-             text-[218px] max-[1650px]:text-[180px]  max-[1450px]:text-[170px] max-[1250px]:text-[140px] max-[996px]:text-[80px]  max-[600px]:text-[60px]  max-[600px]:text-[32px]
+                    <p className={`tsx2 mt-[40px] text-transparent bigtextblur uppercase font-[400] ${archivo.className}
+             text-[218px] 
              
              `}>partners</p>
 
-                <div className=' flex flex-wrap w-screen justify-center items-center gap-4 relative -top-[130px]'>
-                    {
-                        tempPartners
-                    }
+                </div>
+                <div className='absolute top-[50%] -translate-y-[50%] w-[9999px] overflow-hidden z-1'>
+                    <Runing direction='right' />
+                    <Runing direction='right' idd={2} />
+                    <Runing direction='right' idd={3} />
+                </div>
+                <div className='h-[211px] relative'>
+                    <section className=" w-[7680px] h-[211px] bg-bottom-foil overflow-hidden opacity-50 z-1"></section>
+                    <div className='w-screen absolute left-0 h-[211px] top-0 z-40  flex items-center justify-center'>
+                    </div>
                 </div>
             </div>
-            <div className='h-[211px] relative'>
-                <section className=" w-[7680px] h-[211px] bg-bottom-foil overflow-hidden opacity-50 z-1"></section>
-                <div className='w-screen absolute left-0 h-[211px] top-0 z-40  flex items-center justify-center'>
+            <div className='relative overflow-hidden min-[1920px]:hidden '>
+                <div className='relative max-w-[1920px] min-h-screen mt-[50.59px] overflow-x-hidden min-[1920px]:hidden'>
+                    <BlurText text='partner' />
+                </div>
+
+                <div className='absolute top-[50%] -translate-y-[50%] w-[9999px] overflow-hidden z-1'>
+                    <Runing direction='right' />
+                    <Runing direction='right' idd={2} />
+                    <Runing direction='right' idd={3} />
                 </div>
             </div>
-        </div>
+
+        </>
+
     )
 }
 

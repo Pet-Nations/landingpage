@@ -31,6 +31,9 @@ const config: Config = {
       },
       backgroundImage: {},
       animation: {
+        partnerToRight : 'partnerToRight 40s linear alternate infinite',
+        partnerToRight1 : 'partnerToRight1 40s linear alternate infinite',
+
         fallLeaf: "fallLeaf 3s linear infinite",
         fallLeaf1: "fallLeaf1 3s linear infinite",
         carMove: "carMove 1s linear forwards",
@@ -103,6 +106,14 @@ const config: Config = {
         transUp: "transUp 1s ease-out forwards ",
       },
       keyframes: {
+        partnerToRight : {
+          "0%": { transform: "translateX(-80%)" },
+          "100%": { transform: "translateX(0%)" },
+        },
+        partnerToRight1 : {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
         fallLeaf: {
           "0% , 100%": {
             filter: "blur(0px)",
