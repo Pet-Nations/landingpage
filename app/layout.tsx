@@ -7,9 +7,33 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
+const description = 'Pet Nations, build the Decentralized Society of Pets powered by Socialfi, IP, and ID ecosystem.'
+const defaultTitle = 'Pet Nations'
+
 export const metadata: Metadata = {
   title: "Pet Nations - No man land",
-  description: "The limitless web3 ecosystem for pets #desoc #ip",
+  description: description,
+  openGraph: {
+    title: defaultTitle,
+    description: description,
+    type: 'website',
+    images: [
+      {
+        url: 'https://nextjs.org/og.png',
+        width: 800,
+        height: 600,
+        alt: 'Og Image Alt',
+      },
+    ],
+  },
+  twitter: {
+    title: defaultTitle,
+    description: description,
+    siteId: defaultTitle,
+    creator: defaultTitle,
+    creatorId: defaultTitle,
+    images: ['https://nextjs.org/og.png'], // Must be an absolute URL
+  },
 };
 
 export default function RootLayout({

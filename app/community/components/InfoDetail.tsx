@@ -2,7 +2,6 @@
 import React from 'react'
 
 const InfoDetail = ({ item, mode }: any) => {
-    console.log(item, 'iteminfo')
     if (mode === 'small') {
         return (
             <>

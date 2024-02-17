@@ -48,12 +48,7 @@ const IMAGE_COMUNITY_CONFIGS = [
 
 const CommunityPage = () => {
     const [hoverId, setHoverId] = useState<any>(null)
-
     const currentItem = IMAGE_COMUNITY_CONFIGS.find(x => x.id === hoverId) ?? IMAGE_COMUNITY_CONFIGS[0]
-
-    console.log(hoverId, 'hoverId')
-    console.log(currentItem, 'currentItem')
-
 
     return (
         <>
