@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
+
 const poppins = Poppins({
   weight: ["400", "300", "700", "500"],
   subsets: ["latin"],
@@ -9,6 +10,8 @@ const poppins = Poppins({
 
 const description = 'Pet Nations, build the Decentralized Society of Pets powered by Socialfi, IP, and ID ecosystem.'
 const defaultTitle = 'Pet Nations'
+
+
 
 export const metadata: Metadata = {
   title: "Pet Nations - No man land",
@@ -19,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://nextjs.org/og.png',
+        url: 'https://petnations.io/bgnation2.png',
         width: 800,
         height: 600,
         alt: 'Og Image Alt',
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     siteId: defaultTitle,
     creator: defaultTitle,
     creatorId: defaultTitle,
-    images: ['https://nextjs.org/og.png'], // Must be an absolute URL
+    images: ['https://petnations.io/bgnation2.png'], // Must be an absolute URL
   },
 };
 

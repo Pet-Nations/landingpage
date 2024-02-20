@@ -109,17 +109,19 @@ export const IMAGE_COMUNITY_CONFIGS = [
 export const NAV_CONFIGS = [
   {
     name: "FAQ",
-    url: "/",
+    url: "#",
     icon: <Scaleup />,
   },
   {
     name: "TEAM",
-    url: "/team",
+    // url: "/team",
+    url: "/#",
     icon: <MediaIcon />,
   },
   {
     name: "Partners",
-    url: "/partners",
+    // url: "/partners",
+    url: "/#",
     icon: <PartnersIcon />,
   },
   {
