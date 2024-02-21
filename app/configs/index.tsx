@@ -115,13 +115,13 @@ export const NAV_CONFIGS = [
   {
     name: "TEAM",
     // url: "/team",
-    url: "/#",
+    url: "#",
     icon: <MediaIcon />,
   },
   {
     name: "Partners",
     // url: "/partners",
-    url: "/#",
+    url: "#",
     icon: <PartnersIcon />,
   },
   {
@@ -133,11 +133,11 @@ export const NAV_CONFIGS = [
 export const HEADER_ICON = [
   {
     icon: <DiscordIcon />,
-    url: "/",
+    url: "#",
   },
   {
     icon: <FacebookIcon />,
-    url: "/",
+    url: "#",
   },
   // {
   //   icon: <SocialIcon />,
@@ -149,7 +149,7 @@ export const HEADER_ICON = [
   // },
   {
     icon: <TelegramIcon />,
-    url: "/",
+    url: "#",
   },
   {
     tag: 'youtube',
