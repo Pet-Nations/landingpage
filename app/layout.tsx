@@ -20,14 +20,6 @@ export const metadata: Metadata = {
     title: defaultTitle,
     description: description,
     type: 'website',
-    images: [
-      {
-        url: 'https://petnations.io/bgnation2.png',
-        width: 800,
-        height: 600,
-        alt: 'Og Image Alt',
-      },
-    ],
   },
   twitter: {
     title: defaultTitle,
@@ -35,7 +27,6 @@ export const metadata: Metadata = {
     siteId: defaultTitle,
     creator: defaultTitle,
     creatorId: defaultTitle,
-    images: ['https://petnations.io/bgnation2.png'], // Must be an absolute URL
   },
 };
 
