@@ -16,10 +16,25 @@ const defaultTitle = 'Pet Nations'
 export const metadata: Metadata = {
   title: "Pet Nations - No man land",
   description: description,
+  metadataBase: new URL('https://petnations.io'),
   openGraph: {
     title: defaultTitle,
     description: description,
     type: 'website',
+    images: [
+      {
+        url: 'https://petnations.io/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: defaultTitle,
+      },
+      {
+        url: 'https://petnations.io/opengraph-image2.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Another Image',
+      }
+    ]
   },
   twitter: {
     title: defaultTitle,
@@ -27,6 +42,14 @@ export const metadata: Metadata = {
     siteId: defaultTitle,
     creator: defaultTitle,
     creatorId: defaultTitle,
+    images: [
+      {
+        url: 'https://petnations.io/opengraph-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: defaultTitle,
+      }
+    ]
   },
 };
 
