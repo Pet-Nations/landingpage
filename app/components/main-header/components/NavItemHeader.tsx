@@ -11,7 +11,7 @@ const NavItemHeader = ({ name, url, icon }: any) => {
     h-[60px] p-4 max-[450px]:pl-2 hover:bg-orange1 cursor-pointer
   "
     >
-      <Link className={` inline-flex items-center `} key={url} href={url}>
+      <Link target={name === "FAQ" ? "_blank" : ""} className={` inline-flex items-center `} key={url} href={url}>
         <div className={`flex items-center justify-center  h-[62px]`}>
           <span className="mr-2">{icon}</span>
           <p

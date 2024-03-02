@@ -72,35 +72,35 @@ export const PET_CARDS: any[] = [
 
 export const IMAGE_COMUNITY_CONFIGS = [
   {
-      id: 1,
-      title: "CO-FOUNDER & CEO",
-      name: 'Genjile',
-      imgUrl: "/token",
-      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs1} alt="img" />
+    id: 1,
+    title: "CO-FOUNDER & CEO",
+    name: 'Genjile',
+    imgUrl: "/token",
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs1} alt="img" />
 
   },
   {
-      id: 2,
-      title: "CO-FOUNDER",
-      name: 'HOANG NGUYEN',
-      imgUrl: "/token",
-      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs2} alt="img" />
+    id: 2,
+    title: "CO-FOUNDER",
+    name: 'HOANG NGUYEN',
+    imgUrl: "/token",
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs2} alt="img" />
 
   },
   {
-      id: 3,
-      title: "CMO",
-      name: 'lewandowski',
-      imgUrl: "/token",
-      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs3} alt="img" />
+    id: 3,
+    title: "CMO",
+    name: 'lewandowski',
+    imgUrl: "/token",
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs3} alt="img" />
 
   },
   {
-      id: 4,
-      title: "CTO",
-      name: 'LELE NGUYEN',
-      imgUrl: "/token",
-      image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs4} alt="img" />
+    id: 4,
+    title: "CTO",
+    name: 'LELE NGUYEN',
+    imgUrl: "/token",
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs4} alt="img" />
 
   },
 
@@ -109,7 +109,7 @@ export const IMAGE_COMUNITY_CONFIGS = [
 export const NAV_CONFIGS = [
   {
     name: "FAQ",
-    url: "#",
+    url: process.env.NEXT_PUBLIC_FAQ,
     icon: <Scaleup />,
   },
   {
