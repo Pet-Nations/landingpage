@@ -9,7 +9,7 @@ const NavItem = ({ name, url, icon }: any) => {
   const [isHover, setIsHover] = useState(false);
 
   const getWidth = () => {
-    if (name === "FAQ") {
+    if (name === "DOC") {
       return `w-[168px]`;
     }
     if (name === "TEAM") {
@@ -26,7 +26,7 @@ const NavItem = ({ name, url, icon }: any) => {
 
   return (
     <Link
-      target={name === "FAQ" ? "_blank" : ""}
+      target={name === "DOC" ? "_blank" : ""}
       className={` inline-flex items-center `}
       key={url}
       href={url}

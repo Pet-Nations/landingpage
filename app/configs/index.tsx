@@ -108,7 +108,7 @@ export const IMAGE_COMUNITY_CONFIGS = [
 
 export const NAV_CONFIGS = [
   {
-    name: "FAQ",
+    name: "DOC",
     url: process.env.NEXT_PUBLIC_FAQ,
     icon: <Scaleup />,
   },
