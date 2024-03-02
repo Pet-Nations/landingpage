@@ -26,7 +26,7 @@ const NavItem = ({ name, url, icon }: any) => {
 
   return (
     <Link
-      // target="_blank"
+      target={name === "FAQ" ? "_blank" : ""}
       className={` inline-flex items-center `}
       key={url}
       href={url}
