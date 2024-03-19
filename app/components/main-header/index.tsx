@@ -149,7 +149,7 @@ const MainHeader = ({ page }: Props) => {
         {HEADER_ICON.map((el: any, index: any) => (
           <Link
             className="h-10 w-10 flex items-center justify-center"
-            key={index}
+            key={el.url}
             href={el.url}
             target="_blank"
           >

@@ -28,16 +28,18 @@ const MobileMenuComponent = ({ isOpen, onClose }: any) => {
       <div className="flex-auto"></div>
 
       <div className=" w-full h-[88px] pl-4 max-[450px]:pl-2 flex flex-wrap items-center justify-center gap-2 ">
-        {HEADER_ICON.map((el: any, index: any) => (
-          <Link
-            className="h-10 w-10 flex items-center justify-center"
-            key={index}
-            href={el.url}
-            target="_blank"
-          >
-            {el.icon}
-          </Link>
-        ))}
+        {HEADER_ICON.map((el: any, index: any) => {
+          return (
+            <Link
+              className="h-10 w-10 flex items-center justify-center"
+              key={index}
+              href={el.url}
+              target="_blank"
+            >
+              {el.icon}
+            </Link>
+          )
+        })}
       </div>
     </div>
   );
