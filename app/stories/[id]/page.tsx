@@ -31,7 +31,7 @@ const Detail = ({ params: { id } }: any) => {
             src={outstorypng}
             alt="img"
           ></Image>
-          <CardList id={id} />
+          <div className="mt-[158px]"><CardList id={id} /></div>
           <Content backgroundId={id} />
         </section>
       </div>

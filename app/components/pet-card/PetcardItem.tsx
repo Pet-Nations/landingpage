@@ -79,7 +79,7 @@ const PetcardItem = ({ item, showMenu }: any) => {
         max-[1440px]:w-[25.75vw] 
        w-[448px] z-40 h-[160px] "
       >
-        <Image src={item.src} fill={true} alt="1" />
+        <Image src={item.src} fill={true} sizes="100vw" alt="1" />
         <p className="absolute text-[32px] max-[1440px]:text-[24px] leading-normal font-bold uppercase bottom-[8px] left-[26px] group-hover:animate-petCardTextDOwn">
           {item?.name}
         </p>

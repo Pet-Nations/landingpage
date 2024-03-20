@@ -20,8 +20,8 @@ const MobileMenuComponent = ({ isOpen, onClose }: any) => {
       flex flex-col gap:2 
         z-[50] last:pr-0"
       >
-        {NAV_CONFIGS.map((nav: any) => (
-          <NavItemHeader key={nav.url} {...nav} />
+        {NAV_CONFIGS.map((nav: any, index) => (
+          <NavItemHeader key={index} {...nav} />
         ))}
       </div>
 

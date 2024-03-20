@@ -140,8 +140,8 @@ const MainHeader = ({ page }: Props) => {
 
         h-[62px] flex items-center  z-[50] last:pr-0 max-[1366px]:hidden "
       >
-        {NAV_CONFIGS.map((nav: any) => (
-          <NavItem key={nav.url} {...nav} />
+        {NAV_CONFIGS.map((nav: any, index) => (
+          <NavItem key={index} {...nav} />
         ))}
       </div>
 
@@ -149,7 +149,7 @@ const MainHeader = ({ page }: Props) => {
         {HEADER_ICON.map((el: any, index: any) => (
           <Link
             className="h-10 w-10 flex items-center justify-center"
-            key={el.url}
+            key={index}
             href={el.url}
             target="_blank"
           >

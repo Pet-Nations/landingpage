@@ -30,7 +30,7 @@ const Section4 = () => {
           </span>
         </p>
         <div className="absolute   top-[258px] left-[212px] flex gap-6 max-[1650px]:left-[64px] z-[51] max-[996px]:top-[650px]   max-[996px]:left-[50vw]  max-[996px]:-translate-x-[50%]  max-[1200px]:left-[32px] max-[890px]:hidden">
-          <div className="parenthoversvg origin-top group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.05] ">
+          <div className="parenthoversvg origin-top group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:border-[#000] hover:bg-orange1 hover:scale-y-[1.05] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
@@ -52,7 +52,7 @@ const Section4 = () => {
             </p>
           </div>
 
-          <div className="parenthoversvg  origin-top  group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 hover:scale-y-[1.05] ">
+          <div className="parenthoversvg  origin-top  group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:border-[#000] hover:bg-orange1 hover:scale-y-[1.05] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="66"
@@ -72,7 +72,7 @@ const Section4 = () => {
               Create NFT Create contents Conquer and complete tasks
             </p>
           </div>
-          <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:bg-orange1 origin-top hover:scale-y-[1.05] ">
+          <div className="parenthoversvg group w-[264px] h-[300px] border-2 border-solid border-[#ff4e9] bg-dark-main flex flex-col items-center justify-center gap-4 hover:border-[#000] hover:bg-orange1 origin-top hover:scale-y-[1.05] ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"

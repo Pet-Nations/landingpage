@@ -56,22 +56,22 @@ const Card = ({ item, setHoverId, hoverId }: any) => {
 
 
                     {HEADER_ICON.map((el: any, index: any) => {
-                    if (el.tag === "youtube") {
-                        return null
-                    } else {
-                        return (
-                            <Link
-                                className="h-10 w-10 flex items-center justify-center"
-                                key={index}
-                                href={el.url}
-                                target="_blank"
-                            >
-                                {el.icon}
-                            </Link>
-                        )
+                        if (el.tag === "youtube") {
+                            return null
+                        } else {
+                            return (
+                                <Link
+                                    className="h-10 w-10 flex items-center justify-center"
+                                    key={index}
+                                    href={el.url}
+                                    target="_blank"
+                                >
+                                    {el.icon}
+                                </Link>
+                            )
+                        }
                     }
-                }
-                )}
+                    )}
                 </div>
             </div>
         </div>

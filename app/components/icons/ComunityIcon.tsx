@@ -1,7 +1,7 @@
 import React from "react";
 
-const ComunityIcon = ({ isHover }: any) => {
-  const color = isHover ? "#1a1a1a" : "#FFF4E9";
+const ComunityIcon = ({ isHover, isActive }: any) => {
+  const color = isHover || isActive  ? "#1a1a1a" : "#FFF4E9";
 
   return (
     <svg
