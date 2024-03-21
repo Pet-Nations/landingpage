@@ -67,7 +67,7 @@ const PetCardList = ({ showMenu }: any) => {
         return <PetcardItem key={x.id} item={x} showMenu={showMenu} />;
       })}
 
-      <UserAvatar showMenu={showMenu} />
+      <div className="flex relative"><UserAvatar showMenu={showMenu} /></div>
     </div>
   );
 };

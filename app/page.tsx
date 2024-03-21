@@ -19,16 +19,17 @@ export default function Home() {
 
 
 
-  // const isLoaded = !!sessionStorage?.getItem("loaded");
-  const isLoaded = false;
+  const isLoaded = !!sessionStorage?.getItem("loaded");
+  // const isLoaded = false;
 
-  // useEffect(() => {
-  //   if (!isLoaded) {
-  //     setShowBlackCover(true);
-  //   } else {
-  //     setShowLoading(false);
-  //   }
-  // }, [isLoaded]);
+  useEffect(() => {
+    if (!isLoaded) {
+      setShowBlackCover(true);
+    } else {
+      setShowLoading(false);
+      setShowMainPage(true)
+    }
+  }, [isLoaded]);
 
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function Home() {
 
   useEffect(() => {
     if (!showLoading) {
-      // sessionStorage.setItem("loaded", "1");
+      sessionStorage.setItem("loaded", "1");
       setShowBlackCover2(true);
     }
   }, [showLoading]);
@@ -67,27 +68,27 @@ export default function Home() {
             }  `}
         />
         <div className="opacity-0 absolute">
-        <Image
-        src={Sky}
-        className="absolute h-60vh top-[0] z-10 "
-        alt="image"
-      ></Image>
+          <Image
+            src={Sky}
+            className="absolute h-60vh top-[0] z-10 "
+            alt="image"
+          ></Image>
 
-        <Car1/>
-        <Image
-        src={Section1Img}
-        alt="image "
-        loading={"eager"}
-        priority={true}
-        className="relative z-30 max-[600px]:hidden"
-      ></Image>
-      <Image
-        src={Section1ImgM}
-        loading={"eager"}
-        priority={true}
-        alt="image "
-        className=" hidden relative z-30 max-[600px]:block"
-      ></Image>
+          <Car1 />
+          <Image
+            src={Section1Img}
+            alt="image "
+            loading={"eager"}
+            priority={true}
+            className="relative z-30 max-[600px]:hidden"
+          ></Image>
+          <Image
+            src={Section1ImgM}
+            loading={"eager"}
+            priority={true}
+            alt="image "
+            className=" hidden relative z-30 max-[600px]:block"
+          ></Image>
         </div>
         <Loading showLoading={showLoading} />
         <div
