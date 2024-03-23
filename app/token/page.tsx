@@ -27,7 +27,7 @@ const TokenNomic = () => {
       <Section3Clone />
       <Section4 />
 
-      <section className="w-[7680px] h-[211px] bg-bottom-foil1 overflow-hidden z-1"></section>
+      <section className="w-[7680px] h-[211px] bg-bottom-foil1 opacity-30 overflow-hidden z-1"></section>
     </div>
   );
 };

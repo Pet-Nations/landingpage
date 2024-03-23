@@ -3,10 +3,16 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import SmallRegtangle from "../icons/SmallRegtangle";
+import { usePathname } from 'next/navigation'
+
 
 const NavItem = ({ name, url, icon }: any) => {
   const isLast = name === "COMMUNITY";
   const [isHover, setIsHover] = useState(false);
+
+  const pathname = usePathname();
+
+  const isActive = pathname === name.toLowerCase().replace("",'/')
 
   const getWidth = () => {
     if (name === "DOC") {
@@ -40,21 +46,23 @@ const NavItem = ({ name, url, icon }: any) => {
           setIsHover(false);
         }}
       >
-        <span className="mr-2">{React.cloneElement(icon, { isHover })}</span>
-        {isHover ? (
+        <span className="mr-2">{React.cloneElement(icon, { isHover, isActive })}</span>
+        {isHover || isActive ? (
           <p
-            className={` inline-block   uppercase tracking-[2px] text-center text-[20px] leading-normal  hover:text-dark-main  text-[#1a1a1a] font-bold
+            className={`inline-block   uppercase tracking-[2px] text-center text-[20px] leading-normal  hover:text-dark-main  text-[#1a1a1a] font-bold
              hover:font-bold`}
           >
             {name}
           </p>
         ) : (
           <p
-            className={`text-white1 inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main hover:font-bold`}
+            className={` text-white1 inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main hover:font-bold`}
           >
             {name}
           </p>
         )}
+
+        <div className={`flex absolute w-[55px] h-[3px] ${isActive || isHover ? "bg-[#FA5252]": ""} bottom-0`}></div>
       </div>
 
       <div className="">{!isLast && <SmallRegtangle />}</div>

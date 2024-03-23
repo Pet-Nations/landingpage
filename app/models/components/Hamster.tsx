@@ -29,11 +29,12 @@ const HamsterC = () => {
 
         <div
           className="model-hamster-price 
-        max-[450px]:w-[90vw]
-        max-[450px]:left-[50%]
-        max-[450px]:translate-x-[-50%]
-
-
+          max-[380px]:w-[90vw]
+          max-[380px]:left-[50%]
+          max-[380px]:translate-x-[-50%]
+        max-[459px]:w-[80vw]
+        max-[459px]:left-[50%]
+        max-[459px]:translate-x-[-43%]
          absolute left-[22px] -bottom-[26.51px] z-50  max-smallPhone:-left-[42px] "
         >
           <div className="flex justify-between items-center h-full ml-4 mr-[90.16px]">

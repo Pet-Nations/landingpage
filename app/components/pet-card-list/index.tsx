@@ -58,7 +58,7 @@ const PetCardList = ({ showMenu }: any) => {
      
      
      
-     h-full absolute right-0 justify-center z-40"
+     h-full absolute right-0 z-40 mt-[100px]"
     >
       {/* {PET_CARDS.map((card: Card) => (
         <PetCard key={card.id} {...card} showMenu={showMenu} />
@@ -67,7 +67,7 @@ const PetCardList = ({ showMenu }: any) => {
         return <PetcardItem key={x.id} item={x} showMenu={showMenu} />;
       })}
 
-      <UserAvatar showMenu={showMenu} />
+      <div className="flex relative"><UserAvatar showMenu={showMenu} /></div>
     </div>
   );
 };

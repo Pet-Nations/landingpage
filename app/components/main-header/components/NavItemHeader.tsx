@@ -15,7 +15,7 @@ const NavItemHeader = ({ name, url, icon }: any) => {
         <div className={`flex items-center justify-center  h-[62px]`}>
           <span className="mr-2">{icon}</span>
           <p
-            className={` inline-block   uppercase tracking-[2px] text-center text-[20px] max-[450px]:text-[16px] leading-normal text-white1  font-bold
+            className={` inline-block   uppercase tracking-[2px] text-center text-[20px] max-[450px]:text-[16px] leading-normal text-white1 font-bold
              hover:font-bold`}
           >
             {name}
