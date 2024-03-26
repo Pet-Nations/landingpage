@@ -2,9 +2,10 @@
 import { numberWithCommas } from '@/app/utils/FormatNumber'
 import React, { useState } from 'react'
 
-const InfoDetail = ({ item, mode, isHover }: any) => {
+const InfoDetail = ({ item, mode }: any) => {
+    const [isHoverDetail, setIsHoverDetail] = useState(false)
+
     if (mode === 'small') {
-        const [isHoverDetail, setIsHoverDetail] = useState(false)
         return (
             <div onMouseEnter={() => setIsHoverDetail(true)}
                 onMouseLeave={() => setIsHoverDetail(false)}>
