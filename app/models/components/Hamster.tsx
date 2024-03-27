@@ -3,6 +3,7 @@ import React from "react";
 import Hamster from "/public/images/HAM.png";
 import PetnationText from "/public/images/petnationtext.png";
 import SolanaImg from "/public/images/sonana.png";
+import PetTokenImg from "/public/images/pet_token.png";
 
 const HamsterC = () => {
   return (
@@ -49,13 +50,13 @@ const HamsterC = () => {
               <p className=" text-white1 text-[16px] font-[300] leading-[28px]">
                 Price
               </p>
-              <p className=" text-[24px] font-bold leading-[28px]">XX.XX SOL</p>
+              <p className=" text-[24px] font-bold leading-[28px]">XX.XX PET</p>
             </div>
           </div>
 
           <Image
             className="absolute top-[23.56px] right-[19.64px]"
-            src={SolanaImg}
+            src={PetTokenImg}
             alt="img"
           ></Image>
         </div>
