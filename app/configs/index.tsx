@@ -110,6 +110,7 @@ export const NAV_CONFIGS = [
   {
     name: "DOCS",
     // url: process.env.NEXT_PUBLIC_FAQ,
+    url:"#",
     icon: <Scaleup />,
   },
   {
