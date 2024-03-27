@@ -19,17 +19,17 @@ export default function Home() {
 
 
 
-  const isLoaded = !!sessionStorage?.getItem("loaded");
-  // const isLoaded = false;
+  // const isLoaded = !!sessionStorage?.getItem("loaded");
+  const isLoaded = false;
 
-  useEffect(() => {
-    if (!isLoaded) {
-      setShowBlackCover(true);
-    } else {
-      setShowLoading(false);
-      setShowMainPage(true)
-    }
-  }, [isLoaded]);
+  // useEffect(() => {
+  //   if (!isLoaded) {
+  //     setShowBlackCover(true);
+  //   } else {
+  //     setShowLoading(false);
+  //     setShowMainPage(true)
+  //   }
+  // }, [isLoaded]);
 
 
   useEffect(() => {
