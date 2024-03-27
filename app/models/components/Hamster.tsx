@@ -58,6 +58,8 @@ const HamsterC = () => {
             className="absolute top-[23.56px] right-[19.64px]"
             src={PetTokenImg}
             alt="img"
+            width={62}
+            height={62}
           ></Image>
         </div>
       </div>
