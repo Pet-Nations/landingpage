@@ -1,5 +1,5 @@
 include:
-  - project: "xgame-x/common/cicd-template"
+  - project: "hongnv.uet/x-basic-ci"
     ref: main
     file:
       - "base-cicd.yaml"
