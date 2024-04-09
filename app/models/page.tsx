@@ -34,8 +34,8 @@ const items = [
     icon: <Icon3 />,
   },
   {
-    title1: "AVATAR ",
-    title2: "PET-VATAR",
+    title1: "QUESTS ",
+    title2: "PETQUEST",
     icon: <Icon4 />,
   },
   {
