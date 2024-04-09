@@ -81,15 +81,14 @@ const Section1 = () => {
          backdrop-blur-[24px]  
      "
       >
-        <p className="text-[16px] max-[1200px]:text-[12px] text-end font-bold leading-[31px]">
+        <p className="text-[#1A1A1A] text-[16px] max-[1200px]:text-[12px] text-end font-bold leading-[31px]">
           The Economy
         </p>
-        <p className="text-dark-main text-[34px] text-end  max-[1200px]:text-[20px] max-[786px]:inline-block max-[786px]:w-[155px] font-[500] leading-normal">
+        <p className="text-[#1A1A1A] text-dark-main text-[34px] text-end  max-[1200px]:text-[20px] max-[786px]:inline-block max-[786px]:w-[155px] font-[500] leading-normal">
           Socialfi 2.0 with Pet Nations{" "}
         </p>
-        <p className="text-end text-[16px]  max-[1200px]:text-[10px]  font-[400] leading-[31px] max-[786px]:leading-[16px] inline-block max-w-[480px] break-keep">
-          Enhancing the economy balance and communities benefits with Pet
-          Nations Native Token (PEN) and Point system (PET)
+        <p className="text-end text-[16px]  max-[1200px]:text-[10px]  font-[400] leading-[31px] max-[786px]:leading-[16px] inline-block max-w-[500px] break-keep text-[#1A1A1A]">
+          Enhancing the economy balance and communities’ benefits with Pet Nations Native Token (PET) and Point system (CAKE)
         </p>
         {/* <div
           className="w-[468px] 
@@ -115,9 +114,9 @@ const Section1 = () => {
             </p>
           </div>
         </div> */}
-       <div className="w-full flex justify-center pl-[60px] max-[1200px]:pl-[0px]">
-       <div className="mt-[24px] max-[1200px]:py-[10px] max-[786px]:px-[10px] items-center px-[40px] py-[24px] bg-[#161622] text-[#ffffff] font-bold leading-8">Go to Inventory</div>
-       </div>
+        <div className="w-full flex justify-center pl-[60px] max-[1200px]:pl-[0px]">
+          <div className="mt-[24px] max-[1200px]:py-[10px] max-[786px]:px-[10px] items-center px-[40px] py-[24px] bg-[#161622] text-[#ffffff] font-bold leading-8">Go to Inventory</div>
+        </div>
       </div>
     </section>
   );
