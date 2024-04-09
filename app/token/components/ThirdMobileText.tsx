@@ -14,7 +14,7 @@ const ThirdMobileText = () => {
       <p
         className={`text-white1 text-[16px] font-bold leading-normal animcustom4`}
       >
-        Pet Nations Points
+        Pet Nations Points CAKE
       </p>
       <p
         className={`

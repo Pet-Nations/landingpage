@@ -18,11 +18,11 @@ const FirstMobileText = () => {
       </p>
       <p
         className={`
-          text-white1 max-w-[83px] inline-block text-[14px] font-[300] leading-[18px] opacity-[0.7]
+          text-white1 font-medium max-w-[83px] inline-block text-[14px] font-[300] leading-[18px] opacity-[0.7]
         animcustom2 }
           `}
       >
-        Earn more New feeds Priority
+        Earn more Priority
       </p>
     </div>
   );

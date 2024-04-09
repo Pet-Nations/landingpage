@@ -13,15 +13,23 @@ const SecondText = () => {
       <p
         className={`text-white1 text-[32px] font-bold leading-normal ${"animcustom3"}`}
       >
-        Pet Nations Native Token
+        Pet Nations Rank
       </p>
-      <p
+      {/* <p
         className={`
           text-white1 max-w-[260px] inline-block text-[16px] font-[300] leading-6 opacity-[0.7]
             animcustom2
           `}
       >
         Voting rights Higher rank VIP club Spend to burn
+      </p> */}
+      <p
+        className={`
+          text-white1 max-w-[83px] inline-block text-[16px] font-[300] leading-6 opacity-[0.7]
+        animcustom2 }
+          `}
+      >
+        Earn more Priority
       </p>
     </div>
   );
