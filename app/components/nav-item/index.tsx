@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SmallRegtangle from "../icons/SmallRegtangle";
 import { usePathname } from 'next/navigation'
 
@@ -15,7 +15,7 @@ const NavItem = ({ name, url, icon }: any) => {
   const isActive = pathname === name.toLowerCase().replace("",'/')
 
   const getWidth = () => {
-    if (name === "DOC") {
+    if (name === "DOCS") {
       return `w-[168px]`;
     }
     if (name === "TEAM") {
@@ -29,6 +29,12 @@ const NavItem = ({ name, url, icon }: any) => {
     }
     return "";
   };
+
+  useEffect (() => {
+    if(name === "DOCS" || name === "Partners"){
+      setIsHover(false)
+    }
+  })
 
   return (
     <Link
@@ -56,7 +62,8 @@ const NavItem = ({ name, url, icon }: any) => {
           </p>
         ) : (
           <p
-            className={` text-white1 inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main hover:font-bold`}
+            // className={` text-white1 inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal  hover:text-dark-main hover:font-bold`}
+            className={`${name === "DOCS" || name === "Partners" ? "opacity-60 text-white1 inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal":"text-white1 inline-block   uppercase tracking-[2px] font-[400] text-center text-[20px] leading-normal"}`}
           >
             {name}
           </p>

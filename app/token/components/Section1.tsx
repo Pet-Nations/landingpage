@@ -91,7 +91,7 @@ const Section1 = () => {
           Enhancing the economy balance and communities benefits with Pet
           Nations Native Token (PEN) and Point system (PET)
         </p>
-        <div
+        {/* <div
           className="w-[468px] 
          max-[1200px]:w-[100%] 
          
@@ -100,7 +100,7 @@ const Section1 = () => {
         >
           <div className="flex flex-col items-center justify-center h-full">
             <p className="text-[24px] max-[1200px]:text-[14px] font-bold leading-[31px]  max-[1200px]:leading-normal text-[#A7AABF]">
-              PEN
+              PET
             </p>
             <p className="font-bold leading-[31px] text-[24px]  max-[1200px]:text-[18px] max-[1200px]:leading-normal text-orange1">
               1.800.000
@@ -108,13 +108,16 @@ const Section1 = () => {
           </div>
           <div className="flex flex-col items-center justify-center h-full">
             <p className="text-[24px]  max-[1200px]:text-[14px] font-bold leading-[31px] max-[1200px]:leading-normal text-[#A7AABF]">
-              PET
+              CAKE
             </p>
             <p className="font-bold leading-[31px] text-[24px]  max-[1200px]:text-[18px] max-[1200px]:leading-normal text-orange1">
               1.800.000
             </p>
           </div>
-        </div>
+        </div> */}
+       <div className="w-full flex justify-center pl-[60px] max-[1200px]:pl-[0px]">
+       <div className="mt-[24px] max-[1200px]:py-[10px] max-[786px]:px-[10px] items-center px-[40px] py-[24px] bg-[#161622] text-[#ffffff] font-bold leading-8">Go to Inventory</div>
+       </div>
       </div>
     </section>
   );

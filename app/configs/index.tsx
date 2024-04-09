@@ -115,8 +115,7 @@ export const NAV_CONFIGS = [
   },
   {
     name: "TEAM",
-    // url: "/team",
-    url: "#",
+    url: "/team",
     icon: <MediaIcon />,
   },
   {
