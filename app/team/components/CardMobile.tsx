@@ -27,21 +27,27 @@ const CardMobile = ({ item }: any) => {
                 <p className='text-[16px] text-[#FF4656] uppercase text-center '>{item.title}</p>
                 <p className={`text-[35px] text-[#d9d9d9] font-[900]  uppercase text-center ${archivo.className} `}>{item.name}</p>
             </div>
-            <div className='mt-[32px] opacity-100'>
-                <p className='font-[300] text-[16px] text-center text-white1'>
-                    <span className='w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span>&nbsp;
-                    CEO of PET NATIONS
-                </p>
-                <p className='font-[300] text-[16px] text-center text-white1'>
-                    <span className='w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span>&nbsp;
-                    CEO of PET VERSES
-                </p>
-                <p className='font-[300] text-[16px] text-center text-white1'>
-                    <span className='w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span>&nbsp;
-                    CMO of GLOBALCHAIN
-                </p>
+            <div className='mt-[32px] px-[24px] opacity-100 pb-[50px]'>
+                {item.expOne && <p className='font-[300] text-[16px] text-left text-white1'>
+                    <div className='flex justify-start'>
+                        <div className='w-[10px] mx-[3px]'><span className='mt-[12px] w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span></div>
+                        {item.expOne}
+                    </div>
+                </p>}
+                {item.expTwo && <p className='font-[300] text-[16px] text-left text-white1'>
+                    <div className='flex justify-start'>
+                        <div className='w-[10px] mx-[3px]'><span className='mt-[12px] w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span></div>
+                        {item.expTwo}
+                    </div>
+                </p>}
+                {item.expThree && <p className='font-[300] text-[16px] text-left text-white1'>
+                    <div className='flex justify-start'>
+                        <div className='w-[10px] mx-[3px]'><span className='mt-[12px] w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span></div>
+                        {item.expThree}
+                    </div>
+                </p>}
             </div>
-            <div className=' w-[300px] mx-auto relative top-[18px] opacity-100 px-[34px] py-[18px]  bg-dark-main border-[2px] border-solid border-[#f8f8f8] flex items-center justify-around'>
+            {/* <div className=' w-[300px] mx-auto relative top-[18px] opacity-100 px-[34px] py-[18px]  bg-dark-main border-[2px] border-solid border-[#f8f8f8] flex items-center justify-around'>
 
                 {HEADER_ICON.map((el: any, index: any) => {
                     if (el.tag === "youtube") {
@@ -60,7 +66,7 @@ const CardMobile = ({ item }: any) => {
                     }
                 }
                 )}
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -7,6 +7,8 @@ import NavItem from "../nav-item";
 import { HEADER_ICON, NAV_CONFIGS } from "@/app/configs";
 import MobileHambugerButton from "./components/MobileHambugerButton";
 import headerBg from "/public/images/headerbg.png";
+import headerIcons from "/public/images/icon_pet_menu.png";
+
 import { useEffect, useRef } from "react";
 
 interface Props {
@@ -131,7 +133,15 @@ const MainHeader = ({ page }: Props) => {
       
       clippy backdrop-blur-[100px] max-[1366px]:hidden"
       >
-        <Image src={headerBg} height={62} alt="img" />
+        {/* <Image src={headerBg} width={0} height={0} style={{height:"62px", width:"600px"}} alt="img" /> */}
+
+        <div className="bg-[white] opacity-20 h-[62px] w-[500px] items-center">
+          <div className="absolute flex w-full justify-between top-[15px] px-[40px]  opacity-20">
+            <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" />
+            <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" />
+            <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" />
+            <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" /></div>
+        </div>
       </div>
 
       <div

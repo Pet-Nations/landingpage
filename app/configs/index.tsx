@@ -51,6 +51,8 @@ export const PET_CARDS: any[] = [
     background2: <VisionMap />,
     avatar: <DogAvatar />,
     src: "/images/petcard2.png",
+    
+    
   },
   {
     id: 3,
@@ -76,15 +78,20 @@ export const IMAGE_COMUNITY_CONFIGS = [
     title: "CO-FOUNDER & CEO",
     name: 'Genjile',
     imgUrl: "/token",
-    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs1} alt="img" />
-
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs1} alt="img" />,
+    expOne:"6 years hosting events & services in blockchain",
+    expTwo:"4 years in top corp, Vingroup, Worldbank",
+    expThree:"OKX Global Partnership",
   },
   {
     id: 2,
     title: "CO-FOUNDER",
     name: 'HOANG NGUYEN',
     imgUrl: "/token",
-    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs2} alt="img" />
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs2} alt="img" />,
+    expOne:"Founders of top 2 pet groups with 6 mils user",
+    expTwo:"Top pet-related partnership in Vietnam",
+    expThree:"",
 
   },
   {
@@ -92,7 +99,10 @@ export const IMAGE_COMUNITY_CONFIGS = [
     title: "CMO",
     name: 'lewandowski',
     imgUrl: "/token",
-    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs3} alt="img" />
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs3} alt="img" />,
+    expOne:"",
+    expTwo:"",
+    expThree:"",
 
   },
   {
@@ -100,30 +110,33 @@ export const IMAGE_COMUNITY_CONFIGS = [
     title: "CTO",
     name: 'LELE NGUYEN',
     imgUrl: "/token",
-    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs4} alt="img" />
+    image: <Image className='absolute bottom-0 left-[50%] -translate-x-[50%]' width={236} height={262} src={CharacterImgs4} alt="img" />,
+    expOne:"",
+    expTwo:"",
+    expThree:"",
 
   },
 
 ]
 
 export const NAV_CONFIGS = [
-  {
-    name: "DOCS",
-    // url: process.env.NEXT_PUBLIC_FAQ,
-    url:"#",
-    icon: <Scaleup />,
-  },
+  // {
+  //   name: "DOCS",
+  //   // url: process.env.NEXT_PUBLIC_FAQ,
+  //   url:"#",
+  //   icon: <Scaleup />,
+  // },
   {
     name: "TEAM",
     url: "/team",
     icon: <MediaIcon />,
   },
-  {
-    name: "Partners",
-    // url: "/partners",
-    url: "#",
-    icon: <PartnersIcon />,
-  },
+  // {
+  //   name: "Partners",
+  //   // url: "/partners",
+  //   url: "#",
+  //   icon: <PartnersIcon />,
+  // },
   {
     name: "COMMUNITY",
     url: "/community",
