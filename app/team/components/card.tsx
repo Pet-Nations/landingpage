@@ -12,6 +12,8 @@ const Card = ({ item, setHoverId, hoverId }: any) => {
 
     const isActive = hoverId === item.id
 
+    console.log('item :>> ', item);
+
     return (
         <div
             onMouseEnter={() => setHoverId(item.id)}
@@ -33,27 +35,28 @@ const Card = ({ item, setHoverId, hoverId }: any) => {
                 <p className='text-[16px] text-[#FF4656] uppercase text-center '>{item.title}</p>
                 <p className={`text-[35px] text-[#d9d9d9] font-[900]  uppercase text-center ${archivo.className} `}>{item.name}</p>
             </div>
-            <div className={`mt-[32px]  ${isActive ? `opacity-100` : `opacity-0`} `}>
-                <p className='font-[300] text-[16px] text-center text-white1'>
-                    <span className='w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span>&nbsp;
-                    CEO of PET NATIONS
-                </p>
-                <p className='font-[300] text-[16px] text-center text-white1'>
-                    <span className='w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span>&nbsp;
-                    CEO of PET VERSES
-                </p>
-                <p className='font-[300] text-[16px] text-center text-white1'>
-                    <span className='w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span>&nbsp;
-                    CMO of GLOBALCHAIN
-                </p>
+            <div className={`mt-[32px] px-[24px]  ${isActive ? `opacity-100` : `opacity-0`} `}>
+                {item.expOne && <p className='font-[300] text-lg text-[16px]  text-white1 text-left'>
+                    <div className='flex justify-start'>
+                        <div className='w-[10px] mx-[3px]'><span className='mt-[12px] w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span></div>
+                        {item.expOne}
+                    </div>
+                </p>}
+                {item.expTwo && <p className='font-[300] text-lg  text-[16px]  text-white1 text-left'>
+                    <div className='flex justify-start'>
+                        <div className='w-[10px] mx-[3px]'><span className='mt-[12px] w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span></div>
+                        {item.expTwo}
+                    </div>
+                </p>}
+                {item.expThree && <p className='font-[300] text-lg text-[16px]  text-white1 text-left'>
+                    <div className='flex justify-start'>
+                        <div className='w-[10px] mx-[3px]'><span className='mt-[12px] w-[5px] h-[5px] bg-white1 inline-block rounded-[50%] relative -top-[2px]' ></span></div>
+                        {item.expThree}
+                    </div>
+                </p>}
             </div>
-            <div className={`h-[82px] relative bg-transparent   ${isActive ? "opacity-100" : "opacity-0"} transition-all duration-1000`}>
-                <div className={`absolute ${isActive ? "opacity-100" : "opacity-0"} px-[34px] py-[18px] -bottom-[50%] -translate-y-[30%] bg-dark-main border-[2px] border-solid border-[#f8f8f8] w-[300px] left-[50%] -translate-x-[50%] flex items-center justify-around`}>
-                    {/* <DiscordIcon />
-                    <FacebookIcon />
-                    <TelegramIcon />
-                    <TwitterIcon /> */}
-
+            <div className={`h-[50px] relative bg-transparent   ${isActive ? "opacity-100" : "opacity-0"} transition-all duration-1000`}>
+                {/* <div className={`absolute ${isActive ? "opacity-100" : "opacity-0"} px-[34px] py-[18px] -bottom-[50%] -translate-y-[30%] bg-dark-main border-[2px] border-solid border-[#f8f8f8] w-[300px] left-[50%] -translate-x-[50%] flex items-center justify-around`}>
 
                     {HEADER_ICON.map((el: any, index: any) => {
                         if (el.tag === "youtube") {
@@ -72,7 +75,7 @@ const Card = ({ item, setHoverId, hoverId }: any) => {
                         }
                     }
                     )}
-                </div>
+                </div> */}
             </div>
         </div>
     )
