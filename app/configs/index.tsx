@@ -148,10 +148,10 @@ export const HEADER_ICON = [
     icon: <DiscordIcon />,
     url: "#",
   },
-  {
-    icon: <FacebookIcon />,
-    url: "https://www.facebook.com/petnations24?mibextid=LQQJ4d",
-  },
+  // {
+  //   icon: <FacebookIcon />,
+  //   url: "https://www.facebook.com/petnations24?mibextid=LQQJ4d",
+  // },
   // {
   //   icon: <SocialIcon />,
   //   url: "/",
