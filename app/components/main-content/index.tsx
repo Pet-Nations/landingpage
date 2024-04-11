@@ -7,6 +7,8 @@ import MainContentMobile from "../mobile-maincontent/MainContent";
 import PetCardList from "../pet-card-list";
 import KartDesktop from "../kart/KartDesktop";
 import TopTabletPetCard from "../kart/TopTabletPetCard";
+import { HEADER_ICON } from "@/app/configs";
+import Link from "next/link";
 
 const MainContent = ({ showMainPage, staticCarPNG }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
@@ -38,6 +40,20 @@ const MainContent = ({ showMainPage, staticCarPNG }: any) => {
         />
 
         {showOtherVisuals && <VisualsList />}
+        {/* <div className="absolute max-[480px]:block left-[10%] bottom-[15%] z-[999]">
+          <div className="flex">{HEADER_ICON.map((el: any, index: any) => {
+            return (
+              <Link
+                className="h-10 w-10 flex items-center justify-center"
+                key={index}
+                href={el.url}
+                target="_blank"
+              >
+                {el.icon}
+              </Link>
+            )
+          })}</div>
+        </div> */}
         <PetCardList showMenu={showOtherVisuals} />
       </div>
       <MainContentMobile showMainPage={showMainPage} />

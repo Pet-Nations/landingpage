@@ -135,18 +135,18 @@ const MainHeader = ({ page }: Props) => {
       >
         {/* <Image src={headerBg} width={0} height={0} style={{height:"62px", width:"600px"}} alt="img" /> */}
 
-        <div className="bg-[white] opacity-20 h-[62px] w-[500px] items-center">
+        <div className="bg-[white] opacity-20 h-[62px] w-[350px] items-center">
           <div className="absolute flex w-full justify-between top-[15px] px-[40px]  opacity-20">
             <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" />
-            <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" />
-            <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" />
+            {/* <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" /> */}
+            {/* <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" /> */}
             <Image src={headerIcons} width={36} style={{ zIndex: 9, transform: "rotate(45deg)" }} height={36} alt="img" /></div>
         </div>
       </div>
 
       <div
         className=" absolute top-10 
-       left-[183px] max-[1600px]:left-[105px]
+       left-[183px] max-[1600px]:left-[135px]
 
         h-[62px] flex items-center  z-[50] last:pr-0 max-[1366px]:hidden "
       >

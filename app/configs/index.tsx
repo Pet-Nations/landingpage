@@ -126,11 +126,11 @@ export const NAV_CONFIGS = [
   //   url:"#",
   //   icon: <Scaleup />,
   // },
-  {
-    name: "TEAM",
-    url: "/team",
-    icon: <MediaIcon />,
-  },
+  // {
+  //   name: "TEAM",
+  //   url: "/team",
+  //   icon: <MediaIcon />,
+  // },
   // {
   //   name: "Partners",
   //   // url: "/partners",
@@ -138,12 +138,21 @@ export const NAV_CONFIGS = [
   //   icon: <PartnersIcon />,
   // },
   {
-    name: "COMMUNITY",
+    name: "COMMUNITY UNION",
     url: "/community",
     icon: <ComunityIcon />,
   },
 ];
 export const HEADER_ICON = [
+  {
+    icon: <TwitterIcon />,
+    url: "https://twitter.com/pet_nations",
+  },
+  {
+    tag: 'youtube',
+    icon: <YoutubeIcon />,
+    url: "https://www.youtube.com/channel/UCzYllb_kpUHdzuDKuz1Lylw",
+  },
   {
     icon: <DiscordIcon />,
     url: "#",
@@ -164,13 +173,5 @@ export const HEADER_ICON = [
     icon: <TelegramIcon />,
     url: "#",
   },
-  {
-    tag: 'youtube',
-    icon: <YoutubeIcon />,
-    url: "https://www.youtube.com/channel/UCzYllb_kpUHdzuDKuz1Lylw",
-  },
-  {
-    icon: <TwitterIcon />,
-    url: "https://twitter.com/pet_nations",
-  },
+  
 ];

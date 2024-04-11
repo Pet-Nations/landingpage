@@ -16,6 +16,7 @@ import Link from "next/link";
 import Car1 from "../kart/Car1";
 import LeafList from "../kart/LeafList";
 import StaticBrick from "../kart/StaticBrick";
+import { HEADER_ICON } from "@/app/configs";
 
 const MainContentMobile = ({ showMainPage }: any) => {
   const [showOtherVisuals, setShowOtherVisuals] = useState(false);
@@ -125,6 +126,20 @@ const MainContentMobile = ({ showMainPage }: any) => {
           />
         </Link>
       </div>
+      <div className="absolute hidden max-[480px]:block left-[10px] bottom-[61px] z-[999]">
+          <div className="flex">{HEADER_ICON.map((el: any, index: any) => {
+            return (
+              <Link
+                className="h-10 w-10 flex items-center justify-center"
+                key={index}
+                href={el.url}
+                target="_blank"
+              >
+                {el.icon}
+              </Link>
+            )
+          })}</div>
+        </div>
       <div
         className={`absolute bottom-[61px] right-[15px] z-30 flex flex-col items-end opacity-0
           ${showOtherVisuals ? `animate-transUp` : ""}
