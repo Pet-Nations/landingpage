@@ -72,7 +72,7 @@ const NavItem = ({ name, url, icon }: any) => {
         <div className={`flex absolute w-[55px] h-[3px] ${isActive || isHover ? "bg-[#FA5252]": ""} bottom-0`}></div>
       </div>
 
-      <div className="">{!isLast && <SmallRegtangle />}</div>
+      {/* <div className="">{!isLast && <SmallRegtangle />}</div> */}
     </Link>
   );
 };
