@@ -155,7 +155,7 @@ export const HEADER_ICON = [
   },
   {
     icon: <DiscordIcon />,
-    url: "#",
+    url: "https://discord.gg/8RnCua96",
   },
   // {
   //   icon: <FacebookIcon />,
