@@ -27,7 +27,7 @@ const MobileMenuComponent = ({ isOpen, onClose }: any) => {
 
       <div className="flex-auto"></div>
 
-      <div className=" w-full h-[88px] pl-4 max-[480px]:hidden max-[450px]:pl-2 flex flex-wrap items-center justify-center gap-2 ">
+      {/* <div className=" w-full h-[88px] pl-4 max-[480px]:hidden max-[450px]:pl-2 flex flex-wrap items-center justify-center gap-2 ">
         {HEADER_ICON.map((el: any, index: any) => {
           return (
             <Link
@@ -40,7 +40,7 @@ const MobileMenuComponent = ({ isOpen, onClose }: any) => {
             </Link>
           )
         })}
-      </div>
+      </div> */}
     </div>
   );
 };
